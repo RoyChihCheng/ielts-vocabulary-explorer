@@ -158,6 +158,34 @@ body{background:var(--paper);font-family:var(--fb);color:var(--navy);
   flex-shrink:0;transition:background .2s;}
 .dot.cur{background:var(--gold);}
 .dot.known{background:var(--known);}
+
+/* ===== MOBILE / PHONE (added for touch navigation) ===== */
+@media (max-width:600px){
+  body{height:100dvh;}
+  #hdr{height:48px;padding:0 12px;gap:8px;}
+  .hdr-unit{max-width:76px;font-size:.68rem;}
+  #counter{font-size:.76rem;}
+  #known-badge{font-size:.56rem;}
+  .hdr-nav{gap:7px;}
+  .mode-btn{padding:5px 9px;font-size:.6rem;}
+  #stage{padding:8px;}
+  .scene{width:100%;height:100%;max-height:100%;}
+  .face{padding:18px 18px;}
+  .f-word{font-size:clamp(1.9rem,9vw,2.8rem);}
+  .b-zh{font-size:clamp(1.4rem,7vw,2rem);}
+  .b-quiz-word{font-size:clamp(1.5rem,7.5vw,2.1rem);}
+  .b-ex{font-size:.8rem;}
+  .b-col{font-size:.72rem;}
+  .ic-body{overflow-y:auto;}
+  .f-hint,.ic-hint{display:none;}
+  #nav-bar{height:58px;padding:0 8px;}
+  #dots{display:none;}
+  #action-count{display:none;}
+  .action-center{gap:8px;}
+  .nav-btn{padding:12px 16px;font-size:.92rem;}
+  #know-btn,#review-btn{padding:12px 15px;font-size:.86rem;}
+}
+/* ===== END MOBILE ===== */
 </style>
 </head>
 <body>
@@ -372,7 +400,28 @@ function setMode(m){
   render();
 }
 
-document.getElementById('scene').addEventListener('click',flip);
+let suppressClick=false;
+(function(){
+  const sc=document.getElementById('scene');
+  sc.addEventListener('click',function(){
+    if(suppressClick){suppressClick=false;return;}
+    flip();
+  });
+  let x0=null,y0=null;
+  sc.addEventListener('touchstart',function(e){
+    const t=e.changedTouches[0];x0=t.clientX;y0=t.clientY;
+  },{passive:true});
+  sc.addEventListener('touchend',function(e){
+    if(x0===null)return;
+    const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.4){
+      suppressClick=true;
+      go(dx<0?1:-1);
+      setTimeout(function(){suppressClick=false;},400);
+    }
+    x0=null;
+  },{passive:true});
+})();
 document.getElementById('prev-btn').addEventListener('click',function(e){e.stopPropagation();go(-1);});
 document.getElementById('next-btn').addEventListener('click',function(e){e.stopPropagation();go(1);});
 document.getElementById('know-btn').addEventListener('click',function(e){e.stopPropagation();markKnown();});

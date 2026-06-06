@@ -36,6 +36,13 @@ main{flex:1;max-width:900px;margin:0 auto;width:100%;padding:40px 24px 60px;}
 .ch-arrow{font-size:1rem;color:var(--gold);opacity:.6;transition:opacity .15s,transform .15s;}
 .ch-card:hover .ch-arrow{opacity:1;transform:translateX(3px);}
 .site-ftr{text-align:center;padding:20px;font-family:var(--fm);font-size:.6rem;color:var(--g400);letter-spacing:.06em;border-top:1px solid var(--g200);}
+@media (max-width:600px){
+  .site-hdr{padding:32px 20px 26px;}
+  main{padding:26px 16px 40px;}
+  .grid{grid-template-columns:1fr;gap:14px;}
+  .ch-card{padding:18px 18px 16px;}
+  .site-title{font-size:clamp(1.5rem,7vw,2rem);}
+}
 </style>
 </head>
 <body>
