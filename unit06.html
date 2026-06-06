@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 6 · Nature, Wildlife & Travel | IELTS Vocabulary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="gate.js"></script>
+<style>
+:root{
+  --navy:#2E1A47;--gold:#8E5FB0;--gold2:#C9A8E0;
+  --paper:#FAF7FC;--g100:#F0E9F7;--g200:#E2D5EE;--g400:#9A8AA8;
+  --known:#2B6830;--r:2px;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Lora','Times New Roman',serif;
+  --fm:'JetBrains Mono','Courier New',monospace;
+  --shadow:0 1px 3px rgba(46,26,71,.06),0 4px 16px rgba(46,26,71,.08),0 16px 48px rgba(46,26,71,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);font-family:var(--fb);color:var(--navy);
+  height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+#hdr{height:52px;background:var(--navy);display:flex;align-items:center;
+  padding:0 18px;flex-shrink:0;position:relative;gap:12px;}
+.hdr-unit{font-family:var(--fd);font-size:.85rem;font-weight:700;color:var(--gold2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;}
+.hdr-center{position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:1px;pointer-events:none;}
+#counter{font-family:var(--fm);font-size:.82rem;color:#fff;letter-spacing:.02em;}
+#known-badge{font-family:var(--fm);font-size:.62rem;color:var(--gold2);opacity:.75;min-height:.85em;}
+.hdr-nav{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.mode-toggle{display:flex;border:1px solid rgba(142,95,176,.35);border-radius:var(--r);overflow:hidden;}
+.mode-btn{background:transparent;border:none;color:rgba(142,95,176,.6);font-family:var(--fm);
+  font-size:.66rem;padding:4px 10px;cursor:pointer;transition:background .15s,color .15s;
+  letter-spacing:.04em;text-transform:uppercase;}
+.mode-btn.active{background:var(--gold);color:#fff;}
+#home-link{color:rgba(201,168,224,.5);font-size:1.15rem;text-decoration:none;
+  line-height:1;transition:color .15s;padding:2px;}
+#home-link:hover{color:var(--gold2);}
+#prog-track{height:2px;background:rgba(142,95,176,.15);flex-shrink:0;}
+#prog-fill{height:100%;background:var(--gold);transition:width .3s ease;width:0%;}
+#stage{flex:1;display:flex;align-items:center;justify-content:center;
+  padding:14px 16px;overflow:hidden;}
+.scene{width:min(660px,100%);height:min(460px,calc(100vh - 130px));
+  perspective:1400px;cursor:pointer;user-select:none;}
+.card{width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;transition:transform .52s cubic-bezier(.4,0,.2,1);}
+.card.flipped{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--r);display:flex;flex-direction:column;padding:28px 36px;}
+.front{background:var(--paper);border:1px solid var(--g200);box-shadow:var(--shadow);}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;}
+.f-meta{display:flex;flex-direction:column;gap:2px;}
+.f-num{font-family:var(--fm);font-size:.66rem;color:var(--gold);letter-spacing:.1em;}
+.f-part{font-family:var(--fm);font-size:.58rem;color:var(--g400);letter-spacing:.05em;}
+.f-known-mark{font-family:var(--fm);font-size:.62rem;color:var(--known);
+  opacity:0;transition:opacity .2s;}
+.f-known-mark.vis{opacity:1;}
+.f-body{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;text-align:center;padding:4px 0;}
+.f-word{font-family:var(--fd);font-size:clamp(2rem,6vw,3.4rem);
+  color:var(--navy);font-weight:700;line-height:1.05;letter-spacing:-.01em;}
+.f-ipa{font-family:var(--fm);font-size:.76rem;color:var(--g400);letter-spacing:.02em;}
+.f-pos{font-family:var(--fb);font-size:.88rem;color:var(--g400);font-style:italic;}
+.f-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;}
+.back{background:var(--navy);transform:rotateY(180deg);overflow:hidden;}
+.b-zh{font-family:var(--fd);font-size:clamp(1.5rem,4.2vw,2.3rem);
+  color:var(--gold2);font-weight:700;line-height:1.2;flex-shrink:0;margin-bottom:10px;}
+.b-quiz-word{font-family:var(--fd);font-size:clamp(1.6rem,4.5vw,2.5rem);
+  color:var(--gold2);font-weight:700;line-height:1.1;flex-shrink:0;}
+.b-quiz-meta{font-family:var(--fb);font-size:.82rem;color:rgba(201,168,224,.65);
+  font-style:italic;flex-shrink:0;margin-bottom:10px;}
+.b-rule{height:1px;background:rgba(255,255,255,.1);flex-shrink:0;margin-bottom:10px;}
+.b-content{flex:1;overflow-y:auto;display:flex;flex-direction:column;
+  gap:11px;scrollbar-width:none;-ms-overflow-style:none;}
+.b-content::-webkit-scrollbar{display:none;}
+.b-sec{display:flex;flex-direction:column;gap:5px;}
+.b-label{font-family:var(--fm);font-size:.57rem;
+  color:rgba(142,95,176,.75);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;}
+.b-ex{font-family:var(--fb);font-size:.77rem;color:#ccc;font-style:italic;
+  line-height:1.6;padding-left:10px;border-left:2px solid rgba(142,95,176,.3);}
+.b-col{font-family:var(--fm);font-size:.67rem;color:#e8dff2;line-height:1.35;
+  padding-left:10px;border-left:2px solid var(--gold);padding-top:1px;padding-bottom:1px;}
+.b-cols{display:flex;flex-direction:column;gap:4px;}
+.b-syns{display:flex;flex-direction:column;gap:5px;}
+.b-syn-row{display:flex;flex-direction:column;gap:1px;}
+.b-syn-w{font-family:var(--fm);font-size:.7rem;color:var(--gold2);}
+.b-syn-n{font-family:var(--fb);font-size:.71rem;color:#999;line-height:1.45;padding-left:6px;}
+.b-note{font-family:var(--fb);font-size:.74rem;color:#cdb0e2;font-style:italic;
+  line-height:1.6;padding:8px 10px;
+  border:1px solid rgba(142,95,176,.2);border-radius:2px;background:rgba(142,95,176,.07);}
+.intro-face{cursor:default;}
+.ic-eyebrow{font-family:var(--fm);font-size:.62rem;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;flex-shrink:0;}
+.ic-title{font-family:var(--fd);font-size:clamp(1.3rem,3.2vw,1.9rem);
+  color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:4px;flex-shrink:0;}
+.ic-zh{font-family:var(--fb);font-size:.85rem;color:var(--g400);font-style:italic;flex-shrink:0;}
+.ic-rule{height:1px;background:var(--g200);margin:14px 0;flex-shrink:0;}
+.ic-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
+.ic-sec-label{font-family:var(--fm);font-size:.57rem;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
+.ic-about{font-family:var(--fb);font-size:.81rem;color:var(--navy);line-height:1.65;}
+.ic-steps{display:flex;flex-direction:column;gap:6px;}
+.ic-step{font-family:var(--fb);font-size:.79rem;color:var(--navy);
+  line-height:1.5;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.ic-tag{font-family:var(--fm);font-size:.62rem;background:var(--g100);
+  border:1px solid var(--g200);color:var(--navy);padding:1px 7px;
+  border-radius:var(--r);white-space:nowrap;flex-shrink:0;}
+.ic-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;margin-top:auto;}
+#nav-bar{height:52px;background:var(--g100);border-top:1px solid var(--g200);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 14px;flex-shrink:0;}
+.nav-btn{background:transparent;border:1px solid var(--g200);color:var(--navy);
+  font-family:var(--fb);font-size:.82rem;padding:6px 14px;cursor:pointer;
+  border-radius:var(--r);transition:all .15s;}
+.nav-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.action-center{display:flex;align-items:center;gap:6px;}
+#action-count{font-family:var(--fm);font-size:.65rem;color:#aaa;white-space:nowrap;}
+#know-btn{background:var(--known);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#know-btn:hover{opacity:.85;}
+#review-btn{background:var(--gold);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#review-btn:hover{opacity:.8;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+#dots{display:flex;gap:3px;align-items:center;max-width:200px;overflow:hidden;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--g200);flex-shrink:0;transition:background .2s;}
+.dot.cur{background:var(--gold);}
+.dot.known{background:var(--known);}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <span class="hdr-unit">Ch. 6 &middot; Nature, Wildlife & Travel</span>
+  <div class="hdr-center">
+    <span id="counter">Introduction</span>
+    <span id="known-badge"></span>
+  </div>
+  <nav class="hdr-nav">
+    <div class="mode-toggle">
+      <button class="mode-btn active" data-mode="browse">Browse</button>
+      <button class="mode-btn" data-mode="quiz">Quiz</button>
+    </div>
+    <a id="home-link" href="index.html" title="Index">&#8962;</a>
+  </nav>
+</header>
+<div id="prog-track"><div id="prog-fill"></div></div>
+<main id="stage">
+  <div class="scene" id="scene">
+    <div class="card" id="card">
+      <div class="face front" id="front-face"></div>
+      <div class="face back"  id="back-face"></div>
+    </div>
+  </div>
+</main>
+<footer id="nav-bar">
+  <button class="nav-btn" id="prev-btn">&#8592; Prev</button>
+  <div class="action-center">
+    <span id="action-count"></span>
+    <button id="know-btn">Know it &#10003;</button>
+    <button id="review-btn">Review &#8635;</button>
+  </div>
+  <div class="nav-right">
+    <div id="dots"></div>
+    <button class="nav-btn" id="next-btn">Next &#8594;</button>
+  </div>
+</footer>
+<script>
+const UNIT = {
+  number: 6,
+  title_en: "Nature, Wildlife & Travel",
+  title_zh: "\u81ea\u7136\u751f\u614b\u3001\u91ce\u751f\u52d5\u7269\u8207\u65c5\u904a",
+  src: "Units 7, 9 & 15",
+  count: 53,
+  words: [{"word": "breathtaking","ipa": "/ˈbreθˌteɪkɪŋ/","pos": "adj","zh": "令人屏息的","part": "B","examples": ["The view from the summit was simply breathtaking, stretching across an unbroken expanse of snow-capped peaks.","The speed of technological advancement over the past two decades has been nothing short of breathtaking."],"col": ["breathtaking view","breathtaking scenery","breathtaking speed","truly breathtaking","breathtaking landscape","breathtaking beauty","absolutely breathtaking","breathtaking performance"],"syn": [{"w": "stunning","n": "強調視覺上的強烈衝擊，幾乎與breathtaking同義"},{"w": "awe-inspiring","n": "強調引發敬畏之感，比breathtaking更強調情感深度"},{"w": "spectacular","n": "強調壯觀或引人注目，比breathtaking更廣義"}],"note": "breathtaking和stunning在描述自然景觀時幾乎可互換；IELTS旅遊和環境類寫作中是高頻正面描述詞，也可比喻性地描述驚人的速度或變化。"},{"word": "charming","ipa": "/ˈtʃɑːmɪŋ/","pos": "adj","zh": "迷人的","part": "B","examples": ["The charming medieval town centre, with its cobbled streets and historic architecture, attracts thousands of visitors each summer.","Critics described the documentary as charming but insufficiently rigorous in its analysis of the evidence."],"col": ["charming village","charming personality","utterly charming","charming town","charming accent","find someone charming","charming atmosphere","charming and quaint"],"syn": [{"w": "delightful","n": "強調令人愉快和欣喜，比charming更強調積極情緒"},{"w": "appealing","n": "強調有吸引力，比charming更廣義，不限於人的魅力"},{"w": "picturesque","n": "特指如畫般美麗，主要用於景觀描述"}],"note": "charming強調迷人的個性或氛圍；picturesque特指如畫的風景。IELTS旅遊類文章中charming village/town是描述傳統小鎮的典型搭配。"},{"word": "comfortable","ipa": "/ˈkʌmftəbəl/","pos": "adj","zh": "舒適的","part": "B","examples": ["Eco-lodges are designed to offer comfortable accommodation while minimising the environmental impact on surrounding natural habitats.","Many people feel more comfortable travelling within familiar cultural environments rather than venturing into less predictable destinations."],"col": ["feel comfortable","comfortable lifestyle","comfortable temperature","comfortably off","comfortable accommodation","comfortable environment","reasonably comfortable","comfortable seat"],"syn": [{"w": "cosy","n": "強調溫馨親切的舒適感，比comfortable更口語"},{"w": "pleasant","n": "強調令人愉快，比comfortable更廣義"},{"w": "convenient","n": "強調方便性，比comfortable更強調使用上的易利"}],"note": "comfortable在IELTS描述旅遊設施或生活條件時非常常用；comfortably off（生活寬裕）是描述中產階級經濟狀況的實用固定搭配。"},{"word": "dramatic","ipa": "/drəˈmætɪk/","pos": "adj","zh": "戲劇性的；壯觀的","part": "B","examples": ["The region has witnessed a dramatic decline in biodiversity over the past fifty years as a result of habitat destruction.","The landscape transforms in a dramatic fashion as travellers descend from the arid plateau into the lush coastal valleys."],"col": ["dramatic change","dramatic increase","dramatic decline","dramatic effect","dramatic landscape","dramatic improvement","dramatic shift","quite dramatic"],"syn": [{"w": "significant","n": "最廣義，強調重要性，比dramatic更中性"},{"w": "striking","n": "強調引人注目，視覺衝擊力強，比dramatic更強調外觀"},{"w": "marked","n": "強調明顯可察覺，比dramatic更正式但語氣更輕"}],"note": "dramatic可指視覺效果也可指數量變化；a dramatic increase/decline是IELTS描述統計趨勢的高頻搭配，比a big increase更學術。"},{"word": "magnificent","ipa": "/mæɡˈnɪfɪsənt/","pos": "adj","zh": "壯麗的","part": "B","examples": ["The Serengeti offers some of the most magnificent wildlife spectacles on Earth, including the annual wildebeest migration.","The palace's magnificent baroque architecture represents one of the finest examples of seventeenth-century royal patronage of the arts."],"col": ["magnificent view","magnificent architecture","truly magnificent","magnificent creature","magnificent achievement","magnificent scenery","magnificent specimen","magnificent building"],"syn": [{"w": "grand","n": "強調莊嚴的規模和氣派，比magnificent更強調正式感"},{"w": "splendid","n": "強調光彩奪目的美麗，與magnificent幾乎同義"},{"w": "imposing","n": "強調令人印象深刻的龐大外觀，比magnificent更強調讓人敬畏"}],"note": "magnificent是IELTS自然和建築類文章的高分形容詞；在寫作中，替換beautiful或big，使用magnificent可顯著提升Lexical Resource得分。"},{"word": "memorable","ipa": "/ˈmemərəbəl/","pos": "adj","zh": "值得紀念的","part": "B","examples": ["Ecotourism operators strive to create memorable experiences that deepen visitors' connection with natural environments.","A memorable brand identity requires consistency across all touchpoints, from packaging to customer service."],"col": ["memorable experience","truly memorable","memorable occasion","memorable moment","memorable performance","create a memorable","highly memorable","memorable journey"],"syn": [{"w": "unforgettable","n": "語氣比memorable更強，強調絕對無法忘記"},{"w": "remarkable","n": "強調引人注目和不尋常，比memorable更強調客觀特質"},{"w": "significant","n": "強調重要性，比memorable更偏向事實評估"}],"note": "memorable強調容易記住且值得記住；unforgettable語氣更強，暗示情感衝擊。IELTS旅遊類文章中memorable experience是吸引遊客的關鍵賣點之一。"},{"word": "mountainous","ipa": "/ˈmaʊntənəs/","pos": "adj","zh": "多山的","part": "B","examples": ["The mountainous terrain of northern Pakistan makes the delivery of aid and infrastructure development particularly challenging.","Marine life in mountainous coastal regions is often uniquely adapted to the cold, nutrient-rich waters that flow down from glacial peaks."],"col": ["mountainous region","mountainous terrain","mountainous area","mountainous landscape","mountainous country","mountainous conditions","mountainous backdrop","mountainous topography"],"syn": [{"w": "hilly","n": "強調多丘陵，比mountainous更輕描述較小的山丘"},{"w": "rugged","n": "強調地形崎嶇不平，比mountainous更強調艱難性"},{"w": "elevated","n": "強調高海拔，比mountainous更廣義的地形描述"}],"note": "mountainous是IELTS地理和旅遊類文章的常見詞彙；mountainous terrain（山地地形）和mountainous region（山區）是標準搭配。"},{"word": "precarious","ipa": "/prɪˈkeərɪəs/","pos": "adj","zh": "危險的；不穩固的","part": "B","examples": ["Many seasonal workers find themselves in a precarious financial situation during periods of low employment.","The survival of numerous endemic species is precarious, with populations too small to withstand further habitat loss."],"col": ["precarious situation","precarious balance","precarious position","financially precarious","precarious existence","precarious stability","precarious state","remain precarious"],"syn": [{"w": "unstable","n": "最廣義，強調缺乏穩定性，比precarious更中性"},{"w": "fragile","n": "強調脆弱容易破損，比precarious更強調物理或情感層面"},{"w": "vulnerable","n": "強調容易受到傷害或攻擊，比precarious更強調易受害性"}],"note": "precarious強調岌岌可危的不穩定狀態；IELTS中precarious living conditions和precarious ecosystem balance是常見搭配。"},{"word": "remote","ipa": "/rɪˈməʊt/","pos": "adj","zh": "偏遠的","part": "B","examples": ["The construction of roads in remote areas often triggers a complex cycle of deforestation and settlement that proves difficult to reverse.","Remote working has enabled many urban professionals to relocate to rural and coastal communities, revitalising local economies."],"col": ["remote area","remote location","remote village","remote community","remote working","extremely remote","remote possibility","remote control"],"syn": [{"w": "isolated","n": "強調孤立與外界隔絕，比remote更強調缺乏連接"},{"w": "inaccessible","n": "強調難以到達，比remote更強調交通障礙"},{"w": "distant","n": "強調空間距離遠，比remote更廣義且中性"}],"note": "remote有地理（remote area）和技術（remote working）兩種主要用法；remote working（遠距工作）是IELTS近年最高頻的相關概念之一。"},{"word": "rustic","ipa": "/ˈrʌstɪk/","pos": "adj","zh": "鄉村風的；淳樸的","part": "B","examples": ["The farmhouse's rustic charm, with its exposed stone walls and low-beamed ceilings, has been carefully preserved by its owners.","Travel writers often romanticise rustic ways of life without acknowledging the economic hardships that can accompany rural living."],"col": ["rustic charm","rustic setting","rustic style","rustic village","rustic atmosphere","rustic furniture","rustic landscape","genuinely rustic"],"syn": [{"w": "rural","n": "最廣義，指與農村地區相關，比rustic更中性"},{"w": "pastoral","n": "帶有田園詩歌的浪漫意象，比rustic更強調理想化的鄉村"},{"w": "bucolic","n": "最文學性，指寧靜美好的鄉村田園，常見於詩歌"}],"note": "rustic帶有「樸素古拙但有魅力」的含義，通常是正面的；IELTS旅遊類文章中，rustic charm是描述傳統鄉村旅遊吸引力的固定搭配。"},{"word": "spectacular","ipa": "/spekˈtækjʊlə/","pos": "adj","zh": "壯觀的","part": "B","examples": ["The annual migration of monarch butterflies through Mexico is one of the most spectacular natural events on the planet.","The company launched its new product with a spectacular marketing campaign that dominated social media for weeks."],"col": ["spectacular view","spectacular scenery","spectacular achievement","truly spectacular","spectacular performance","spectacular failure","spectacular success","spectacular display"],"syn": [{"w": "breathtaking","n": "強調令人窒息的視覺衝擊，與spectacular幾乎同義"},{"w": "stunning","n": "強調強烈的視覺衝擊，比spectacular更口語"},{"w": "impressive","n": "最廣義，強調令人印象深刻，比spectacular更中性"}],"note": "spectacular可正面（a spectacular view）也可負面（a spectacular failure）；IELTS旅遊和商業類寫作中都是高分詞彙。"},{"word": "stunning","ipa": "/ˈstʌnɪŋ/","pos": "adj","zh": "絕美的","part": "B","examples": ["The newly restored coastal wetlands provided a stunning backdrop for migratory birds arriving from across the globe.","Researchers have made a series of stunning discoveries that are fundamentally challenging our understanding of human evolution."],"col": ["stunning view","stunning landscape","stunning discovery","truly stunning","stunning achievement","stunning performance","visually stunning","stunning natural beauty"],"syn": [{"w": "breathtaking","n": "強調令人窒息的壯觀，與stunning幾乎同義用於景觀描述"},{"w": "remarkable","n": "強調引人注目的特殊性，比stunning更偏學術"},{"w": "extraordinary","n": "強調超乎尋常，比stunning更正式"}],"note": "stunning在口語和寫作中都非常常用，但在學術語境中建議替換為remarkable或extraordinary以提升正式程度。"},{"word": "attract","ipa": "/əˈtrækt/","pos": "verb","zh": "吸引","part": "C","examples": ["National parks attract millions of visitors annually, generating vital revenue for conservation programmes.","High wages and quality of life consistently attract skilled workers from overseas to urban centres in developed economies."],"col": ["attract visitors","attract investment","attract attention","attract talent","attract tourists","attract criticism","attract funding","attract wildlife"],"syn": [{"w": "draw","n": "強調主動吸引，與attract幾乎同義但更口語"},{"w": "lure","n": "帶有誘惑意涵，暗示用誘餌吸引，比attract更負面"},{"w": "entice","n": "強調用誘人的條件吸引，比attract更帶有廣告或商業意涵"}],"note": "attract是IELTS高頻動詞；attract investment和attract tourism是Task 2中評估政策效果的核心表達。"},{"word": "damage","ipa": "/ˈdæmɪdʒ/","pos": "verb","zh": "損害","part": "C","examples": ["Urban expansion has irreversibly damaged many of the wetlands that once provided vital flood protection for riverside communities.","Constant noise pollution can significantly damage hearing, particularly in individuals who work in manufacturing environments."],"col": ["damage environment","damage reputation","severely damage","damage health","damage ecosystem","cause damage","damage infrastructure","damage relationships"],"syn": [{"w": "harm","n": "最廣義，泛指造成任何形式的傷害，比damage更廣用"},{"w": "destroy","n": "強調徹底摧毀，比damage更嚴重"},{"w": "impair","n": "較正式，強調削弱功能或能力，比damage更強調對功能的影響"}],"note": "damage既作動詞也作名詞；在IELTS環境類文章中，irreversible damage（不可逆損害）是描述生態破壞嚴重性的最有力表達，比simply harm更精準。"},{"word": "outweigh","ipa": "/ˌaʊtˈweɪ/","pos": "verb","zh": "重於；超過","part": "C","examples": ["Proponents of nuclear energy argue that its long-term benefits in terms of low-carbon power generation clearly outweigh the risks associated with waste disposal.","For many conservation organisations, the ecological costs of tourism in fragile environments outweigh the economic benefits it generates."],"col": ["benefits outweigh costs","risks outweigh benefits","outweigh disadvantages","clearly outweigh","far outweigh","outweigh the harm","outweigh concerns","outweigh negatives"],"syn": [{"w": "exceed","n": "強調在數量或程度上超過，比outweigh更廣義"},{"w": "surpass","n": "強調超越某一標準或水平，比outweigh更積極"},{"w": "override","n": "強調優先壓制，比outweigh更強調取代性"}],"note": "the benefits outweigh the costs/risks是IELTS Task 2最高頻的句型之一，用於論述利弊對比；熟練使用outweigh有助獲得高分。"},{"word": "burrow","ipa": "/ˈbʌrəʊ/","pos": "noun","zh": "洞穴","part": "A","examples": ["Badgers construct elaborate underground burrow systems, known as setts, which may be used by multiple generations over decades.","Desert animals often shelter in burrows during the hottest parts of the day to avoid life-threatening temperature extremes."],"col": ["dig a burrow","underground burrow","animal burrow","rabbit burrow","burrow system","deep burrow","abandon a burrow","burrow entrance"],"syn": [{"w": "tunnel","n": "最廣義，泛指地下通道，不限於動物挖掘"},{"w": "den","n": "指動物的巢穴或棲所，不一定是地下洞穴"},{"w": "hole","n": "最廣義，泛指任何洞口，比burrow更口語"}],"note": "burrow既是名詞（地洞）也是動詞（挖掘）；IELTS生態類文章中，burrow是描述穴居動物（burrowing animals）習性的核心詞彙。"},{"word": "colony","ipa": "/ˈkɒləni/","pos": "noun","zh": "群落；殖民地","part": "A","examples": ["A single ant colony may contain millions of individuals working in a highly coordinated and specialised division of labour.","The decline of bee colonies due to pesticide use and habitat loss poses a serious threat to agricultural pollination globally."],"col": ["ant colony","bee colony","coral colony","established colony","thriving colony","colony collapse","penal colony","colony of seabirds"],"syn": [{"w": "community","n": "最廣義，泛指共同生活的群體，不一定指生物意義上的群落"},{"w": "population","n": "強調特定地區的生物個體數量，比colony更廣義"},{"w": "settlement","n": "偏人類社會語境，指定居的聚落，也可指殖民地"}],"note": "colony在生物語境指動物群落，在歷史語境指殖民地；colony collapse disorder（蜂群崩潰症）是IELTS生態類文章最重要的相關概念。"},{"word": "degradation","ipa": "/ˌdeɡrəˈdeɪʃən/","pos": "noun","zh": "降解；退化","part": "A","examples": ["Soil degradation caused by intensive agricultural practices reduces crop yields and threatens long-term food security.","The degradation of coral reef ecosystems is occurring at an unprecedented rate due to ocean warming and acidification."],"col": ["environmental degradation","soil degradation","land degradation","habitat degradation","moral degradation","gradual degradation","degradation of ecosystems","prevent degradation"],"syn": [{"w": "deterioration","n": "最廣義，指品質或狀況的下降，比degradation更廣用"},{"w": "decline","n": "強調逐漸減少或下降，比degradation更中性"},{"w": "depletion","n": "強調資源的耗盡或減少，偏指數量的減少"}],"note": "degradation強調品質的惡化和系統性破壞；IELTS中land degradation和habitat degradation是描述生態惡化的高頻核心搭配。"},{"word": "demise","ipa": "/dɪˈmaɪz/","pos": "noun","zh": "滅絕；死亡","part": "A","examples": ["The demise of several traditional industries in the region has left large numbers of workers without viable employment alternatives.","Conservationists warn that without immediate action, the polar bear's demise could occur within this century."],"col": ["swift demise","gradual demise","predict the demise","lead to demise","seal the demise","face demise","economic demise","cultural demise"],"syn": [{"w": "extinction","n": "特指物種的徹底滅絕，是demise在生物語境的最終形式"},{"w": "collapse","n": "強調突然的崩潰或失敗，比demise更強調速度"},{"w": "downfall","n": "強調因自身失誤或弱點導致的衰亡，比demise更強調原因"}],"note": "demise通常含有不可逆轉的終結意涵；IELTS中demise of species/industry是描述不可逆衰亡的高分詞彙，比disappearance更有力。"},{"word": "devastation","ipa": "/ˌdevəˈsteɪʃən/","pos": "noun","zh": "毀滅","part": "A","examples": ["The hurricane left a trail of devastation across coastal communities, destroying thousands of homes and displacing tens of thousands of residents.","The ecological devastation caused by the oil spill was visible for decades in the affected marine environment."],"col": ["widespread devastation","ecological devastation","economic devastation","cause devastation","face devastation","total devastation","path of devastation","leave devastation"],"syn": [{"w": "destruction","n": "最廣義，強調破壞行為或結果，比devastation更廣用"},{"w": "ruin","n": "強調徹底損毀的結果，可指物理或財務層面"},{"w": "havoc","n": "強調混亂和嚴重破壞，常用於wreak havoc（造成嚴重破壞）"}],"note": "devastation強調毀滅性的廣泛破壞；IELTS環境和社會類文章中，wreak devastation是描述自然災害或人為破壞影響的高分固定搭配。"},{"word": "habitat","ipa": "/ˈhæbɪtæt/","pos": "noun","zh": "棲息地","part": "A","examples": ["The destruction of natural habitats through deforestation and urban expansion is the primary driver of biodiversity loss globally.","Conservation efforts that focus solely on protecting individual species often fail to address the underlying loss of habitat that threatens them."],"col": ["natural habitat","loss of habitat","destroy habitat","protect habitat","habitat destruction","critical habitat","wildlife habitat","restore habitat"],"syn": [{"w": "ecosystem","n": "比habitat更廣義，指生物與環境之間的整體相互作用系統"},{"w": "environment","n": "最廣義，泛指生物所處的外部條件"},{"w": "biome","n": "最學術，指具有相似氣候和植被特徵的大型生態區域"}],"note": "habitat是IELTS生態類核心詞彙；habitat destruction、habitat loss和habitat restoration（棲息地恢復）是三個必記搭配。"},{"word": "harm","ipa": "/hɑːm/","pos": "noun","zh": "傷害","part": "A","examples": ["Environmental regulations aim to prevent commercial activities from causing irreversible harm to ecosystems and biodiversity.","There is growing evidence that excessive screen time may cause psychological harm to young children."],"col": ["do harm","cause harm","physical harm","serious harm","long-term harm","irreversible harm","prevent harm","harm to environment"],"syn": [{"w": "damage","n": "最廣義，可指物理或非物理的傷害，比harm更廣用"},{"w": "injury","n": "偏指身體上的傷害，比harm更具體"},{"w": "detriment","n": "較正式，指不利影響或損失，常用於to the detriment of"}],"note": "harm可作名詞和動詞；do more harm than good（弊大於利）是IELTS寫作中論述政策副作用的標準高分短語，在Task 2幾乎適用於所有爭議性主題。"},{"word": "herd","ipa": "/hɜːd/","pos": "noun","zh": "獸群","part": "A","examples": ["The migratory herds of wildebeest that cross the Serengeti represent one of the last great wildlife spectacles on Earth.","Scientists have observed that elephant herds are matriarchal, led by the oldest and most experienced female in the group."],"col": ["herd of cattle","herd of elephants","herd instinct","migratory herd","herd mentality","herd behaviour","elephant herd","large herd"],"syn": [{"w": "flock","n": "特指鳥類或綿羊的群體"},{"w": "pack","n": "特指狼或犬科動物的群體"},{"w": "swarm","n": "特指昆蟲（尤其是蜜蜂）的大群體"}],"note": "不同動物群體有不同的集合名詞：herd（牛、象）、pack（狼）、flock（鳥、羊）、swarm（蜂、蟲）；IELTS野生動物類閱讀中，這些群體詞彙是常見細節題考點。"},{"word": "hive","ipa": "/haɪv/","pos": "noun","zh": "蜂箱；蜂群","part": "A","examples": ["A healthy bee hive can contain up to sixty thousand individual bees during the peak of summer.","The city's financial district is a hive of activity during trading hours, with billions of dollars changing hands every minute."],"col": ["beehive","hive of activity","hive mind","queen hive","abandon hive","hive collapse","artificial hive","hive entrance"],"syn": [{"w": "colony","n": "強調蜜蜂或其他群居動物的整個社會群落"},{"w": "nest","n": "最廣義，泛指各種動物的巢穴或棲所"},{"w": "den","n": "特指哺乳動物的棲息巢穴，比hive更廣義"}],"note": "hive除指蜂巢外，a hive of activity是IELTS高分固定搭配，比喻某地非常繁忙；hive mind（集體智慧）在科技和社會類文章中也是新興概念。"},{"word": "lifespan","ipa": "/ˈlaɪfspæn/","pos": "noun","zh": "壽命","part": "A","examples": ["Advances in medicine have dramatically extended the average human lifespan over the past century.","The lifespan of plastic products in the environment far exceeds that of the organisms they are designed to serve."],"col": ["average lifespan","extend lifespan","lifespan of a product","human lifespan","short lifespan","lifespan of a species","increase lifespan","natural lifespan"],"syn": [{"w": "life expectancy","n": "偏統計學用語，強調基於資料的平均預期壽命"},{"w": "longevity","n": "強調長壽的特質，比lifespan更側重長久性"},{"w": "duration","n": "最廣義，泛指任何事物持續的時間"}],"note": "lifespan指個體實際壽命，life expectancy指統計預期壽命；IELTS中increasing life expectancy是最核心的健康類社會議題之一。"},{"word": "pack","ipa": "/pæk/","pos": "noun","zh": "一群（狼、狗等）","part": "A","examples": ["Wolf packs coordinate their hunting strategy with remarkable sophistication, using a combination of speed, stamina, and teamwork.","The documentary depicted the complex social hierarchy that governs life within a pack of African wild dogs."],"col": ["wolf pack","pack of wolves","pack mentality","pack behaviour","run in a pack","pack leader","hunting pack","pack hierarchy"],"syn": [{"w": "group","n": "最廣義，泛指任何動物或人的群體"},{"w": "herd","n": "特指大型哺乳動物的群體，如牛或象"},{"w": "pride","n": "特指獅群，是lion的專用集合名詞"}],"note": "pack特指狼或犬科動物群體；pack mentality（群體心理）在社會學語境指個人受群體影響而失去獨立判斷的現象，是IELTS社會類文章的有用概念。"},{"word": "parasite","ipa": "/ˈpærəsaɪt/","pos": "noun","zh": "寄生蟲","part": "A","examples": ["Many parasites have co-evolved with their hosts over millions of years, developing complex mechanisms to avoid immune detection.","Critics of social welfare systems sometimes describe long-term claimants as parasites on the state, a description widely condemned as stigmatising."],"col": ["parasitic relationship","intestinal parasite","host and parasite","internal parasite","external parasite","parasite infection","social parasite","parasite control"],"syn": [{"w": "freeloader","n": "口語，比喻義：指靠他人生活而不貢獻的人"},{"w": "bloodsucker","n": "口語，強烈貶義，比喻剝削他人的人"},{"w": "leech","n": "本義指水蛭，比喻義同freeloader，帶有強烈批評意涵"}],"note": "parasite在生物語境指寄生生物，在社會語境指剝削他人的人；IELTS生態類文章中parasite-host relationships是描述生態系統複雜性的重要概念。"},{"word": "prey","ipa": "/preɪ/","pos": "noun","zh": "獵物","part": "A","examples": ["As apex predators, sharks play a vital role in maintaining the health of marine ecosystems by regulating prey populations.","Elderly and isolated individuals are disproportionately likely to fall prey to online scams and financial fraud."],"col": ["natural prey","prey population","hunt prey","prey species","fall prey to","bird of prey","prey and predator","easy prey"],"syn": [{"w": "victim","n": "比喻義：指受害者，比prey更廣義，不限於動物語境"},{"w": "quarry","n": "較正式，強調被追獵的目標，比prey更強調追獵過程"},{"w": "target","n": "最廣義，泛指任何被針對的對象"}],"note": "prey既作名詞也作動詞（prey on）；fall prey to（成為...的受害者）是IELTS高分慣用表達，可用於生態語境（小動物淪為獵物）和社會語境（成為詐騙受害者）。"},{"word": "rival","ipa": "/ˈraɪvəl/","pos": "noun","zh": "對手；競爭者","part": "A","examples": ["The company invested heavily in research and development to maintain its technological lead over its closest rivals.","Competition between rival species for the same food source is one of the key drivers of evolutionary adaptation."],"col": ["business rival","close rival","chief rival","rival company","rival species","rival team","fierce rival","outperform rivals"],"syn": [{"w": "competitor","n": "最廣義，強調在同一市場或領域競爭的對手"},{"w": "opponent","n": "偏運動或辯論語境，強調直接對立的一方"},{"w": "adversary","n": "最正式且帶有敵對意涵，比rival更強調衝突性"}],"note": "rival既是名詞也是動詞（to rival sth.）；IELTS商業和生態類文章中rival出現在不同語境，需注意詞性；to rival意為「可與...媲美」，是高分替換表達。"},{"word": "swarm","ipa": "/swɔːm/","pos": "noun","zh": "一大群（昆蟲）","part": "A","examples": ["A swarm of locusts descended on the region's crops, devastating harvests and triggering a humanitarian food crisis.","Swarms of tourists in high season have led several popular destinations to introduce visitor caps in an effort to limit damage."],"col": ["swarm of bees","locust swarm","swarm of tourists","swarm behaviour","drone swarm","large swarm","swarm intelligence","swarm of insects"],"syn": [{"w": "mass","n": "最廣義，泛指大量聚集的人或物"},{"w": "horde","n": "偏貶義，指大量令人感到壓迫的人群"},{"w": "cloud","n": "比喻性地指大量飛行昆蟲，如a cloud of mosquitoes"}],"note": "swarm特指昆蟲群；swarm intelligence（群體智慧）是IELTS科技類閱讀中討論仿生學和AI設計的重要概念，指模擬蜂群行為的演算法系統。"},{"word": "threshold","ipa": "/ˈθreʃhəʊld/","pos": "noun","zh": "門檻；開端","part": "A","examples": ["Scientists warn that the Earth is approaching critical ecological thresholds beyond which recovery may be impossible.","The introduction of a minimum income threshold has helped lift millions of families out of absolute poverty."],"col": ["pain threshold","critical threshold","income threshold","cross a threshold","ecological threshold","threshold level","at the threshold","reach a threshold"],"syn": [{"w": "limit","n": "最廣義，指不可超越的邊界或限制"},{"w": "tipping point","n": "強調一旦越過便引發連鎖反應的臨界點，比threshold更強調不可逆性"},{"w": "boundary","n": "強調邊界，比threshold更廣義"}],"note": "threshold在IELTS環境（ecological threshold）和政策（income threshold）語境都很重要；tipping point是其強調不可逆轉折的特殊形式。"},{"word": "appalling","ipa": "/əˈpɔːlɪŋ/","pos": "adj","zh": "惡劣的；駭人的","part": "B","examples": ["The documentary exposed the appalling conditions in which many farmed animals are kept throughout their lives.","The city's appalling air quality has been linked to significantly elevated rates of respiratory disease among residents."],"col": ["appalling conditions","appalling behaviour","truly appalling","appalling record","appalling situation","appalling treatment","quite appalling","find it appalling"],"syn": [{"w": "shocking","n": "強調令人震驚，比appalling更廣義，不一定含有道德譴責"},{"w": "dreadful","n": "強調極差的品質或令人恐懼的狀況"},{"w": "horrific","n": "強調引發恐懼或強烈憤慨，語氣最強"}],"note": "appalling帶有強烈的道德譴責意味，強調某事差到令人震驚；IELTS動物權利、環境或人權類文章中是高頻詞彙，比simply bad更有表達力。"},{"word": "aquatic","ipa": "/əˈkwætɪk/","pos": "adj","zh": "水生的；水上的","part": "B","examples": ["Aquatic ecosystems support an immense diversity of life, including many species that have yet to be formally identified by scientists.","The introduction of alien species into aquatic environments has devastated native fish populations in several major river systems."],"col": ["aquatic ecosystem","aquatic life","aquatic species","aquatic habitat","aquatic environment","marine and aquatic","aquatic plant","aquatic research"],"syn": [{"w": "marine","n": "特指海洋的，是aquatic的下位詞，更具體"},{"w": "freshwater","n": "特指淡水環境，與marine相對，同為aquatic的下位詞"},{"w": "underwater","n": "強調水面以下的環境，可修飾活動或環境"}],"note": "aquatic是最廣義的「水生」形容詞，涵蓋海洋、淡水等所有水體環境；IELTS生態類文章中aquatic biodiversity和aquatic pollution是常見搭配。"},{"word": "hypocritical","ipa": "/ˌhɪpəˈkrɪtɪkəl/","pos": "adj","zh": "偽善的","part": "B","examples": ["It would be hypocritical for wealthy nations to demand that developing countries curb deforestation while continuing to consume the agricultural products that drive it.","Critics accused the government of being hypocritical in its environmental commitments by simultaneously expanding fossil fuel extraction."],"col": ["hypocritical behaviour","somewhat hypocritical","deeply hypocritical","seem hypocritical","considered hypocritical","hypocritical stance","hypocritical attitude","blatantly hypocritical"],"syn": [{"w": "inconsistent","n": "較中性，強調言行不一，比hypocritical少了道德譴責"},{"w": "two-faced","n": "最口語，強調表裡不一，含強烈輕蔑意味"},{"w": "insincere","n": "強調缺乏誠意，比hypocritical更廣義"}],"note": "hypocritical指言行相悖、虛偽做作；IELTS環境和政策類文章中，批評developed nations在環保議題上的hypocritical stance是常見論點。"},{"word": "impartial","ipa": "/ɪmˈpɑːʃəl/","pos": "adj","zh": "公正的","part": "B","examples": ["A free press relies on journalists maintaining impartial standards when reporting on political and social issues.","The inquiry was conducted by an impartial panel of experts with no financial ties to either party involved in the dispute."],"col": ["impartial judge","impartial review","remain impartial","impartial panel","impartial assessment","appear impartial","impartial observer","impartial investigation"],"syn": [{"w": "unbiased","n": "強調沒有偏見，與impartial幾乎同義但更強調態度"},{"w": "objective","n": "強調基於事實而非情感判斷，比impartial更強調方法論"},{"w": "neutral","n": "強調不偏向任何一方，比impartial更強調立場的中立"}],"note": "impartial強調對各方一視同仁；objective強調以事實為基礎；IELTS媒體類文章中，impartial reporting（公正報導）是討論新聞倫理的核心概念。"},{"word": "irresponsible","ipa": "/ˌɪrɪˈspɒnsɪbəl/","pos": "adj","zh": "不負責任的","part": "B","examples": ["Critics argued that it was irresponsible to approve the development without a comprehensive environmental impact assessment.","Irresponsible fishing practices, including the use of fine-mesh nets, have depleted fish stocks in many regions."],"col": ["irresponsible behaviour","irresponsible decision","deeply irresponsible","irresponsible action","financially irresponsible","environmentally irresponsible","considered irresponsible","irresponsible attitude"],"syn": [{"w": "reckless","n": "強調魯莽輕率，不考慮後果，比irresponsible更強調危險性"},{"w": "negligent","n": "強調因疏忽而造成傷害，偏法律語境"},{"w": "careless","n": "最廣義，強調粗心大意，語氣比irresponsible輕"}],"note": "irresponsible在IELTS環境和政策類寫作中是高頻詞彙，常用於批評企業或政府的行為；reckless則更常用於描述個人行為的衝動魯莽。"},{"word": "nocturnal","ipa": "/nɒkˈtɜːnəl/","pos": "adj","zh": "夜行性的","part": "B","examples": ["Many of the world's most endangered species are nocturnal, making population surveys and conservation efforts particularly challenging.","The construction of artificial lighting in urban areas disrupts the nocturnal behaviour of wildlife and contributes to the decline of light-sensitive species."],"col": ["nocturnal animal","nocturnal creature","nocturnal behaviour","nocturnal predator","nocturnal habits","nocturnal activity","strictly nocturnal","nocturnal species"],"syn": [{"w": "night-active","n": "最描述性，強調夜間活動，比nocturnal更口語"},{"w": "diurnal","n": "反義詞，指日行性的，是nocturnal的學術對比詞"},{"w": "crepuscular","n": "最精確，特指在黎明和黃昏活動的動物，比nocturnal更具體"}],"note": "nocturnal是IELTS生態和動物類閱讀的核心詞彙；light pollution（光污染）對nocturnal species的影響是近年IELTS閱讀的新興考點。"},{"word": "outrageous","ipa": "/aʊtˈreɪdʒəs/","pos": "adj","zh": "無理的；令人震驚的","part": "B","examples": ["Environmental groups condemned the proposal as outrageous, arguing it would cause irreparable damage to a protected ecosystem.","The fee charged for a basic wildlife tour in some protected areas can be outrageous, limiting access to all but the most affluent travellers."],"col": ["outrageous behaviour","outrageous claim","outrageous price","truly outrageous","find it outrageous","outrageous decision","outrageous suggestion","outrageous amount"],"syn": [{"w": "shocking","n": "強調令人震驚，比outrageous更廣義"},{"w": "scandalous","n": "強調使人蒙羞或引發公眾憤慨，比outrageous更強調輿論反應"},{"w": "unconscionable","n": "最強烈且正式，強調違反道德良知，不可接受"}],"note": "outrageous帶有強烈的道德憤慨；IELTS批判性寫作中，形容企業或政府行為時，outrageous是高分表達，但需搭配具體論據才能使論點有說服力。"},{"word": "risky","ipa": "/ˈrɪski/","pos": "adj","zh": "有風險的","part": "B","examples": ["Investing in a single stock is generally considered risky compared to diversifying across a broad portfolio.","It is risky to introduce non-native species into an ecosystem without extensive research into the potential ecological consequences."],"col": ["risky venture","risky behaviour","potentially risky","risky strategy","risky investment","quite risky","increasingly risky","prove risky"],"syn": [{"w": "hazardous","n": "強調帶來實際傷害的危險，比risky更強調客觀危害"},{"w": "precarious","n": "強調脆弱不穩定的狀態，比risky更強調岌岌可危"},{"w": "perilous","n": "最強烈且正式，強調充滿危險，多用於文學或強調性語境"}],"note": "risky是口語化表達；IELTS學術寫作中可替換為hazardous、precarious或fraught with risk以提升正式程度。"},{"word": "venomous","ipa": "/ˈvenəməs/","pos": "adj","zh": "有毒的","part": "B","examples": ["Australia is home to a disproportionate number of venomous species, including several of the world's deadliest snakes and spiders.","The politician's venomous rhetoric towards immigrants was condemned by human rights groups across the political spectrum."],"col": ["venomous snake","venomous creature","venomous bite","venomous species","highly venomous","venomous attack","venomous insect","venomous remark"],"syn": [{"w": "toxic","n": "最廣義，指有毒的物質，比venomous更廣義且常用於化學語境"},{"w": "poisonous","n": "強調接觸或食用有害，與venomous的區別在於venomous指主動注射毒液"},{"w": "lethal","n": "強調致命性，比venomous更強調結果"}],"note": "venomous指動物主動注射毒液（如蛇咬），poisonous指被動接觸或食入有毒物質（如毒菇）；這一區別是IELTS生物類閱讀的常見考點。"},{"word": "flourish","ipa": "/ˈflʌrɪʃ/","pos": "verb","zh": "繁茂；興旺","part": "C","examples": ["Marine life flourishes in areas where cold upwelling currents bring nutrients from the ocean floor to the surface.","Small and medium enterprises tend to flourish in economic environments characterised by low regulation and access to affordable credit."],"col": ["flourish in environment","business flourishes","culture flourishes","flourish naturally","allowed to flourish","continue to flourish","society flourishes","economically flourish"],"syn": [{"w": "thrive","n": "與flourish幾乎同義，強調在有利條件下健康茁壯成長"},{"w": "prosper","n": "偏財務或商業語境，強調成功和繁榮"},{"w": "bloom","n": "偏植物或情感語境，強調盛開或綻放"}],"note": "flourish和thrive幾乎同義，但flourish帶有更文學意涵；IELTS中ecosystems flourish when pollution is reduced是描述因果關係的有效句型。"},{"word": "forage","ipa": "/ˈfɒrɪdʒ/","pos": "verb","zh": "覓食","part": "C","examples": ["Black bears regularly forage along the edges of forests and farmland, bringing them into increasingly frequent conflict with human settlements.","Foraging for wild mushrooms and edible plants has experienced a remarkable revival among urban dwellers seeking a connection with nature."],"col": ["forage for food","forage in forest","animals forage","forage widely","forage at night","forage for resources","forage on farmland","forage behaviour"],"syn": [{"w": "scavenge","n": "強調從廢棄物或殘渣中尋找食物，比forage帶有更多貶義"},{"w": "search for food","n": "最廣義的描述性替換"},{"w": "graze","n": "特指食草動物在地面覓食的行為，比forage更具體"}],"note": "forage強調動物廣泛搜尋食物的行為；IELTS生態和野生動物類文章中，foraging behaviour（覓食行為）是描述動物習性的重要術語。"},{"word": "hibernate","ipa": "/ˈhaɪbəneɪt/","pos": "verb","zh": "冬眠","part": "C","examples": ["As winters become milder due to climate change, some species are hibernating for shorter periods, which may affect their reproductive cycles.","Brown bears typically hibernate from late autumn through to early spring, emerging in a weakened state and in need of food."],"col": ["hibernate through winter","begin to hibernate","animals that hibernate","hibernate underground","fail to hibernate","hibernate in caves","seasonal hibernation","hibernate behaviour"],"syn": [{"w": "dormant","n": "形容詞，描述冬眠或休眠的狀態，而非動作"},{"w": "lie dormant","n": "強調保持不活躍狀態，可用於植物種子或火山等"},{"w": "overwinter","n": "強調度過冬季的過程，比hibernate更廣義"}],"note": "hibernate特指動物冬季休眠；IELTS中climate change disrupting hibernation patterns是描述氣候對野生動物影響的重要具體例子。"},{"word": "lay","ipa": "/leɪ/","pos": "verb","zh": "產（蛋）；放置","part": "C","examples": ["Sea turtles return to the beaches where they were born to lay their eggs, a behaviour threatened by coastal development.","Many fish species lay their eggs in shallow, sheltered water where they are better protected from predators."],"col": ["lay eggs","lay a foundation","lay the groundwork","lay traps","lay claim to","lay emphasis on","lay plans","lay waste to"],"syn": [{"w": "deposit","n": "強調將物品放置或存入某處，比lay更正式"},{"w": "produce","n": "最廣義，泛指生產或產出，不限於產卵"},{"w": "spawn","n": "特指魚類等生物大量產卵，比lay更具體"}],"note": "lay eggs（產卵）是IELTS生物和生態類閱讀的核心動詞短語；注意lay（過去式laid）和lie（過去式lay）是常見混淆詞，需特別注意。"},{"word": "poach","ipa": "/pəʊtʃ/","pos": "verb","zh": "偷獵；水煮","part": "C","examples": ["Despite intensive anti-poaching measures, the illegal killing of elephants for ivory continues to threaten the species' survival.","Headhunters are employed by corporations to poach talented executives from competitor companies."],"col": ["poach animals","poach elephants","anti-poaching measures","poach for ivory","poach workers","illegally poach","poach from competitors","poach wildlife"],"syn": [{"w": "hunt illegally","n": "最描述性，強調非法獵殺行為"},{"w": "traffic","n": "強調非法貿易和走私，偏指將動物或動物製品交易"},{"w": "headhunt","n": "特指高薪挖角人才，是poach在商業語境的同義詞"}],"note": "poach最重要的IELTS相關語境是非法盜獵；anti-poaching（反盜獵）措施的有效性是IELTS野生動物保護類閱讀和寫作的常見主題。"},{"word": "thrive","ipa": "/θraɪv/","pos": "verb","zh": "茁壯成長；興盛","part": "C","examples": ["Coral reefs thrive only within a narrow temperature range, making them particularly susceptible to the effects of ocean warming.","Evidence suggests that students thrive academically when they feel genuinely supported by both teachers and parents."],"col": ["thrive in conditions","thrive on challenge","business thrives","ecosystem thrives","continue to thrive","thrive under pressure","children thrive","allow to thrive"],"syn": [{"w": "flourish","n": "與thrive幾乎同義，比thrive帶有更多文學性"},{"w": "prosper","n": "偏財務或商業語境，強調繁榮成功"},{"w": "grow","n": "最廣義，指任何形式的發展，比thrive更中性"}],"note": "thrive和flourish可互換，但thrive在IELTS學術寫作中更常見；thrive on是固定搭配，如thrive on competition，是高分表達。"},{"word": "coast","ipa": "/kəʊst/","pos": "noun","zh": "海岸","part": "A","examples": ["Coastal communities in low-lying areas face an existential threat from rising sea levels driven by climate change.","The ecologically rich mangrove forests that line much of the tropical coast provide natural protection against storm surges."],"col": ["coastal area","along the coast","coast erosion","coast guard","coast line","tropical coast","rugged coast","scenic coast"],"syn": [{"w": "shoreline","n": "強調海岸線的線性輪廓，比coast更精確"},{"w": "seaside","n": "偏休閒旅遊語境，強調海邊的休閒氛圍"},{"w": "littoral zone","n": "最學術，指潮間帶的科學術語，IELTS生態類閱讀可能出現"}],"note": "coast是IELTS地理和環境類核心詞彙；coastal erosion（海岸侵蝕）和coastal flooding（海岸洪水）是描述氣候變化影響的重要具體例子。"},{"word": "shore","ipa": "/ʃɔː/","pos": "noun","zh": "岸邊","part": "A","examples": ["Tonnes of plastic waste wash up on the shores of even the most remote islands, illustrating the global scale of ocean pollution.","Seabirds nest on rocky shores that are inaccessible to terrestrial predators, using the natural geography as a defence mechanism."],"col": ["on the shore","shore up","rocky shore","opposite shore","shore erosion","along the shore","shoreline habitat","sandy shore"],"syn": [{"w": "beach","n": "特指有沙或礫石的平坦海濱，比shore更具體"},{"w": "coast","n": "更廣義，指陸地與海洋交界的整體地帶，比shore更大範圍"},{"w": "waterfront","n": "強調靠近水邊的城市或開發區域"}],"note": "shore作動詞（shore up）意為「支撐、加固」，如shore up an economy（支撐經濟），是IELTS中常見的慣用表達，與名詞義完全不同，需注意。"},{"word": "species","ipa": "/ˈspiːʃiːz/","pos": "noun","zh": "物種","part": "A","examples": ["Biologists estimate that human activity has caused the extinction of species at a rate one thousand times greater than the natural background rate.","The introduction of invasive species into new environments can rapidly displace native flora and fauna, irreversibly altering entire ecosystems."],"col": ["endangered species","invasive species","native species","species diversity","protect species","species extinction","species habitat","migratory species"],"syn": [{"w": "organism","n": "最廣義，指任何生物體，比species更強調個體"},{"w": "creature","n": "口語，泛指任何動物，比species更非正式"},{"w": "taxon","n": "最學術的生物分類術語，泛指任何分類層級"}],"note": "species單複數相同；IELTS生態類文章中，endangered species、invasive species和keystone species（關鍵物種）是三個必記搭配。"},{"word": "tide","ipa": "/taɪd/","pos": "noun","zh": "潮汐","part": "A","examples": ["Tidal power stations harness the energy of the rising and falling tide to generate clean, predictable electricity.","There has been a noticeable tide of public opinion turning against the unbridled growth of social media platforms."],"col": ["high tide","low tide","tidal power","tide turns","rising tide","tide of opinion","stem the tide","tide of change"],"syn": [{"w": "current","n": "強調流動的水流，比tide更廣義，不限於潮汐"},{"w": "wave","n": "可比喻性地指大規模的變化趨勢，與tide同義"},{"w": "trend","n": "比喻義：強調長期發展方向，比tide更常用於社會現象"}],"note": "tide有潮汐義和比喻義（趨勢）；turn the tide（扭轉局勢）和stem the tide（阻止趨勢）是IELTS高分慣用表達，在環境、政治和社會類文章中都極有用。"},{"word": "native","ipa": "/ˈneɪtɪv/","pos": "adj","zh": "本土的；原生的","part": "B","examples": ["Restoring native plant species to degraded areas is often more effective than introducing exotic varieties that may become invasive.","The research focused on comparing the vocabulary acquisition rates of native and non-native speakers of English in academic settings."],"col": ["native species","native speaker","native language","native habitat","native plant","native to region","native culture","indigenous and native"],"syn": [{"w": "indigenous","n": "強調原住的、最初的，比native有更強的歷史和文化意涵"},{"w": "endemic","n": "特指某地區獨有的物種，是native的更精確生物術語"},{"w": "local","n": "最廣義，強調地方性，比native更中性且口語"}],"note": "native和indigenous幾乎同義，但indigenous有更強的政治人權含義（原住民族）；IELTS生態文章中native species是核心詞彙。"},{"word": "tropical","ipa": "/ˈtrɒpɪkəl/","pos": "adj","zh": "熱帶的","part": "B","examples": ["Tropical rainforests are responsible for generating approximately twenty percent of the world's oxygen supply.","Rising ocean temperatures are threatening the survival of tropical coral reef ecosystems on a global scale."],"col": ["tropical rainforest","tropical climate","tropical disease","tropical species","tropical region","tropical storm","tropical ecosystem","tropical biodiversity"],"syn": [{"w": "equatorial","n": "最精確的地理術語，指赤道附近的地區"},{"w": "subtropical","n": "指亞熱帶氣候，比tropical更廣義，包含部分溫帶特徵"},{"w": "humid","n": "強調濕熱的氣候特徵，比tropical更廣義"}],"note": "tropical是IELTS環境類核心形容詞；tropical deforestation（熱帶森林砍伐）和tropical biodiversity（熱帶生物多樣性）是最重要的搭配。"},{"word": "torrential","ipa": "/təˈrenʃəl/","pos": "adj","zh": "猛烈的（雨）","part": "B","examples": ["Torrential rainfall overwhelmed the city's drainage infrastructure, causing severe flooding in low-lying residential areas.","Climatologists predict that climate change will increase the frequency and intensity of torrential precipitation events in many regions."],"col": ["torrential rain","torrential downpour","torrential rainfall","torrential flooding","torrential storm","experience torrential","torrential conditions","particularly torrential"],"syn": [{"w": "heavy","n": "最廣義，泛指大量的降雨，比torrential程度低"},{"w": "intense","n": "強調強度高，比torrential更廣義，可用於多種語境"},{"w": "severe","n": "強調嚴重性，比torrential更廣義，不限於降雨"}],"note": "torrential幾乎專門修飾rain和flooding；IELTS氣象和自然災害類文章中，torrential rainfall是描述極端天氣的標準詞彙。"}]
+};
+const PART_LABELS = {
+  A:'Part A · Nouns', B:'Part B · Adjectives',
+  C:'Part C · Verbs',  D:'Part D · Phrases'
+};
+const SK = 'ielts_u6';
+let cur=0, mode='browse', flipped=false, known=[], onIntro=true;
+function load(){ try{ known=JSON.parse(localStorage.getItem(SK)||'[]'); }catch(e){known=[];} }
+function save(){ try{ localStorage.setItem(SK,JSON.stringify(known)); }catch(e){} }
+function isKnown(i){ return known.includes(i); }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateDots(){
+  const n=UNIT.words.length, max=Math.min(n,30);
+  let h='';
+  for(let i=0;i<max;i++){
+    const c=(!onIntro&&i===cur)?'dot cur':isKnown(i)?'dot known':'dot';
+    h+='<div class="'+c+'"></div>';
+  }
+  if(n>max) h+='<span style="font-family:var(--fm);font-size:.5rem;color:var(--g400);margin-left:2px;">+'+(n-max)+'</span>';
+  document.getElementById('dots').innerHTML=h;
+}
+function renderIntro(){
+  document.getElementById('counter').textContent='Introduction';
+  document.getElementById('known-badge').textContent='';
+  document.getElementById('prog-fill').style.width='0%';
+  document.getElementById('action-count').textContent='';
+  document.getElementById('know-btn').style.display='none';
+  document.getElementById('review-btn').style.display='none';
+  const f=document.getElementById('front-face');
+  f.className='face front intro-face';
+  f.innerHTML=
+    '<div class="ic-eyebrow">IELTS Core Thematic Vocabulary · Chapter 6 of 10</div>'+
+    '<div class="ic-title">Nature, Wildlife & Travel</div>'+
+    '<div class="ic-zh">自然生態、野生動物與旅遊</div>'+
+    '<div class="ic-rule"></div>'+
+    '<div class="ic-body">'+
+      '<div>'+
+        '<div class="ic-sec-label">關於本章</div>'+
+        '<div class="ic-about">本章收錄 53 個核心詞彙。每個詞條包含搭配詞與中文解釋。</div>'+
+      '</div>'+
+      '<div>'+
+        '<div class="ic-sec-label">使用方式</div>'+
+        '<div class="ic-steps">'+
+          '<div class="ic-step"><span class="ic-tag">Browse</span>正面顯示英文單字，翻面查看中文與搭配詞。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Quiz</span>正面顯示中文，翻面前先回想英文，訓練主動回憶。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Know it ✓</span>標記已掌握。<span class="ic-tag">Review ↺</span>重新複習。</div>'+
+          '<div class="ic-step"><span class="ic-tag">快捷鍵</span>← → 切換卡片 &nbsp;·&nbsp; F 翻轉 &nbsp;·&nbsp; K 標記</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="ic-hint">按 Next → 開始學習</div>';
+  document.getElementById('back-face').innerHTML='';
+  updateDots();
+}
+function render(){
+  if(onIntro){ renderIntro(); return; }
+  document.getElementById('front-face').className='face front';
+  document.getElementById('know-btn').style.display='';
+  document.getElementById('review-btn').style.display='';
+  const w=UNIT.words[cur], n=UNIT.words.length, k=isKnown(cur);
+  document.getElementById('counter').textContent=(cur+1)+' / '+n;
+  document.getElementById('known-badge').textContent=known.length+' / '+n+' known';
+  document.getElementById('prog-fill').style.width=((cur+1)/n*100)+'%';
+  document.getElementById('action-count').textContent=known.length+'/'+n;
+  const isQuiz=(mode==='quiz');
+  document.getElementById('front-face').innerHTML=
+    '<div class="f-top">'+
+      '<div class="f-meta">'+
+        '<div class="f-num">#'+String(cur+1).padStart(3,'0')+'</div>'+
+        '<div class="f-part">'+(PART_LABELS[w.part]||'')+'</div>'+
+      '</div>'+
+      '<span class="f-known-mark'+(k?' vis':'')+'">✓ known</span>'+
+    '</div>'+
+    '<div class="f-body">'+
+      '<div class="f-word">'+esc(isQuiz?w.zh:w.word)+'</div>'+
+      (!isQuiz&&w.ipa?'<div class="f-ipa">'+esc(w.ipa)+'</div>':'')+
+      (!isQuiz?'<div class="f-pos">'+esc(w.pos)+'</div>':'')+
+    '</div>'+
+    '<div class="f-hint">'+(isQuiz?'think → click to flip':'click to flip →')+'</div>';
+  const exH=(w.examples||[]).map(e=>'<div class="b-ex">"'+esc(e)+'"</div>').join('');
+  const colH=(w.col||[]).map(c=>'<div class="b-col">'+esc(c)+'</div>').join('');
+  const synH=(w.syn||[]).map(s=>
+    '<div class="b-syn-row"><div class="b-syn-w">'+esc(s.w)+'</div>'+
+    '<div class="b-syn-n">（'+esc(s.n)+'）</div></div>'
+  ).join('');
+  const noteH=w.note?'<div class="b-sec"><div class="b-label">注意</div><div class="b-note">'+esc(w.note)+'</div></div>':'';
+  let zhLine, metaLine='';
+  if(isQuiz){
+    zhLine='<div class="b-quiz-word">'+esc(w.word)+'</div>';
+    metaLine='<div class="b-quiz-meta">'+esc(w.pos)+(w.ipa?' &nbsp;'+esc(w.ipa):'')+'</div>';
+  } else {
+    zhLine='<div class="b-zh">'+esc(w.zh)+'</div>';
+  }
+  document.getElementById('back-face').innerHTML=
+    zhLine+metaLine+
+    '<div class="b-rule"></div>'+
+    '<div class="b-content">'+
+      (exH?'<div class="b-sec"><div class="b-label">Examples</div>'+exH+'</div>':'')+
+      (colH?'<div class="b-sec"><div class="b-label">搭配</div><div class="b-cols">'+colH+'</div></div>':'')+
+      (synH?'<div class="b-sec"><div class="b-label">近義</div><div class="b-syns">'+synH+'</div></div>':'')+
+      noteH+
+    '</div>';
+  updateDots();
+}
+function flip(){ if(onIntro) return; flipped=!flipped; document.getElementById('card').classList.toggle('flipped',flipped); }
+function go(dir){
+  if(onIntro&&dir>0){ onIntro=false;cur=0;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(!onIntro&&dir<0&&cur===0){ onIntro=true;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(onIntro) return;
+  cur=Math.max(0,Math.min(UNIT.words.length-1,cur+dir));
+  flipped=false;document.getElementById('card').classList.remove('flipped');render();
+}
+function markKnown(){ if(onIntro) return; if(!isKnown(cur)) known.push(cur); save();render(); setTimeout(function(){ if(cur<UNIT.words.length-1) go(1); },180); }
+function markReview(){ if(onIntro) return; known=known.filter(function(x){return x!==cur;}); save();render(); }
+function setMode(m){ mode=m;flipped=false;document.getElementById('card').classList.remove('flipped');document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.toggle('active',b.dataset.mode===m);});render(); }
+document.getElementById('scene').addEventListener('click',flip);
+document.getElementById('prev-btn').addEventListener('click',function(e){e.stopPropagation();go(-1);});
+document.getElementById('next-btn').addEventListener('click',function(e){e.stopPropagation();go(1);});
+document.getElementById('know-btn').addEventListener('click',function(e){e.stopPropagation();markKnown();});
+document.getElementById('review-btn').addEventListener('click',function(e){e.stopPropagation();markReview();});
+document.querySelectorAll('.mode-btn').forEach(function(b){ b.addEventListener('click',function(e){e.stopPropagation();setMode(b.dataset.mode);});});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowLeft') go(-1);
+  else if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  else if(e.key==='f'||e.key==='F') flip();
+  else if(e.key==='k'||e.key==='K') markKnown();
+});
+load();render();
+</script>
+</body>
+</html>

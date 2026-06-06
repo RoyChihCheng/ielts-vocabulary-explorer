@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 4 · Business, Marketing & Consumerism | IELTS Vocabulary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="gate.js"></script>
+<style>
+:root{
+  --navy:#2E1A47;--gold:#8E5FB0;--gold2:#C9A8E0;
+  --paper:#FAF7FC;--g100:#F0E9F7;--g200:#E2D5EE;--g400:#9A8AA8;
+  --known:#2B6830;--r:2px;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Lora','Times New Roman',serif;
+  --fm:'JetBrains Mono','Courier New',monospace;
+  --shadow:0 1px 3px rgba(46,26,71,.06),0 4px 16px rgba(46,26,71,.08),0 16px 48px rgba(46,26,71,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);font-family:var(--fb);color:var(--navy);
+  height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+#hdr{height:52px;background:var(--navy);display:flex;align-items:center;
+  padding:0 18px;flex-shrink:0;position:relative;gap:12px;}
+.hdr-unit{font-family:var(--fd);font-size:.85rem;font-weight:700;color:var(--gold2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;}
+.hdr-center{position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:1px;pointer-events:none;}
+#counter{font-family:var(--fm);font-size:.82rem;color:#fff;letter-spacing:.02em;}
+#known-badge{font-family:var(--fm);font-size:.62rem;color:var(--gold2);opacity:.75;min-height:.85em;}
+.hdr-nav{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.mode-toggle{display:flex;border:1px solid rgba(142,95,176,.35);border-radius:var(--r);overflow:hidden;}
+.mode-btn{background:transparent;border:none;color:rgba(142,95,176,.6);font-family:var(--fm);
+  font-size:.66rem;padding:4px 10px;cursor:pointer;transition:background .15s,color .15s;
+  letter-spacing:.04em;text-transform:uppercase;}
+.mode-btn.active{background:var(--gold);color:#fff;}
+#home-link{color:rgba(201,168,224,.5);font-size:1.15rem;text-decoration:none;
+  line-height:1;transition:color .15s;padding:2px;}
+#home-link:hover{color:var(--gold2);}
+#prog-track{height:2px;background:rgba(142,95,176,.15);flex-shrink:0;}
+#prog-fill{height:100%;background:var(--gold);transition:width .3s ease;width:0%;}
+#stage{flex:1;display:flex;align-items:center;justify-content:center;
+  padding:14px 16px;overflow:hidden;}
+.scene{width:min(660px,100%);height:min(460px,calc(100vh - 130px));
+  perspective:1400px;cursor:pointer;user-select:none;}
+.card{width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;transition:transform .52s cubic-bezier(.4,0,.2,1);}
+.card.flipped{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--r);display:flex;flex-direction:column;padding:28px 36px;}
+.front{background:var(--paper);border:1px solid var(--g200);box-shadow:var(--shadow);}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;}
+.f-meta{display:flex;flex-direction:column;gap:2px;}
+.f-num{font-family:var(--fm);font-size:.66rem;color:var(--gold);letter-spacing:.1em;}
+.f-part{font-family:var(--fm);font-size:.58rem;color:var(--g400);letter-spacing:.05em;}
+.f-known-mark{font-family:var(--fm);font-size:.62rem;color:var(--known);
+  opacity:0;transition:opacity .2s;}
+.f-known-mark.vis{opacity:1;}
+.f-body{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;text-align:center;padding:4px 0;}
+.f-word{font-family:var(--fd);font-size:clamp(2rem,6vw,3.4rem);
+  color:var(--navy);font-weight:700;line-height:1.05;letter-spacing:-.01em;}
+.f-ipa{font-family:var(--fm);font-size:.76rem;color:var(--g400);letter-spacing:.02em;}
+.f-pos{font-family:var(--fb);font-size:.88rem;color:var(--g400);font-style:italic;}
+.f-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;}
+.back{background:var(--navy);transform:rotateY(180deg);overflow:hidden;}
+.b-zh{font-family:var(--fd);font-size:clamp(1.5rem,4.2vw,2.3rem);
+  color:var(--gold2);font-weight:700;line-height:1.2;flex-shrink:0;margin-bottom:10px;}
+.b-quiz-word{font-family:var(--fd);font-size:clamp(1.6rem,4.5vw,2.5rem);
+  color:var(--gold2);font-weight:700;line-height:1.1;flex-shrink:0;}
+.b-quiz-meta{font-family:var(--fb);font-size:.82rem;color:rgba(201,168,224,.65);
+  font-style:italic;flex-shrink:0;margin-bottom:10px;}
+.b-rule{height:1px;background:rgba(255,255,255,.1);flex-shrink:0;margin-bottom:10px;}
+.b-content{flex:1;overflow-y:auto;display:flex;flex-direction:column;
+  gap:11px;scrollbar-width:none;-ms-overflow-style:none;}
+.b-content::-webkit-scrollbar{display:none;}
+.b-sec{display:flex;flex-direction:column;gap:5px;}
+.b-label{font-family:var(--fm);font-size:.57rem;
+  color:rgba(142,95,176,.75);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;}
+.b-ex{font-family:var(--fb);font-size:.77rem;color:#ccc;font-style:italic;
+  line-height:1.6;padding-left:10px;border-left:2px solid rgba(142,95,176,.3);}
+.b-col{font-family:var(--fm);font-size:.67rem;color:#e8dff2;line-height:1.35;
+  padding-left:10px;border-left:2px solid var(--gold);padding-top:1px;padding-bottom:1px;}
+.b-cols{display:flex;flex-direction:column;gap:4px;}
+.b-syns{display:flex;flex-direction:column;gap:5px;}
+.b-syn-row{display:flex;flex-direction:column;gap:1px;}
+.b-syn-w{font-family:var(--fm);font-size:.7rem;color:var(--gold2);}
+.b-syn-n{font-family:var(--fb);font-size:.71rem;color:#999;line-height:1.45;padding-left:6px;}
+.b-note{font-family:var(--fb);font-size:.74rem;color:#cdb0e2;font-style:italic;
+  line-height:1.6;padding:8px 10px;
+  border:1px solid rgba(142,95,176,.2);border-radius:2px;background:rgba(142,95,176,.07);}
+.intro-face{cursor:default;}
+.ic-eyebrow{font-family:var(--fm);font-size:.62rem;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;flex-shrink:0;}
+.ic-title{font-family:var(--fd);font-size:clamp(1.3rem,3.2vw,1.9rem);
+  color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:4px;flex-shrink:0;}
+.ic-zh{font-family:var(--fb);font-size:.85rem;color:var(--g400);font-style:italic;flex-shrink:0;}
+.ic-rule{height:1px;background:var(--g200);margin:14px 0;flex-shrink:0;}
+.ic-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
+.ic-sec-label{font-family:var(--fm);font-size:.57rem;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
+.ic-about{font-family:var(--fb);font-size:.81rem;color:var(--navy);line-height:1.65;}
+.ic-steps{display:flex;flex-direction:column;gap:6px;}
+.ic-step{font-family:var(--fb);font-size:.79rem;color:var(--navy);
+  line-height:1.5;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.ic-tag{font-family:var(--fm);font-size:.62rem;background:var(--g100);
+  border:1px solid var(--g200);color:var(--navy);padding:1px 7px;
+  border-radius:var(--r);white-space:nowrap;flex-shrink:0;}
+.ic-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;margin-top:auto;}
+#nav-bar{height:52px;background:var(--g100);border-top:1px solid var(--g200);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 14px;flex-shrink:0;}
+.nav-btn{background:transparent;border:1px solid var(--g200);color:var(--navy);
+  font-family:var(--fb);font-size:.82rem;padding:6px 14px;cursor:pointer;
+  border-radius:var(--r);transition:all .15s;}
+.nav-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.action-center{display:flex;align-items:center;gap:6px;}
+#action-count{font-family:var(--fm);font-size:.65rem;color:#aaa;white-space:nowrap;}
+#know-btn{background:var(--known);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#know-btn:hover{opacity:.85;}
+#review-btn{background:var(--gold);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#review-btn:hover{opacity:.8;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+#dots{display:flex;gap:3px;align-items:center;max-width:200px;overflow:hidden;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--g200);flex-shrink:0;transition:background .2s;}
+.dot.cur{background:var(--gold);}
+.dot.known{background:var(--known);}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <span class="hdr-unit">Ch. 4 &middot; Business, Marketing & Consumerism</span>
+  <div class="hdr-center">
+    <span id="counter">Introduction</span>
+    <span id="known-badge"></span>
+  </div>
+  <nav class="hdr-nav">
+    <div class="mode-toggle">
+      <button class="mode-btn active" data-mode="browse">Browse</button>
+      <button class="mode-btn" data-mode="quiz">Quiz</button>
+    </div>
+    <a id="home-link" href="index.html" title="Index">&#8962;</a>
+  </nav>
+</header>
+<div id="prog-track"><div id="prog-fill"></div></div>
+<main id="stage">
+  <div class="scene" id="scene">
+    <div class="card" id="card">
+      <div class="face front" id="front-face"></div>
+      <div class="face back"  id="back-face"></div>
+    </div>
+  </div>
+</main>
+<footer id="nav-bar">
+  <button class="nav-btn" id="prev-btn">&#8592; Prev</button>
+  <div class="action-center">
+    <span id="action-count"></span>
+    <button id="know-btn">Know it &#10003;</button>
+    <button id="review-btn">Review &#8635;</button>
+  </div>
+  <div class="nav-right">
+    <div id="dots"></div>
+    <button class="nav-btn" id="next-btn">Next &#8594;</button>
+  </div>
+</footer>
+<script>
+const UNIT = {
+  number: 4,
+  title_en: "Business, Marketing & Consumerism",
+  title_zh: "\u5546\u696d\u884c\u92b7\u8207\u6d88\u8cbb\u8cbf\u6613",
+  src: "Units 6, 12 & 17",
+  count: 55,
+  words: [{"word": "billboard","ipa": "/ˈbɪlbɔːd/","pos": "noun","zh": "廣告看板","part": "A","examples": ["Outdoor billboards remain one of the most cost-effective advertising formats for building local brand awareness.","Critics argue that the proliferation of billboards along motorways constitutes visual pollution that detracts from the landscape."],"col": ["highway billboard","giant billboard","digital billboard","billboard advertising","rent a billboard","billboard campaign","roadside billboard","electronic billboard"],"syn": [{"w": "hoarding","n": "英式英語用詞，指大型戶外廣告看板，與billboard同義"},{"w": "advertisement board","n": "最正式的說法，描述性強但不常用"},{"w": "poster","n": "泛指海報或廣告，但比billboard小得多，常見於室內或街頭"}],"note": "billboard在美式英語和IELTS中最常見；hoarding是英式英語同義詞。IELTS廣告類閱讀中digital billboard（電子看板）是新興高頻詞彙。"},{"word": "branding","ipa": "/ˈbrændɪŋ/","pos": "noun","zh": "品牌化；品牌建立","part": "A","examples": ["Effective branding goes far beyond a logo; it encompasses every interaction a customer has with a company.","The rebranding campaign was a bold attempt to distance the company from its controversial past."],"col": ["effective branding","branding strategy","corporate branding","personal branding","visual branding","branding campaign","strong branding","brand identity"],"syn": [{"w": "brand identity","n": "強調品牌的視覺形象和性格特質的整體塑造"},{"w": "marketing","n": "最廣義，涵蓋所有推廣活動，branding是其子集"},{"w": "image building","n": "強調塑造公眾形象，比branding更偏公關語境"}],"note": "branding指塑造品牌價值和形象的整體策略；在IELTS消費主義類文章中，personal branding（個人品牌）是近年常考概念。"},{"word": "distributor","ipa": "/dɪˈstrɪbjʊtə/","pos": "noun","zh": "分銷商；經銷商","part": "A","examples": ["The company appointed a local distributor to manage sales across the Asia-Pacific region.","Film distributors play a crucial role in determining which markets a production will reach."],"col": ["local distributor","film distributor","authorised distributor","exclusive distributor","sole distributor","wholesale distributor","appointed distributor","distribution network"],"syn": [{"w": "supplier","n": "泛指供應商，不一定涉及中間分銷環節"},{"w": "retailer","n": "特指直接向消費者銷售的零售商，而非批發中間商"},{"w": "wholesaler","n": "特指向零售商批發銷售的中間商"}],"note": "distributor是製造商與零售商之間的中間環節；IELTS商業類閱讀中supply chain（供應鏈）議題常涉及distributor的角色。"},{"word": "flyer","ipa": "/ˈflaɪə/","pos": "noun","zh": "傳單","part": "A","examples": ["Local businesses often distribute flyers in busy pedestrian areas to promote new products and services.","The council distributed flyers to all households informing residents of the proposed changes to waste collection schedules."],"col": ["promotional flyer","hand out flyers","distribute flyers","advertising flyer","glossy flyer","produce a flyer","flyer campaign","door-to-door flyers"],"syn": [{"w": "leaflet","n": "英式英語同義詞，通常指摺疊的宣傳單頁"},{"w": "pamphlet","n": "指較長、有詳細資訊的小冊子，比flyer更正式"},{"w": "circular","n": "指正式的通知或廣告通函，多為機構發送"}],"note": "flyer和leaflet幾乎可互換，但leaflet通常比flyer更正式、篇幅更長；IELTS閱讀中兩者均可能出現在廣告或公共資訊語境。"},{"word": "gimmick","ipa": "/ˈɡɪmɪk/","pos": "noun","zh": "花招；噱頭","part": "A","examples": ["Many consumers have become adept at recognising marketing gimmicks and are no longer easily swayed by superficial promotions.","The company was accused of relying on gimmicks rather than genuine product innovation to attract attention."],"col": ["marketing gimmick","promotional gimmick","cheap gimmick","mere gimmick","advertising gimmick","clever gimmick","just a gimmick","gimmick-free"],"syn": [{"w": "ploy","n": "強調計謀性的手段，可用於更廣的語境"},{"w": "trick","n": "最廣義，泛指任何手法或技巧，不一定含貶義"},{"w": "novelty","n": "強調新奇性，但比gimmick中性，不一定帶有欺騙意味"}],"note": "gimmick帶有貶義，暗示該手法缺乏實質內容；IELTS批判廣告或行銷的文章中常用gimmick描述空洞的促銷策略。"},{"word": "jingle","ipa": "/ˈdʒɪŋɡəl/","pos": "noun","zh": "廣告短曲","part": "A","examples": ["A catchy advertising jingle can lodge itself in consumers' memories for years, making it an invaluable marketing tool.","The company's iconic jingle from the 1980s was revived for the anniversary campaign and proved highly effective."],"col": ["advertising jingle","catchy jingle","memorable jingle","radio jingle","brand jingle","TV jingle","compose a jingle","recognisable jingle"],"syn": [{"w": "slogan","n": "廣告標語，強調文字而非旋律"},{"w": "theme tune","n": "主題曲，比jingle更長，多用於電視節目"},{"w": "tagline","n": "品牌標語，強調品牌核心訴求，比jingle更書面"}],"note": "jingle特指有旋律的廣告短曲；slogan是文字標語；在IELTS廣告類文章中，jingle展示了聲音廣告對記憶的強烈影響。"},{"word": "manufacturer","ipa": "/ˌmænjʊˈfæktʃərə/","pos": "noun","zh": "製造商","part": "A","examples": ["Car manufacturers are under increasing pressure to invest in electric vehicle technology to meet stricter emissions standards.","The manufacturer was held liable for injuries caused by defects in the product that were known but not disclosed."],"col": ["car manufacturer","leading manufacturer","domestic manufacturer","major manufacturer","product manufacturer","manufacturer's warranty","equipment manufacturer","manufacturer recall"],"syn": [{"w": "producer","n": "最廣義，指生產任何產品或內容的人或機構"},{"w": "maker","n": "較口語，泛指製造者，不限於工業生產"},{"w": "factory","n": "特指生產設施本身，而非企業主體"}],"note": "manufacturer特指工業生產商；IELTS中manufacturer recall（產品召回）和manufacturer's warranty（製造商保固）是重要搭配。"},{"word": "marketing","ipa": "/ˈmɑːkɪtɪŋ/","pos": "noun","zh": "行銷","part": "A","examples": ["The rise of social media has fundamentally transformed how companies approach digital marketing.","Effective marketing requires a deep understanding of consumer psychology and purchasing behaviour."],"col": ["digital marketing","marketing campaign","direct marketing","marketing strategy","niche marketing","mass marketing","guerrilla marketing","marketing budget"],"syn": [{"w": "promotion","n": "強調特定的推廣活動，是marketing的組成部分"},{"w": "advertising","n": "特指付費廣告，是marketing的一種手段"},{"w": "branding","n": "強調品牌形象的建立，是marketing的核心目標之一"}],"note": "marketing是包含advertising、branding、PR在內的整體商業推廣策略；IELTS中digital marketing（數位行銷）是近年最高頻的相關詞彙。"},{"word": "online retailer","ipa": "/ˌɒnlaɪn rɪˈteɪlə/","pos": "noun","zh": "線上零售商","part": "A","examples": ["The dominance of major online retailers has forced many traditional high-street stores to close permanently.","Small businesses increasingly turn to third-party online retailers to reach a wider customer base without heavy infrastructure costs."],"col": ["global online retailer","major online retailer","successful online retailer","e-commerce retailer","online retail platform","competing with online retailers","online retailer giant","online retailer marketplace"],"syn": [{"w": "e-commerce company","n": "強調以電子商務為業務模式，比online retailer更廣"},{"w": "web-based merchant","n": "較正式的描述性說法"},{"w": "digital marketplace","n": "強調交易平台的概念，可包含多個賣家"}],"note": "online retailer是IELTS消費和科技類文章的核心詞彙；與brick-and-mortar store（實體店）的對比是常見考點，反映購物行為的數位轉型。"},{"word": "ploy","ipa": "/plɔɪ/","pos": "noun","zh": "策略；計謀","part": "A","examples": ["Labelling a product as 'limited edition' is a common marketing ploy designed to create artificial scarcity.","The politician's sudden announcement was widely seen as a ploy to distract public attention from the corruption scandal."],"col": ["marketing ploy","clever ploy","transparent ploy","political ploy","sales ploy","tactical ploy","obvious ploy","ploy to attract customers"],"syn": [{"w": "tactic","n": "較中性，指為達成目標而採取的具體手段"},{"w": "manoeuvre","n": "強調策略性的行動或部署，比ploy更正式"},{"w": "scheme","n": "強調精心設計的計畫，有時帶有負面意涵"}],"note": "ploy帶有輕微貶義，暗示手段帶有欺騙或操縱性；IELTS批評廣告策略的文章中常見marketing ploy一詞。"},{"word": "rebate","ipa": "/ˈriːbeɪt/","pos": "noun","zh": "退稅；折扣","part": "A","examples": ["The government offered a generous rebate to homeowners who installed solar panels to encourage the uptake of renewable energy.","Car manufacturers sometimes offer substantial rebates to clear stock at the end of a model year."],"col": ["tax rebate","cash rebate","government rebate","offer a rebate","receive a rebate","energy rebate","rebate scheme","manufacturer rebate"],"syn": [{"w": "refund","n": "強調退還已支付的款項，比rebate更廣義"},{"w": "discount","n": "指預先扣除的價格減讓，與rebate的事後返還有別"},{"w": "incentive","n": "泛指任何鼓勵特定行為的好處，比rebate更廣"}],"note": "rebate指事後退款，discount指事前減價；IELTS政策類文章中rebate常作為政府激勵措施出現，與tax incentive相關。"},{"word": "sales representative","ipa": "/ˈseɪlz ˌreprɪˈzentətɪv/","pos": "noun","zh": "業務代表","part": "A","examples": ["A skilled sales representative must be able to build rapport with clients quickly and address their concerns effectively.","Pharmaceutical sales representatives have faced increasing scrutiny over their relationship with medical practitioners."],"col": ["pharmaceutical sales representative","field sales representative","regional sales representative","senior sales representative","hire a sales representative","sales representative training","door-to-door sales representative","sales representative commission"],"syn": [{"w": "salesperson","n": "最廣義且中性，泛指任何從事銷售工作的人"},{"w": "account manager","n": "更高職位，強調負責管理客戶關係，比銷售更全面"},{"w": "sales agent","n": "可能是外部代理，而非公司直屬員工"}],"note": "sales representative通常是公司正式員工；sales agent可能是外部代理商。IELTS商業類題目中此詞常在B2B銷售語境下出現。"},{"word": "slogan","ipa": "/ˈsləʊɡən/","pos": "noun","zh": "口號；標語","part": "A","examples": ["A well-crafted slogan can encapsulate a brand's entire value proposition in just a few memorable words.","Political parties invest heavily in devising slogans that resonate with voters and can be easily repeated."],"col": ["campaign slogan","company slogan","catchy slogan","political slogan","memorable slogan","advertising slogan","brand slogan","devise a slogan"],"syn": [{"w": "tagline","n": "強調用於廣告末尾的品牌核心訴求短語，比slogan更具商業色彩"},{"w": "motto","n": "強調組織或個人長期奉行的格言，不一定用於廣告"},{"w": "catchphrase","n": "強調廣為流傳的口頭禪，可出自廣告或名人"}],"note": "slogan偏廣告和政治宣傳；motto偏機構或個人的長期信念；IELTS廣告類寫作中，catchy slogan是高頻搭配，也常作為品牌成功的例子引用。"},{"word": "telemarketing","ipa": "/ˈtelɪˌmɑːkɪtɪŋ/","pos": "noun","zh": "電話行銷","part": "A","examples": ["Many consumers register on do-not-call lists to avoid the persistent intrusion of unsolicited telemarketing calls.","Telemarketing has declined in effectiveness as call-screening technology and public awareness of scams have improved."],"col": ["telemarketing call","nuisance telemarketing","telemarketing campaign","telephone marketing","direct telemarketing","telemarketing firm","cold-call telemarketing","telemarketing ban"],"syn": [{"w": "cold calling","n": "強調主動致電陌生潛在客戶，是telemarketing最常見的形式"},{"w": "direct selling","n": "泛指直接面向消費者的銷售，不一定通過電話"},{"w": "phone solicitation","n": "更正式的說法，強調通過電話進行的商業勸說"}],"note": "telemarketing被視為invasive和irritating；IELTS廣告倫理類題目中常與do-not-call list和consumer rights並列討論。"},{"word": "vendor","ipa": "/ˈvendə/","pos": "noun","zh": "攤販；供應商","part": "A","examples": ["Street vendors play an important role in the informal economy of many developing countries.","The company switched software vendors after repeated technical failures threatened daily operations."],"col": ["street vendor","software vendor","food vendor","vendor contract","authorised vendor","IT vendor","market vendor","vendor selection"],"syn": [{"w": "seller","n": "最廣義，指任何出售商品或服務的人或機構"},{"w": "trader","n": "偏非正式交易的商人，常用於傳統市場語境"},{"w": "supplier","n": "強調提供商品或服務的一方，可能不直接面對消費者"}],"note": "vendor在科技語境中指軟體或硬體供應商；在商業語境中指攤販。IELTS閱讀中這兩種語境都會出現，需靠上下文判斷。"},{"word": "assure","ipa": "/əˈʃʊə/","pos": "verb","zh": "向...保證","part": "C","examples": ["The company's CEO moved quickly to assure investors that the financial situation was under control.","Parents were assured by school officials that all necessary safety measures had been put in place."],"col": ["assure quality","let me assure you","assure the public","assure investors","assure someone of","assure safety","we can assure you","assure compliance"],"syn": [{"w": "guarantee","n": "最強烈，指正式承諾某事必然發生或提供補償"},{"w": "reassure","n": "強調再次保證以消除疑慮，比assure含有安撫意味"},{"w": "confirm","n": "強調確認某事屬實，比assure更中性客觀"}],"note": "assure後接人：assure someone that...；ensure後接事：ensure that...。這是IELTS學生常混淆的用法，需特別注意。"},{"word": "entice","ipa": "/ɪnˈtaɪs/","pos": "verb","zh": "誘惑；引誘","part": "C","examples": ["Supermarkets are designed to entice customers into spending more than they originally intended through strategic product placement.","The company tried to entice talented engineers away from competitors by offering generous salaries and flexible working conditions."],"col": ["entice customers","entice with an offer","entice someone into","entice away from","entice people to buy","entice visitors","entice investors","difficult to entice"],"syn": [{"w": "lure","n": "強調用誘餌吸引，帶有欺騙或危險的暗示"},{"w": "tempt","n": "強調利用弱點或慾望引誘，比entice帶有更多道德判斷"},{"w": "attract","n": "最廣義和中性，指吸引注意力或興趣"}],"note": "entice帶有輕微貶義，暗示通過某種誘惑使人改變行為；IELTS批判廣告或商業道德的文章中是常見詞彙。"},{"word": "induce","ipa": "/ɪnˈdjuːs/","pos": "verb","zh": "導致；誘導","part": "C","examples": ["High-pressure sales tactics are often designed to induce customers to make impulsive purchasing decisions.","Regular physical exercise has been shown to induce positive changes in both mental and physical health."],"col": ["induce a response","induce change","induce sleep","induce purchasing","induce behaviour","induce anxiety","artificially induce","induce a sense of"],"syn": [{"w": "cause","n": "最廣義，指引起某種結果，完全中性"},{"w": "persuade","n": "強調通過理由說服，比induce更強調理性過程"},{"w": "prompt","n": "強調觸發某種行動或反應，比induce更輕微"}],"note": "induce在IELTS學術閱讀中常出現在科學或醫學語境（如drug-induced）；在廣告語境中，induce purchasing behaviour是批評性討論的常用表達。"},{"word": "oblige","ipa": "/əˈblaɪdʒ/","pos": "verb","zh": "迫使；施恩於","part": "C","examples": ["Companies are legally obliged to provide clear information about the ingredients in food products.","I would be greatly obliged if you could review this proposal and provide your feedback by Friday."],"col": ["feel obliged","legally obliged","morally obliged","oblige someone to","much obliged","be obliged to comply","oblige a request","obliged to follow rules"],"syn": [{"w": "compel","n": "強調以外力強制，比oblige更強硬"},{"w": "require","n": "強調正式規定某事必須完成，較中性"},{"w": "force","n": "最強烈，強調無法抗拒的強制壓力"}],"note": "oblige既有「強制」義（be obliged to）也有「幫忙」義；be legally obliged是IELTS法律和商業類文章的重要搭配。"},{"word": "pressurise","ipa": "/ˈpreʃəraɪz/","pos": "verb","zh": "施加壓力","part": "C","examples": ["Consumer advocacy groups have accused the company of pressurising customers into signing contracts they do not fully understand.","Sales teams are often pressurised to meet aggressive targets that may incentivise unethical behaviour."],"col": ["pressurise someone into","pressurise system","feel pressurised","be pressurised to","pressurise customers","heavily pressurise","pressurise government","come under pressure"],"syn": [{"w": "coerce","n": "強調以威脅或強迫手段迫使，比pressurise更嚴重"},{"w": "push","n": "最口語，泛指施加壓力，程度較輕"},{"w": "bully","n": "強調霸道地強迫，含有明顯的道德譴責意味"}],"note": "pressurise（英式）= pressurize（美式）；IELTS消費者保護類文章中，pressurise customers into buying是批評性討論的常用搭配。"},{"word": "reassure","ipa": "/ˌriːəˈʃʊə/","pos": "verb","zh": "使放心","part": "C","examples": ["The health minister sought to reassure the public that the new vaccine had undergone rigorous clinical testing.","Company officials reassured employees that the merger would not result in significant job losses."],"col": ["reassure the public","reassure investors","reassure family","reassure patients","seek to reassure","attempt to reassure","reassure concerns","reassure that"],"syn": [{"w": "comfort","n": "偏情感安撫，比reassure更溫情，強調給予情感支持"},{"w": "calm","n": "強調使人冷靜，比reassure更強調情緒控制"},{"w": "allay","n": "較正式，特指消除恐懼或疑慮，如allay fears"}],"note": "reassure強調再次保證以消除恐懼；allay fears是學術寫作的高分替換。在IELTS中，reassure the public是政府或機構應對危機時的標準動作。"},{"word": "tempt","ipa": "/tempt/","pos": "verb","zh": "誘惑","part": "C","examples": ["Retailers use a variety of psychological techniques to tempt consumers into purchasing items they had not planned to buy.","The offer of a significantly higher salary was enough to tempt her away from her stable government position."],"col": ["tempt someone","tempt fate","tempt a buyer","be tempted to","resist the temptation","greatly tempted","tempt with an offer","tempt consumers"],"syn": [{"w": "entice","n": "強調以某種好處吸引，比tempt更偏廣告和商業語境"},{"w": "lure","n": "強調用誘餌引誘，帶有欺騙或危險的含義"},{"w": "attract","n": "最中性，僅指吸引興趣或注意力，不含道德判斷"}],"note": "tempt常用於廣告批評語境；resist temptation（抵抗誘惑）是IELTS論述消費者自制力的常用表達。"},{"word": "urge","ipa": "/ɜːdʒ/","pos": "verb","zh": "催促；敦促","part": "C","examples": ["Environmental groups have urged governments to implement binding legislation to reduce carbon emissions.","The report urged companies to be more transparent about their environmental impact and sustainability practices."],"col": ["urge action","urge caution","strongly urge","urge government","urge people to","urge restraint","urge someone to act","report urges"],"syn": [{"w": "advocate","n": "強調公開主張或支持某立場，比urge更持久有系統"},{"w": "call for","n": "強調公開呼籲，是urge的常見同義片語"},{"w": "implore","n": "強調懇切地請求，情感色彩比urge更強烈"}],"note": "urge表示強烈建議或呼籲；strongly urge是IELTS學術語境中強調立場的有效強化詞。call for也是非常實用的替換表達。"},{"word": "archive","ipa": "/ˈɑːkaɪv/","pos": "noun","zh": "檔案館；存檔","part": "A","examples": ["Historians rely heavily on national archives to piece together an accurate picture of past events.","The company maintains a digital archive of all customer transactions for compliance and auditing purposes."],"col": ["digital archive","national archive","archive records","access archives","film archive","archive material","historical archive","create an archive"],"syn": [{"w": "repository","n": "強調作為儲存資料或文件的地方，比archive更廣義"},{"w": "database","n": "偏數位化的系統性資料儲存，強調可搜尋性"},{"w": "record","n": "最廣義，泛指任何保存的資料或文件"}],"note": "archive既是名詞（檔案館）也是動詞（存檔）；IELTS歷史和科技類文章中均可出現，digital archive在資訊管理語境中尤為常見。"},{"word": "acquisitiveness","ipa": "/əˈkwɪzɪtɪvnəs/","pos": "noun","zh": "貪得無厭；佔有慾","part": "A","examples": ["Some psychologists argue that human acquisitiveness is an evolved trait rooted in our ancestral drive to accumulate resources.","The rampant acquisitiveness of consumer culture has been criticised for its damaging effects on both individuals and the environment."],"col": ["human acquisitiveness","excessive acquisitiveness","rampant acquisitiveness","material acquisitiveness","consumer acquisitiveness","cultural acquisitiveness","acquisitiveness and greed","driven by acquisitiveness"],"syn": [{"w": "greed","n": "強調對財富的過度渴望，比acquisitiveness更口語且帶有強烈貶義"},{"w": "materialism","n": "強調以物質財富為人生核心追求的價值觀"},{"w": "covetousness","n": "較正式或文學性，指垂涎他人之物的慾望"}],"note": "acquisitiveness是IELTS高分詞彙，用於批判消費主義；可與materialism一起討論過度消費的心理根源，是Task 2社會議題的好論點素材。"},{"word": "stockpile","ipa": "/ˈstɒkpaɪl/","pos": "noun","zh": "囤積；庫存","part": "A","examples": ["Governments were urged to build stockpiles of essential medical supplies following the pandemic's disruption to global supply chains.","The discovery of secret weapons stockpiles in the region raised serious concerns among international security agencies."],"col": ["oil stockpile","food stockpile","weapons stockpile","build a stockpile","maintain a stockpile","emergency stockpile","strategic stockpile","stockpile of resources"],"syn": [{"w": "reserve","n": "強調儲備以備不時之需，比stockpile更中性"},{"w": "hoard","n": "偏貶義，強調出於自私或恐慌的過度囤積"},{"w": "supply","n": "最廣義，指任何可用的存量，不強調囤積行為"}],"note": "stockpile作為名詞指大量儲備物資，也可作動詞（to stockpile）；IELTS能源、安全或醫療類文章中是核心詞彙。"},{"word": "supplies","ipa": "/səˈplaɪz/","pos": "noun","zh": "供應物；物資","part": "A","examples": ["Aid organisations struggled to deliver medical supplies to remote communities affected by the earthquake.","The school faced criticism after parents discovered that basic classroom supplies were being rationed due to budget cuts."],"col": ["medical supplies","office supplies","emergency supplies","supply chain","food supplies","limited supplies","military supplies","supplies of water"],"syn": [{"w": "provisions","n": "特指食物或生活必需品，比supplies更正式"},{"w": "materials","n": "偏指原料或生產用的物資，強調其功能性"},{"w": "equipment","n": "特指工具和器材，比supplies更具體"}],"note": "supplies是複數名詞，指可消耗的物資；equipment指耐用工具或設備。IELTS醫療、環境和教育類文章中supplies是高頻詞彙。"},{"word": "chic","ipa": "/ʃiːk/","pos": "adj","zh": "時髦的","part": "B","examples": ["The boutique hotel attracted an affluent clientele with its chic minimalist design and impeccable personalised service.","What was once considered chic and exclusive has become mass-produced and widely available in today's fast-fashion market."],"col": ["chic boutique","stylish and chic","ultra-chic","chic design","chic neighbourhood","considered chic","effortlessly chic","chic restaurant"],"syn": [{"w": "stylish","n": "最廣義，強調有品味的外觀或設計"},{"w": "elegant","n": "強調優雅大方，比chic更正式"},{"w": "fashionable","n": "強調符合當前潮流，比chic更強調時效性"}],"note": "chic源自法語，比fashionable更強調品味和精緻感；IELTS時尚和消費主義類文章中，chic常出現在高端品牌或城市文化的語境中。"},{"word": "drab","ipa": "/dræb/","pos": "adj","zh": "單調的；灰暗的","part": "B","examples": ["Planners proposed introducing more green spaces and public art to enliven the drab urban landscape.","The offices were described as drab and uninspiring, contributing to a workplace culture of low morale."],"col": ["drab colours","drab office","drab appearance","drab surroundings","looking drab","drab and uninspiring","utterly drab","drab clothing"],"syn": [{"w": "dull","n": "最廣義，指缺乏趣味或色彩，比drab更口語"},{"w": "bleak","n": "強調陰鬱和令人沮喪的特質，帶有更強的情感色彩"},{"w": "monotonous","n": "強調無變化的單調重複，比drab更強調動態層面"}],"note": "drab強調外觀上的灰暗單調；IELTS城市規劃或建築類文章中，drab常作為描述需要更新改造的環境的詞彙使用。"},{"word": "mundane","ipa": "/mʌnˈdeɪn/","pos": "adj","zh": "平凡的；世俗的","part": "B","examples": ["Artificial intelligence is increasingly being deployed to handle mundane and repetitive administrative tasks, freeing employees for more creative work.","The philosopher urged his students to find meaning in the mundane aspects of everyday life rather than seeking constant novelty."],"col": ["mundane task","mundane life","mundane work","seemingly mundane","mundane detail","rather mundane","mundane existence","mundane routine"],"syn": [{"w": "routine","n": "強調按固定模式重複，比mundane更中性"},{"w": "ordinary","n": "最廣義，指普通平常，不一定含有疲倦意味"},{"w": "prosaic","n": "較正式，強調缺乏想像力和詩意，多用於文學批評"}],"note": "mundane在IELTS中常出現在科技類文章，描述人工智慧取代人類處理mundane tasks的論述，是Task 2機器人與就業議題的核心詞彙。"},{"word": "sophisticated","ipa": "/səˈfɪstɪkeɪtɪd/","pos": "adj","zh": "精緻的；老練的","part": "B","examples": ["Modern consumers are far more sophisticated than in previous decades, demanding transparency and authenticity from the brands they support.","The laboratory's sophisticated imaging equipment enabled researchers to observe cellular processes with unprecedented clarity."],"col": ["sophisticated technology","sophisticated taste","highly sophisticated","sophisticated consumer","sophisticated approach","sophisticated system","increasingly sophisticated","sophisticated audience"],"syn": [{"w": "advanced","n": "強調技術或發展層次高，比sophisticated更具體"},{"w": "refined","n": "強調經過精心打磨的品味或品質，比sophisticated更強調過程"},{"w": "complex","n": "強調構成複雜，比sophisticated更強調結構而非品質"}],"note": "sophisticated是IELTS高分形容詞，可修飾技術、消費者或論點，幾乎在所有主題類型都適用。"},{"word": "a must-have item","ipa": "/ə ˈmʌst hæv ˈaɪtəm/","pos": "phrase","zh": "必備物品","part": "D","examples": ["Smartphones have evolved from a luxury novelty to a must-have item for participation in modern professional and social life.","Marketers often create artificial demand by positioning products as must-have items rather than optional purchases."],"col": ["considered a must-have item","become a must-have","the latest must-have","must-have product","must-have gadget","absolute must-have","essential must-have","marketed as a must-have"],"syn": [{"w": "essential item","n": "強調不可缺少的必要性，比must-have更正式"},{"w": "necessity","n": "最正式，強調某物對生活或功能的絕對必要性"},{"w": "indispensable product","n": "強調難以取代的必備性，適合學術論述"}],"note": "must-have item在IELTS消費主義寫作中常作為批評人為製造需求的例子；可替換為perceived necessity（被認為是必需品）以提升論述深度。"},{"word": "a passing trend","ipa": "/ə ˈpɑːsɪŋ trend/","pos": "phrase","zh": "短暫的流行","part": "D","examples": ["Many industry analysts initially dismissed social media as a passing trend, failing to anticipate its transformative impact on communication.","Whether the plant-based food movement is a passing trend or a permanent shift in consumer behaviour remains to be seen."],"col": ["considered a passing trend","merely a passing trend","more than a passing trend","dismiss as a passing trend","just a passing trend","turned out to be a passing trend","not simply a passing trend","a brief passing trend"],"syn": [{"w": "fad","n": "強調短暫流行的時尚，比passing trend語氣更輕蔑"},{"w": "craze","n": "強調短暫瘋狂流行，比fad更口語，帶有積極能量"},{"w": "temporary fashion","n": "強調暫時性的風尚，比passing trend更正式"}],"note": "passing trend和fad都描述短暫流行，但fad語氣更輕蔑；IELTS寫作中，討論流行趨勢是否可持續時，這組詞彙極為實用。"},{"word": "all the rage","ipa": "/ɔːl ðə reɪdʒ/","pos": "phrase","zh": "極為流行","part": "D","examples": ["Electric scooters are all the rage in major cities, offering a convenient and environmentally friendly alternative to short-distance travel.","In the 1980s, shoulder pads were all the rage in women's fashion, reflecting the era's emphasis on power dressing."],"col": ["all the rage among teenagers","currently all the rage","become all the rage","was all the rage","all the rage in fashion","seemingly all the rage","still all the rage","all the rage worldwide"],"syn": [{"w": "very fashionable","n": "最中性的同義表達"},{"w": "extremely popular","n": "最廣義，適用於所有語境"},{"w": "in vogue","n": "更正式，強調符合當前流行趨勢，有法語典雅氣息"}],"note": "all the rage是非正式慣用語，表示極度流行；IELTS正式寫作中建議替換為widely popular或in great demand以提升學術程度。"},{"word": "casual dress","ipa": "/ˈkæʒuəl dres/","pos": "phrase","zh": "便裝","part": "D","examples": ["Many tech companies have adopted a casual dress code as part of a broader effort to foster a relaxed and creative workplace culture.","The shift towards casual dress in professional environments reflects changing attitudes towards formality in modern workplaces."],"col": ["casual dress code","casual dress for Friday","smart casual dress","adopt casual dress","enforce casual dress","casual dress policy","business casual dress","casual dress environment"],"syn": [{"w": "informal attire","n": "最正式的說法，強調非正式的穿著"},{"w": "relaxed clothing","n": "強調舒適休閒，比casual dress更描述性"},{"w": "everyday wear","n": "強調日常穿著，比casual dress更廣義"}],"note": "casual dress vs. business casual是IELTS職場類文章的常見區別；casual Friday（週五便裝日）是職場文化的重要概念，近年延伸到全週。"},{"word": "conspicuous consumption","ipa": "/kənˈspɪkjuəs kənˈsʌmpʃn/","pos": "phrase","zh": "炫耀性消費","part": "D","examples": ["Sociologists argue that conspicuous consumption is driven not by genuine need but by the desire to signal social status and wealth.","The rise of luxury brand culture in emerging economies has been attributed to a growing culture of conspicuous consumption among the nouveau riche."],"col": ["engage in conspicuous consumption","culture of conspicuous consumption","driven by conspicuous consumption","criticise conspicuous consumption","conspicuous consumption of luxury goods","rise of conspicuous consumption","conspicuous consumption as status","avoid conspicuous consumption"],"syn": [{"w": "status spending","n": "強調以消費行為彰顯社會地位的動機"},{"w": "ostentatious spending","n": "強調炫耀性的揮霍，帶有強烈貶義"},{"w": "luxury consumption","n": "較中性，指消費奢侈品的行為"}],"note": "conspicuous consumption由社會學家Thorstein Veblen提出，是IELTS消費主義類寫作的核心學術概念，引用此詞能顯著提升論述深度。"},{"word": "designer label","ipa": "/dɪˈzaɪnə ˈleɪbl/","pos": "phrase","zh": "名牌標籤","part": "D","examples": ["Young consumers are increasingly willing to go into debt to purchase designer label clothing that signals their aspirational identity.","Critics of designer label culture argue that it encourages materialism and creates damaging social pressures among young people."],"col": ["expensive designer label","designer label clothing","designer label brand","wearing designer labels","designer label fashion","coveted designer label","designer label status","designer label market"],"syn": [{"w": "luxury brand","n": "更廣義，強調品牌的高端定位和市場策略"},{"w": "high-end fashion","n": "強調高價位的時裝類別"},{"w": "premium brand","n": "較中性，強調高品質和高定價，比designer label少了炫耀意涵"}],"note": "designer label強調標籤本身作為身分象徵的功能；IELTS論述品牌文化和消費心理時，designer label是批判性分析的重要切入點。"},{"word": "disposable income","ipa": "/dɪˈspəʊzəbl ˈɪnkʌm/","pos": "phrase","zh": "可支配所得","part": "D","examples": ["Rising disposable income in developing economies has driven rapid growth in consumer spending on non-essential goods.","When disposable income falls, households typically cut back on entertainment and dining out before reducing spending on essentials."],"col": ["rise in disposable income","increase disposable income","disposable income level","high disposable income","per capita disposable income","average disposable income","disposable income gap","disposable income growth"],"syn": [{"w": "spending power","n": "強調購買力，比disposable income更口語"},{"w": "discretionary income","n": "更精確的經濟學術語，指扣除必要支出後的餘額"},{"w": "net income","n": "廣義指稅後收入，包含儲蓄和消費兩部分"}],"note": "disposable income是IELTS經濟和消費類文章的核心術語，指稅後可自由支配的收入；與discretionary income不同，後者進一步扣除基本生活費用。"},{"word": "fashion accessory","ipa": "/ˈfæʃn əkˈsesəri/","pos": "phrase","zh": "時尚配件","part": "D","examples": ["Digital devices such as smartwatches have evolved from functional technology to essential fashion accessories for style-conscious consumers.","The fashion accessory market has been transformed by social media influencers who drive demand for specific items overnight."],"col": ["essential fashion accessory","popular fashion accessory","fashion accessory market","luxury fashion accessory","considered a fashion accessory","fashion accessory brand","affordable fashion accessory","iconic fashion accessory"],"syn": [{"w": "style accessory","n": "強調時尚搭配功能，比fashion accessory更強調個人風格"},{"w": "fashion item","n": "更廣義，泛指任何時尚相關的物品"},{"w": "trend item","n": "強調符合當前流行趨勢的物品"}],"note": "fashion accessory在IELTS科技類文章中常用於描述科技產品的時尚化轉型（如手機、智慧手錶）；是討論技術與消費文化交匯的好切入點。"},{"word": "get rid of","ipa": "/ɡet rɪd əv/","pos": "phrase","zh": "擺脫；丟棄","part": "D","examples": ["Fast fashion culture encourages consumers to get rid of clothing after only a season, contributing significantly to global textile waste.","Many governments have introduced incentive schemes to encourage households to get rid of old petrol vehicles and switch to electric alternatives."],"col": ["get rid of old clothes","get rid of waste","get rid of clutter","want to get rid of","get rid of unwanted items","try to get rid of","get rid of pollution","get rid of debt"],"syn": [{"w": "dispose of","n": "更正式，強調以適當方式處置廢棄物"},{"w": "discard","n": "強調主動丟棄不再需要的物品"},{"w": "eliminate","n": "最正式，適用於更廣泛的語境，包含問題或障礙"}],"note": "get rid of是非常口語的表達；IELTS正式寫作中建議使用dispose of、discard或eliminate，視語境而定，以提升學術語感。"},{"word": "in vogue","ipa": "/ɪn vəʊɡ/","pos": "phrase","zh": "流行中","part": "D","examples": ["Sustainable fashion is very much in vogue at present, though critics question whether it represents genuine change or mere greenwashing.","In the early twentieth century, Art Deco was in vogue across Europe and America, influencing architecture, fashion, and the decorative arts."],"col": ["currently in vogue","become in vogue","remain in vogue","fall out of vogue","back in vogue","less in vogue","very much in vogue","in vogue among designers"],"syn": [{"w": "fashionable","n": "最廣義，強調符合當前流行，比in vogue更口語"},{"w": "trendy","n": "強調追逐最新潮流，比in vogue更口語"},{"w": "popular","n": "最廣義，不一定與時尚相關"}],"note": "in vogue源自法語，比fashionable更具文化優雅感；IELTS寫作中使用in vogue而非simply popular能展現更豐富的詞彙量，有助提分。"},{"word": "mass branding","ipa": "/mæs ˈbrændɪŋ/","pos": "phrase","zh": "大眾品牌化","part": "D","examples": ["Mass branding strategies aim to create a consistent brand image that resonates across diverse demographic groups simultaneously.","The era of mass branding is giving way to more personalised approaches made possible by big data and targeted digital advertising."],"col": ["strategy of mass branding","era of mass branding","traditional mass branding","mass branding campaign","shift away from mass branding","mass branding approach","global mass branding","mass branding techniques"],"syn": [{"w": "mass marketing","n": "強調針對最廣泛大眾的行銷策略，是mass branding的上位詞"},{"w": "universal branding","n": "強調品牌策略的全球統一性"},{"w": "broad-reach advertising","n": "強調廣泛觸及的廣告覆蓋"}],"note": "mass branding與niche marketing形成對比；IELTS討論廣告策略演變時，從mass branding到targeted marketing的轉變是重要論點。"},{"word": "personal consumption","ipa": "/ˈpɜːsənl kənˈsʌmpʃn/","pos": "phrase","zh": "個人消費","part": "D","examples": ["Studies show that levels of personal consumption in wealthy nations are unsustainable in the long term given finite global resources.","Tax incentives can be used to shift personal consumption patterns away from harmful products towards more sustainable alternatives."],"col": ["rise in personal consumption","personal consumption habits","personal consumption patterns","reduce personal consumption","personal consumption expenditure","measure personal consumption","personal consumption levels","sustainable personal consumption"],"syn": [{"w": "individual spending","n": "強調個人的花費行為，比personal consumption更口語"},{"w": "private expenditure","n": "更正式的經濟學術語，強調非政府的私人支出"},{"w": "household consumption","n": "偏統計學用法，指家庭層面的消費行為"}],"note": "personal consumption是IELTS經濟和環境類文章的核心詞彙；與government expenditure相對，是衡量一個國家消費主義程度的重要指標。"},{"word": "spending patterns","ipa": "/ˈspendɪŋ ˈpætnz/","pos": "phrase","zh": "消費模式","part": "D","examples": ["Digital payment systems provide retailers with unprecedented insight into consumer spending patterns and purchasing preferences.","Research indicates that spending patterns shift dramatically when individuals transition from employment to retirement."],"col": ["consumer spending patterns","analyse spending patterns","spending patterns change","identify spending patterns","shift in spending patterns","spending patterns data","spending patterns of millennials","track spending patterns"],"syn": [{"w": "consumption habits","n": "強調消費習慣，比spending patterns更強調行為層面"},{"w": "purchasing behaviour","n": "偏心理學和行銷，強調購買決策的行為模式"},{"w": "expenditure trends","n": "更正式的經濟學用語，強調趨勢分析"}],"note": "spending patterns是IELTS商業類文章的核心術語；digital technology改變consumer spending patterns是近年Task 2的常見論點方向。"},{"word": "the latest trend","ipa": "/ðə ˈleɪtɪst trend/","pos": "phrase","zh": "最新趨勢","part": "D","examples": ["Social media influencers play a key role in defining the latest trends in fashion, beauty, and lifestyle for younger consumers.","Keeping up with the latest trends in technology can be both costly and time-consuming for businesses in rapidly evolving industries."],"col": ["follow the latest trend","keep up with the latest trend","the latest trend in fashion","set the latest trend","the latest trend among teenagers","aware of the latest trends","the latest market trend","the latest trend in technology"],"syn": [{"w": "current fashion","n": "強調當前流行風尚，比latest trend更具時裝語境"},{"w": "emerging tendency","n": "更正式，強調正在形成的新趨勢"},{"w": "new development","n": "最廣義，指任何領域的新動向，不限於時尚"}],"note": "the latest trend在IELTS中非常常見，但過於口語；學術寫作中可替換為emerging trends或current developments以提升正式程度。"},{"word": "traditional dress","ipa": "/trəˈdɪʃənl dres/","pos": "phrase","zh": "傳統服飾","part": "D","examples": ["The preservation of traditional dress is seen by many ethnic communities as an important affirmation of cultural identity.","Tourism has sometimes commercialised traditional dress, reducing it to a superficial spectacle rather than a meaningful cultural practice."],"col": ["wear traditional dress","traditional dress code","traditional dress festival","local traditional dress","cultural traditional dress","preserve traditional dress","traditional dress and customs","display traditional dress"],"syn": [{"w": "national costume","n": "強調代表特定國家或民族的正式服裝"},{"w": "cultural attire","n": "更廣義，強調具有文化意義的服裝"},{"w": "indigenous clothing","n": "特指原住民族或土著的傳統服飾"}],"note": "traditional dress在IELTS文化全球化類文章中是核心詞彙；常與cultural identity和globalisation的衝突關係一起討論。"},{"word": "abandon","ipa": "/əˈbændən/","pos": "verb","zh": "放棄；遺棄","part": "C","examples": ["Many small manufacturers were forced to abandon domestic production and outsource to cheaper overseas facilities.","The project was abandoned mid-way through following a dramatic reduction in government funding."],"col": ["abandon project","abandon ship","abandon hope","abandon a plan","completely abandon","abandon traditional values","abandon manufacturing","be forced to abandon"],"syn": [{"w": "discontinue","n": "較正式，強調停止某項活動或計畫，不一定有緊迫性"},{"w": "relinquish","n": "強調主動放棄所持有的權利或職位，較為正式"},{"w": "give up","n": "最廣義且口語，泛指停止嘗試"}],"note": "abandon強調徹底放棄，通常帶有無奈或緊急的語境；在IELTS商業類寫作中，abandon a strategy是描述公司轉型的常見表達。"},{"word": "consume","ipa": "/kənˈsjuːm/","pos": "verb","zh": "消耗；消費","part": "C","examples": ["Developing countries have argued that wealthy nations consume a disproportionate share of the world's natural resources.","The average household in the UK consumes significantly more energy in winter than in any other season."],"col": ["consume resources","consume energy","consume food","consume time","consume products","rapidly consume","consume excessively","consume per capita"],"syn": [{"w": "use up","n": "最口語，強調耗盡某種資源"},{"w": "deplete","n": "較正式，強調逐漸耗盡，常用於自然資源"},{"w": "utilise","n": "強調使用，比consume更中性，不強調消耗"}],"note": "consume在IELTS中非常高頻，廣泛用於能源、食品、資源等語境；consumer society（消費社會）和consumerism（消費主義）是Task 2的核心概念。"},{"word": "discard","ipa": "/dɪˈskɑːd/","pos": "verb","zh": "丟棄","part": "C","examples": ["Fast fashion encourages consumers to discard clothing after only a few wears, generating enormous volumes of textile waste.","Researchers were forced to discard months of data after discovering a fundamental flaw in the experimental methodology."],"col": ["discard waste","discard idea","discard clothing","discard packaging","discard old models","easily discarded","discard material","discard assumptions"],"syn": [{"w": "throw away","n": "最口語，泛指丟棄任何物品"},{"w": "dispose of","n": "較正式，強調以適當方式處置，常用於廢棄物管理"},{"w": "abandon","n": "更廣義，可指放棄計畫或想法，不一定是物品"}],"note": "discard強調主動丟棄不再需要的東西；IELTS環境類文章中，discard packaging（丟棄包裝）和disposable society（拋棄式社會）是常見概念。"},{"word": "dump","ipa": "/dʌmp/","pos": "verb","zh": "傾倒","part": "C","examples": ["Several companies were found to have illegally dumped toxic waste in rivers, causing severe damage to local ecosystems.","Developed nations have been criticised for dumping outdated electronics in developing countries under the guise of aid."],"col": ["dump trash","dump waste","illegally dump","dump toxic chemicals","dump goods on market","dump pollution","dump unwanted items","dump electronically"],"syn": [{"w": "dispose of","n": "強調妥善處置，比dump更負責任的做法"},{"w": "discard","n": "強調主動丟棄，比dump更中性"},{"w": "offload","n": "強調將不需要的東西轉給別人，常用於商業語境"}],"note": "dump在環保語境帶有強烈貶義（非法棄置）；在貿易語境中指低價傾銷（dumping，傾銷）是IELTS國際貿易題目的重要概念。"},{"word": "eradicate","ipa": "/ɪˈrædɪkeɪt/","pos": "verb","zh": "根除","part": "C","examples": ["Despite decades of international effort, it has proved extremely difficult to eradicate malaria in tropical regions.","Some economists argue that extreme poverty can only be eradicated through a fundamental restructuring of the global financial system."],"col": ["eradicate poverty","eradicate disease","eradicate hunger","completely eradicate","eradicate inequality","attempt to eradicate","eradicate a problem","eradicate corruption"],"syn": [{"w": "eliminate","n": "強調徹底消除，比eradicate更廣泛使用"},{"w": "wipe out","n": "較口語，強調徹底摧毀或消滅"},{"w": "stamp out","n": "強調以決心和行動根絕某種惡習或問題"}],"note": "eradicate帶有「連根拔起」的含義，比eliminate更徹底；IELTS中eradicate disease和eradicate poverty是最常見的搭配。"},{"word": "hoard","ipa": "/hɔːd/","pos": "verb","zh": "囤積；秘藏","part": "C","examples": ["During the pandemic, some consumers began to hoard essential goods such as toilet paper and hand sanitiser, creating artificial shortages.","The dictator was accused of hoarding the nation's wealth in foreign bank accounts while the population lived in poverty."],"col": ["hoard supplies","hoard gold","hoard resources","hoard food","hoard wealth","tend to hoard","hoard information","compulsive hoarding"],"syn": [{"w": "stockpile","n": "可以是中性的戰略儲備，比hoard更理性有規劃"},{"w": "accumulate","n": "強調逐漸積累，比hoard更中性，不一定隱藏"},{"w": "amass","n": "強調大量積累財富或物資，比hoard更正式"}],"note": "hoard帶有自私和秘密的貶義涵義；stockpile更中性，可指政府戰略儲備。IELTS資源分配和消費主義類文章中兩者都常出現。"},{"word": "maintain","ipa": "/meɪnˈteɪn/","pos": "verb","zh": "維持；保養","part": "C","examples": ["It is essential that governments maintain consistent policies over the long term to build investor confidence.","The local council has struggled to maintain public green spaces as budget pressures have intensified."],"col": ["maintain status quo","maintain standards","maintain relationships","maintain equipment","maintain a record","maintain momentum","maintain control","maintain balance"],"syn": [{"w": "sustain","n": "強調持續維持，比maintain更強調長期性"},{"w": "preserve","n": "強調防止衰退或消失，比maintain更強調保護"},{"w": "uphold","n": "強調維護原則、法律或價值觀，帶有道德意味"}],"note": "maintain是IELTS學術寫作的高頻動詞，幾乎適用於所有主題；maintain that（主張）也是學術論述的常用表達，相當於argue that。"},{"word": "preserve","ipa": "/prɪˈzɜːv/","pos": "verb","zh": "保存；保護","part": "C","examples": ["Conservationists are working tirelessly to preserve the few remaining examples of old-growth forest in the region.","Digitisation projects aim to preserve fragile historical documents for future generations without damaging the originals."],"col": ["preserve environment","preserve food","preserve culture","preserve heritage","preserve species","preserve rights","preserve natural habitats","carefully preserve"],"syn": [{"w": "conserve","n": "強調節約和保護自然資源，比preserve更常用於環保語境"},{"w": "protect","n": "最廣義，強調防止危害，比preserve更強調防禦"},{"w": "safeguard","n": "較正式，強調採取措施確保安全，多用於法律和政策語境"}],"note": "preserve強調維持現有狀態不受損害；conserve強調節約使用資源；IELTS環境類寫作中這兩個詞是核心詞彙，各有側重。"},{"word": "retain","ipa": "/rɪˈteɪn/","pos": "verb","zh": "保留；持有","part": "C","examples": ["Companies must develop effective strategies to retain experienced employees in an increasingly competitive talent market.","Many immigrants find it challenging to retain their cultural identity while integrating into a new society."],"col": ["retain control","retain information","retain staff","retain customers","retain value","retain independence","retain the right","retain position"],"syn": [{"w": "keep","n": "最廣義和口語，泛指保留任何東西"},{"w": "maintain","n": "強調持續保持某種狀態，比retain更強調積極維護"},{"w": "preserve","n": "強調保護使其不受損害，比retain更強調防止喪失"}],"note": "retain在學術寫作中非常正式且多用；retain customers（留住顧客）和retain talent（留住人才）是IELTS商業類的高頻搭配。"}]
+};
+const PART_LABELS = {
+  A:'Part A · Nouns', B:'Part B · Adjectives',
+  C:'Part C · Verbs',  D:'Part D · Phrases'
+};
+const SK = 'ielts_u4';
+let cur=0, mode='browse', flipped=false, known=[], onIntro=true;
+function load(){ try{ known=JSON.parse(localStorage.getItem(SK)||'[]'); }catch(e){known=[];} }
+function save(){ try{ localStorage.setItem(SK,JSON.stringify(known)); }catch(e){} }
+function isKnown(i){ return known.includes(i); }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateDots(){
+  const n=UNIT.words.length, max=Math.min(n,30);
+  let h='';
+  for(let i=0;i<max;i++){
+    const c=(!onIntro&&i===cur)?'dot cur':isKnown(i)?'dot known':'dot';
+    h+='<div class="'+c+'"></div>';
+  }
+  if(n>max) h+='<span style="font-family:var(--fm);font-size:.5rem;color:var(--g400);margin-left:2px;">+'+(n-max)+'</span>';
+  document.getElementById('dots').innerHTML=h;
+}
+function renderIntro(){
+  document.getElementById('counter').textContent='Introduction';
+  document.getElementById('known-badge').textContent='';
+  document.getElementById('prog-fill').style.width='0%';
+  document.getElementById('action-count').textContent='';
+  document.getElementById('know-btn').style.display='none';
+  document.getElementById('review-btn').style.display='none';
+  const f=document.getElementById('front-face');
+  f.className='face front intro-face';
+  f.innerHTML=
+    '<div class="ic-eyebrow">IELTS Core Thematic Vocabulary · Chapter 4 of 10</div>'+
+    '<div class="ic-title">Business, Marketing & Consumerism</div>'+
+    '<div class="ic-zh">商業行銷與消費貿易</div>'+
+    '<div class="ic-rule"></div>'+
+    '<div class="ic-body">'+
+      '<div>'+
+        '<div class="ic-sec-label">關於本章</div>'+
+        '<div class="ic-about">本章收錄 55 個核心詞彙。每個詞條包含搭配詞與中文解釋。</div>'+
+      '</div>'+
+      '<div>'+
+        '<div class="ic-sec-label">使用方式</div>'+
+        '<div class="ic-steps">'+
+          '<div class="ic-step"><span class="ic-tag">Browse</span>正面顯示英文單字，翻面查看中文與搭配詞。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Quiz</span>正面顯示中文，翻面前先回想英文，訓練主動回憶。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Know it ✓</span>標記已掌握。<span class="ic-tag">Review ↺</span>重新複習。</div>'+
+          '<div class="ic-step"><span class="ic-tag">快捷鍵</span>← → 切換卡片 &nbsp;·&nbsp; F 翻轉 &nbsp;·&nbsp; K 標記</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="ic-hint">按 Next → 開始學習</div>';
+  document.getElementById('back-face').innerHTML='';
+  updateDots();
+}
+function render(){
+  if(onIntro){ renderIntro(); return; }
+  document.getElementById('front-face').className='face front';
+  document.getElementById('know-btn').style.display='';
+  document.getElementById('review-btn').style.display='';
+  const w=UNIT.words[cur], n=UNIT.words.length, k=isKnown(cur);
+  document.getElementById('counter').textContent=(cur+1)+' / '+n;
+  document.getElementById('known-badge').textContent=known.length+' / '+n+' known';
+  document.getElementById('prog-fill').style.width=((cur+1)/n*100)+'%';
+  document.getElementById('action-count').textContent=known.length+'/'+n;
+  const isQuiz=(mode==='quiz');
+  document.getElementById('front-face').innerHTML=
+    '<div class="f-top">'+
+      '<div class="f-meta">'+
+        '<div class="f-num">#'+String(cur+1).padStart(3,'0')+'</div>'+
+        '<div class="f-part">'+(PART_LABELS[w.part]||'')+'</div>'+
+      '</div>'+
+      '<span class="f-known-mark'+(k?' vis':'')+'">✓ known</span>'+
+    '</div>'+
+    '<div class="f-body">'+
+      '<div class="f-word">'+esc(isQuiz?w.zh:w.word)+'</div>'+
+      (!isQuiz&&w.ipa?'<div class="f-ipa">'+esc(w.ipa)+'</div>':'')+
+      (!isQuiz?'<div class="f-pos">'+esc(w.pos)+'</div>':'')+
+    '</div>'+
+    '<div class="f-hint">'+(isQuiz?'think → click to flip':'click to flip →')+'</div>';
+  const exH=(w.examples||[]).map(e=>'<div class="b-ex">"'+esc(e)+'"</div>').join('');
+  const colH=(w.col||[]).map(c=>'<div class="b-col">'+esc(c)+'</div>').join('');
+  const synH=(w.syn||[]).map(s=>
+    '<div class="b-syn-row"><div class="b-syn-w">'+esc(s.w)+'</div>'+
+    '<div class="b-syn-n">（'+esc(s.n)+'）</div></div>'
+  ).join('');
+  const noteH=w.note?'<div class="b-sec"><div class="b-label">注意</div><div class="b-note">'+esc(w.note)+'</div></div>':'';
+  let zhLine, metaLine='';
+  if(isQuiz){
+    zhLine='<div class="b-quiz-word">'+esc(w.word)+'</div>';
+    metaLine='<div class="b-quiz-meta">'+esc(w.pos)+(w.ipa?' &nbsp;'+esc(w.ipa):'')+'</div>';
+  } else {
+    zhLine='<div class="b-zh">'+esc(w.zh)+'</div>';
+  }
+  document.getElementById('back-face').innerHTML=
+    zhLine+metaLine+
+    '<div class="b-rule"></div>'+
+    '<div class="b-content">'+
+      (exH?'<div class="b-sec"><div class="b-label">Examples</div>'+exH+'</div>':'')+
+      (colH?'<div class="b-sec"><div class="b-label">搭配</div><div class="b-cols">'+colH+'</div></div>':'')+
+      (synH?'<div class="b-sec"><div class="b-label">近義</div><div class="b-syns">'+synH+'</div></div>':'')+
+      noteH+
+    '</div>';
+  updateDots();
+}
+function flip(){ if(onIntro) return; flipped=!flipped; document.getElementById('card').classList.toggle('flipped',flipped); }
+function go(dir){
+  if(onIntro&&dir>0){ onIntro=false;cur=0;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(!onIntro&&dir<0&&cur===0){ onIntro=true;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(onIntro) return;
+  cur=Math.max(0,Math.min(UNIT.words.length-1,cur+dir));
+  flipped=false;document.getElementById('card').classList.remove('flipped');render();
+}
+function markKnown(){ if(onIntro) return; if(!isKnown(cur)) known.push(cur); save();render(); setTimeout(function(){ if(cur<UNIT.words.length-1) go(1); },180); }
+function markReview(){ if(onIntro) return; known=known.filter(function(x){return x!==cur;}); save();render(); }
+function setMode(m){ mode=m;flipped=false;document.getElementById('card').classList.remove('flipped');document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.toggle('active',b.dataset.mode===m);});render(); }
+document.getElementById('scene').addEventListener('click',flip);
+document.getElementById('prev-btn').addEventListener('click',function(e){e.stopPropagation();go(-1);});
+document.getElementById('next-btn').addEventListener('click',function(e){e.stopPropagation();go(1);});
+document.getElementById('know-btn').addEventListener('click',function(e){e.stopPropagation();markKnown();});
+document.getElementById('review-btn').addEventListener('click',function(e){e.stopPropagation();markReview();});
+document.querySelectorAll('.mode-btn').forEach(function(b){ b.addEventListener('click',function(e){e.stopPropagation();setMode(b.dataset.mode);});});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowLeft') go(-1);
+  else if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  else if(e.key==='f'||e.key==='F') flip();
+  else if(e.key==='k'||e.key==='K') markKnown();
+});
+load();render();
+</script>
+</body>
+</html>

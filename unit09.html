@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 9 · Crime, Law & Society | IELTS Vocabulary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="gate.js"></script>
+<style>
+:root{
+  --navy:#2E1A47;--gold:#8E5FB0;--gold2:#C9A8E0;
+  --paper:#FAF7FC;--g100:#F0E9F7;--g200:#E2D5EE;--g400:#9A8AA8;
+  --known:#2B6830;--r:2px;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Lora','Times New Roman',serif;
+  --fm:'JetBrains Mono','Courier New',monospace;
+  --shadow:0 1px 3px rgba(46,26,71,.06),0 4px 16px rgba(46,26,71,.08),0 16px 48px rgba(46,26,71,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);font-family:var(--fb);color:var(--navy);
+  height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+#hdr{height:52px;background:var(--navy);display:flex;align-items:center;
+  padding:0 18px;flex-shrink:0;position:relative;gap:12px;}
+.hdr-unit{font-family:var(--fd);font-size:.85rem;font-weight:700;color:var(--gold2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;}
+.hdr-center{position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:1px;pointer-events:none;}
+#counter{font-family:var(--fm);font-size:.82rem;color:#fff;letter-spacing:.02em;}
+#known-badge{font-family:var(--fm);font-size:.62rem;color:var(--gold2);opacity:.75;min-height:.85em;}
+.hdr-nav{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.mode-toggle{display:flex;border:1px solid rgba(142,95,176,.35);border-radius:var(--r);overflow:hidden;}
+.mode-btn{background:transparent;border:none;color:rgba(142,95,176,.6);font-family:var(--fm);
+  font-size:.66rem;padding:4px 10px;cursor:pointer;transition:background .15s,color .15s;
+  letter-spacing:.04em;text-transform:uppercase;}
+.mode-btn.active{background:var(--gold);color:#fff;}
+#home-link{color:rgba(201,168,224,.5);font-size:1.15rem;text-decoration:none;
+  line-height:1;transition:color .15s;padding:2px;}
+#home-link:hover{color:var(--gold2);}
+#prog-track{height:2px;background:rgba(142,95,176,.15);flex-shrink:0;}
+#prog-fill{height:100%;background:var(--gold);transition:width .3s ease;width:0%;}
+#stage{flex:1;display:flex;align-items:center;justify-content:center;
+  padding:14px 16px;overflow:hidden;}
+.scene{width:min(660px,100%);height:min(460px,calc(100vh - 130px));
+  perspective:1400px;cursor:pointer;user-select:none;}
+.card{width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;transition:transform .52s cubic-bezier(.4,0,.2,1);}
+.card.flipped{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--r);display:flex;flex-direction:column;padding:28px 36px;}
+.front{background:var(--paper);border:1px solid var(--g200);box-shadow:var(--shadow);}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;}
+.f-meta{display:flex;flex-direction:column;gap:2px;}
+.f-num{font-family:var(--fm);font-size:.66rem;color:var(--gold);letter-spacing:.1em;}
+.f-part{font-family:var(--fm);font-size:.58rem;color:var(--g400);letter-spacing:.05em;}
+.f-known-mark{font-family:var(--fm);font-size:.62rem;color:var(--known);
+  opacity:0;transition:opacity .2s;}
+.f-known-mark.vis{opacity:1;}
+.f-body{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;text-align:center;padding:4px 0;}
+.f-word{font-family:var(--fd);font-size:clamp(2rem,6vw,3.4rem);
+  color:var(--navy);font-weight:700;line-height:1.05;letter-spacing:-.01em;}
+.f-ipa{font-family:var(--fm);font-size:.76rem;color:var(--g400);letter-spacing:.02em;}
+.f-pos{font-family:var(--fb);font-size:.88rem;color:var(--g400);font-style:italic;}
+.f-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;}
+.back{background:var(--navy);transform:rotateY(180deg);overflow:hidden;}
+.b-zh{font-family:var(--fd);font-size:clamp(1.5rem,4.2vw,2.3rem);
+  color:var(--gold2);font-weight:700;line-height:1.2;flex-shrink:0;margin-bottom:10px;}
+.b-quiz-word{font-family:var(--fd);font-size:clamp(1.6rem,4.5vw,2.5rem);
+  color:var(--gold2);font-weight:700;line-height:1.1;flex-shrink:0;}
+.b-quiz-meta{font-family:var(--fb);font-size:.82rem;color:rgba(201,168,224,.65);
+  font-style:italic;flex-shrink:0;margin-bottom:10px;}
+.b-rule{height:1px;background:rgba(255,255,255,.1);flex-shrink:0;margin-bottom:10px;}
+.b-content{flex:1;overflow-y:auto;display:flex;flex-direction:column;
+  gap:11px;scrollbar-width:none;-ms-overflow-style:none;}
+.b-content::-webkit-scrollbar{display:none;}
+.b-sec{display:flex;flex-direction:column;gap:5px;}
+.b-label{font-family:var(--fm);font-size:.57rem;
+  color:rgba(142,95,176,.75);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;}
+.b-ex{font-family:var(--fb);font-size:.77rem;color:#ccc;font-style:italic;
+  line-height:1.6;padding-left:10px;border-left:2px solid rgba(142,95,176,.3);}
+.b-col{font-family:var(--fm);font-size:.67rem;color:#e8dff2;line-height:1.35;
+  padding-left:10px;border-left:2px solid var(--gold);padding-top:1px;padding-bottom:1px;}
+.b-cols{display:flex;flex-direction:column;gap:4px;}
+.b-syns{display:flex;flex-direction:column;gap:5px;}
+.b-syn-row{display:flex;flex-direction:column;gap:1px;}
+.b-syn-w{font-family:var(--fm);font-size:.7rem;color:var(--gold2);}
+.b-syn-n{font-family:var(--fb);font-size:.71rem;color:#999;line-height:1.45;padding-left:6px;}
+.b-note{font-family:var(--fb);font-size:.74rem;color:#cdb0e2;font-style:italic;
+  line-height:1.6;padding:8px 10px;
+  border:1px solid rgba(142,95,176,.2);border-radius:2px;background:rgba(142,95,176,.07);}
+.intro-face{cursor:default;}
+.ic-eyebrow{font-family:var(--fm);font-size:.62rem;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;flex-shrink:0;}
+.ic-title{font-family:var(--fd);font-size:clamp(1.3rem,3.2vw,1.9rem);
+  color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:4px;flex-shrink:0;}
+.ic-zh{font-family:var(--fb);font-size:.85rem;color:var(--g400);font-style:italic;flex-shrink:0;}
+.ic-rule{height:1px;background:var(--g200);margin:14px 0;flex-shrink:0;}
+.ic-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
+.ic-sec-label{font-family:var(--fm);font-size:.57rem;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
+.ic-about{font-family:var(--fb);font-size:.81rem;color:var(--navy);line-height:1.65;}
+.ic-steps{display:flex;flex-direction:column;gap:6px;}
+.ic-step{font-family:var(--fb);font-size:.79rem;color:var(--navy);
+  line-height:1.5;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.ic-tag{font-family:var(--fm);font-size:.62rem;background:var(--g100);
+  border:1px solid var(--g200);color:var(--navy);padding:1px 7px;
+  border-radius:var(--r);white-space:nowrap;flex-shrink:0;}
+.ic-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;margin-top:auto;}
+#nav-bar{height:52px;background:var(--g100);border-top:1px solid var(--g200);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 14px;flex-shrink:0;}
+.nav-btn{background:transparent;border:1px solid var(--g200);color:var(--navy);
+  font-family:var(--fb);font-size:.82rem;padding:6px 14px;cursor:pointer;
+  border-radius:var(--r);transition:all .15s;}
+.nav-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.action-center{display:flex;align-items:center;gap:6px;}
+#action-count{font-family:var(--fm);font-size:.65rem;color:#aaa;white-space:nowrap;}
+#know-btn{background:var(--known);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#know-btn:hover{opacity:.85;}
+#review-btn{background:var(--gold);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#review-btn:hover{opacity:.8;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+#dots{display:flex;gap:3px;align-items:center;max-width:200px;overflow:hidden;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--g200);flex-shrink:0;transition:background .2s;}
+.dot.cur{background:var(--gold);}
+.dot.known{background:var(--known);}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <span class="hdr-unit">Ch. 9 &middot; Crime, Law & Society</span>
+  <div class="hdr-center">
+    <span id="counter">Introduction</span>
+    <span id="known-badge"></span>
+  </div>
+  <nav class="hdr-nav">
+    <div class="mode-toggle">
+      <button class="mode-btn active" data-mode="browse">Browse</button>
+      <button class="mode-btn" data-mode="quiz">Quiz</button>
+    </div>
+    <a id="home-link" href="index.html" title="Index">&#8962;</a>
+  </nav>
+</header>
+<div id="prog-track"><div id="prog-fill"></div></div>
+<main id="stage">
+  <div class="scene" id="scene">
+    <div class="card" id="card">
+      <div class="face front" id="front-face"></div>
+      <div class="face back"  id="back-face"></div>
+    </div>
+  </div>
+</main>
+<footer id="nav-bar">
+  <button class="nav-btn" id="prev-btn">&#8592; Prev</button>
+  <div class="action-center">
+    <span id="action-count"></span>
+    <button id="know-btn">Know it &#10003;</button>
+    <button id="review-btn">Review &#8635;</button>
+  </div>
+  <div class="nav-right">
+    <div id="dots"></div>
+    <button class="nav-btn" id="next-btn">Next &#8594;</button>
+  </div>
+</footer>
+<script>
+const UNIT = {
+  number: 9,
+  title_en: "Crime, Law & Society",
+  title_zh: "\u72af\u7f6a\u6cd5\u5f8b\u8207\u793e\u6703\u5371\u6a5f",
+  src: "Units 14 & 18",
+  count: 56,
+  words: [{"word": "capital punishment","ipa": "/ˈkæpɪtl ˈpʌnɪʃmənt/","pos": "noun","zh": "死刑","part": "A","examples": ["Advocates of capital punishment argue that it serves as a powerful deterrent against the most heinous crimes.","Many human rights organisations contend that capital punishment constitutes a violation of the right to life."],"col": ["abolish capital punishment","support capital punishment","impose capital punishment","debate over capital punishment","capital punishment case","capital punishment system"],"syn": [{"w": "death penalty","n": "最常見的同義詞，口語及正式文體均通用"},{"w": "execution","n": "強調執行死刑的行為本身，較具體"},{"w": "lethal sentence","n": "文學性用法，強調判決的致命性"}],"note": "capital punishment 與 death penalty 可互換，但學術寫作中前者更正式，後者在新聞文體更常見。"},{"word": "community service","ipa": "/kəˈmjuːnɪti ˈsɜːvɪs/","pos": "noun","zh": "社區服務","part": "A","examples": ["The judge sentenced the first-time offender to 200 hours of community service rather than a custodial sentence.","Community service as an alternative punishment is considered more rehabilitative than short-term imprisonment."],"col": ["sentence to community service","complete community service","community service order","unpaid community service","perform community service","community service hours"],"syn": [{"w": "community payback","n": "英國官方術語，強調對社會的補償"},{"w": "restorative service","n": "強調修復性司法理念的用法"},{"w": "alternative sentencing","n": "廣義替代刑罰，不限於社區服務"}],"note": "作為刑罰的 community service 須與「志願服務」區分；前者是法院判決，後者出於自願。"},{"word": "life sentence","ipa": "/laɪf ˈsentəns/","pos": "noun","zh": "無期徒刑","part": "A","examples": ["The court handed down a life sentence to the convicted murderer, with a minimum term of twenty-five years.","Critics argue that a life sentence without the possibility of parole fails to account for the potential for rehabilitation."],"col": ["serve a life sentence","receive a life sentence","hand down a life sentence","minimum life sentence","life sentence without parole","whole-life sentence"],"syn": [{"w": "life imprisonment","n": "較正式的法律術語，強調監禁狀態"},{"w": "indefinite sentence","n": "強調刑期無固定終止，範圍更廣"},{"w": "whole-life order","n": "英國法律術語，指不得假釋的終身監禁"}],"note": "life sentence 在多數國家仍有假釋可能，而 whole-life sentence 則完全無假釋；寫作時需留意區別。"},{"word": "mugging","ipa": "/ˈmʌɡɪŋ/","pos": "noun","zh": "搶劫 (在公共場合)","part": "A","examples": ["The rise in street muggings has prompted calls for increased police patrols in the city centre.","Victims of mugging often suffer lasting psychological trauma in addition to the immediate financial loss."],"col": ["street mugging","armed mugging","mugging victim","mugging incident","prevent mugging","wave of muggings"],"syn": [{"w": "street robbery","n": "法律術語，範圍較廣，包含各種街頭搶奪"},{"w": "assault and robbery","n": "強調涉及人身攻擊的搶劫，法律色彩更強"},{"w": "bag-snatching","n": "特指搶奪手提包，範圍較窄"}],"note": "mugging 特指街頭以暴力或威脅為手段的搶劫；robbery 範圍更廣，可發生於室內或銀行。"},{"word": "offence","ipa": "/əˈfens/","pos": "noun","zh": "罪行","part": "A","examples": ["Driving under the influence is a serious offence that can result in imprisonment and a permanent criminal record.","The legislation aims to classify hate speech as a criminal offence punishable by a substantial fine."],"col": ["commit an offence","criminal offence","minor offence","serious offence","repeat offence","traffic offence"],"syn": [{"w": "crime","n": "最廣義的犯罪行為，口語及正式均適用"},{"w": "violation","n": "強調違反規定，可指法律或道德準則"},{"w": "misdemeanour","n": "特指輕罪，與 felony（重罪）相對"}],"note": "offence 是英式拼法，美式為 offense；學術寫作中兩者均被接受，但應保持全文一致。"},{"word": "organised crime","ipa": "/ˈɔːɡənaɪzd kraɪm/","pos": "noun","zh": "有組織犯罪","part": "A","examples": ["Organised crime syndicates have increasingly infiltrated legitimate businesses to launder illicit proceeds.","Tackling organised crime requires unprecedented cooperation between national law enforcement agencies and international bodies."],"col": ["tackle organised crime","organised crime syndicate","organised crime network","links to organised crime","organised crime figure","fight against organised crime"],"syn": [{"w": "criminal syndicate","n": "強調有組織的犯罪集團結構"},{"w": "crime ring","n": "較口語，指非正式犯罪網絡"},{"w": "criminal organisation","n": "法律文件中的正式用語，強調組織形式"}],"note": "organised crime 特指有層級、分工明確的犯罪組織；不可用於描述個人的偶發犯罪行為。"},{"word": "peer pressure","ipa": "/pɪə ˈpreʃə/","pos": "noun","zh": "同儕壓力","part": "A","examples": ["Many adolescents engage in risk-taking behaviour as a direct result of peer pressure from their social circle.","Educational programmes designed to resist peer pressure have shown positive outcomes in reducing youth drug use."],"col": ["succumb to peer pressure","resist peer pressure","yield to peer pressure","peer pressure to conform","negative peer pressure","peer pressure among teenagers"],"syn": [{"w": "social pressure","n": "範圍更廣，來自整體社會而非特定同齡群體"},{"w": "group conformity","n": "強調為融入群體而改變行為的傾向"},{"w": "conformism","n": "偏學術，指盲目跟從群體規範的心理"}],"note": "peer pressure 特指來自同齡或同等社會地位者的影響，與來自長輩的 parental pressure 不同。"},{"word": "petty crime","ipa": "/ˈpeti kraɪm/","pos": "noun","zh": "輕微罪行","part": "A","examples": ["An increase in petty crime such as shoplifting and vandalism often signals deeper socioeconomic problems within a community.","The mayor's initiative focused on reducing petty crime through community outreach rather than increased policing."],"col": ["commit petty crime","wave of petty crime","petty crime rate","petty crime offender","reduce petty crime","petty crime and anti-social behaviour"],"syn": [{"w": "minor offence","n": "法律術語，強調犯罪嚴重性較低"},{"w": "misdemeanour","n": "法律分類用語，泛指不達重罪門檻的犯罪"},{"w": "low-level crime","n": "較非正式，強調犯罪規模和嚴重性"}],"note": "petty crime 涵蓋扒竊、塗鴉、破壞公物等輕罪；切勿用於形容暴力犯罪或有組織犯罪。"},{"word": "robbery","ipa": "/ˈrɒbəri/","pos": "noun","zh": "強盜","part": "A","examples": ["Armed robbery carries a significantly heavier sentence than simple theft due to the element of personal threat.","The bank robbery was foiled by an alert security guard who triggered the silent alarm system."],"col": ["armed robbery","commit robbery","bank robbery","robbery suspect","robbery charge","wave of robberies"],"syn": [{"w": "theft","n": "泛指竊盜，不含威脅或暴力，法律意義不同"},{"w": "burglary","n": "特指非法侵入建築物後的盜竊，不一定有直接衝突"},{"w": "heist","n": "口語或媒體用語，通常指精心策劃的大規模搶劫"}],"note": "robbery 法律上必須包含威脅或暴力成分；theft 和 burglary 不涉及直接的人身威脅，三者不可混用。"},{"word": "vandalism","ipa": "/ˈvændəlɪzəm/","pos": "noun","zh": "惡意破壞","part": "A","examples": ["The local council spent over half a million pounds repairing damage caused by acts of vandalism in the past year.","Vandalism of public spaces is often symptomatic of a community's disengagement and sense of social alienation."],"col": ["act of vandalism","commit vandalism","prevent vandalism","mindless vandalism","vandalism and graffiti","vandalism charge"],"syn": [{"w": "wilful damage","n": "法律術語，強調故意性"},{"w": "wanton destruction","n": "強調無目的、任意破壞的性質"},{"w": "defacement","n": "特指塗污或毀損外觀，範圍較窄"}],"note": "vandalism 特指對公共或他人財產的蓄意破壞；graffiti 可視為 vandalism 的一種，但非所有塗鴉均被視為破壞。"},{"word": "violence","ipa": "/ˈvaɪələns/","pos": "noun","zh": "暴力","part": "A","examples": ["Domestic violence remains one of the most underreported crimes due to the complex dynamics of intimate relationships.","The government pledged to address the root causes of gang violence through investment in education and youth programmes."],"col": ["domestic violence","gang violence","acts of violence","incite violence","violence against women","curb violence"],"syn": [{"w": "aggression","n": "強調攻擊傾向，可指言語或行為，範圍較廣"},{"w": "brutality","n": "強調殘暴程度，帶有強烈的道德譴責"},{"w": "force","n": "較中性，指物理力量，不一定帶負面意涵"}],"note": "violence 是不可數名詞，不可說 a violence；描述具體事件時應說 an act of violence 或 a violent incident。"},{"word": "hostile","ipa": "/ˈhɒstaɪl/","pos": "adj","zh": "敵對的","part": "B","examples": ["The hostile reception given to the new policy reflected deep-seated public scepticism about government intentions.","A hostile work environment can severely undermine employee wellbeing and organisational productivity."],"col": ["hostile environment","hostile reaction","hostile takeover","openly hostile","hostile to change","hostile attitude"],"syn": [{"w": "antagonistic","n": "強調主動的對抗與敵對，比 hostile 更主動積極"},{"w": "aggressive","n": "強調攻擊性的行為或態度，不一定有敵意"},{"w": "unfriendly","n": "較口語，強調缺乏友善，程度輕於 hostile"}],"note": "hostile 強調帶有敵意的態度或氛圍；hostile takeover（惡意收購）是商業領域的固定搭配，需特別記憶。"},{"word": "lenient","ipa": "/ˈliːniənt/","pos": "adj","zh": "寬大的","part": "B","examples": ["Critics argued that the judge had been too lenient in sentencing, handing down only a suspended sentence for a serious assault.","A more lenient approach to drug offences is advocated by those who view addiction primarily as a public health issue."],"col": ["lenient sentence","too lenient","lenient approach","lenient judge","lenient treatment","be lenient with"],"syn": [{"w": "merciful","n": "強調出於憐憫而寬恕，帶有道德或情感色彩"},{"w": "clement","n": "正式文學用語，指對過錯表現出的仁慈"},{"w": "indulgent","n": "含有過度縱容的意味，語氣帶輕微批評"}],"note": "lenient 多用於描述刑罰或管束，帶輕微貶義，暗示懲處不足；與 strict 和 harsh 相對，是司法議題寫作的高頻詞。"},{"word": "accept the consequences of","ipa": "/əkˈsept ðə ˈkɒnsɪkwənsɪz əv/","pos": "phrase","zh": "承擔後果","part": "D","examples": ["Those who choose to break the law must be prepared to accept the consequences of their actions.","A truly democratic society requires its leaders to accept the consequences of their decisions, even when those consequences are politically costly."],"col": ["accept the consequences of one's actions","willing to accept the consequences","refuse to accept the consequences","be prepared to accept the consequences","accept the full consequences","accept the consequences willingly"],"syn": [{"w": "face the consequences","n": "強調面對後果，不一定指接受"},{"w": "bear responsibility for","n": "強調承擔責任，側重法律或道德義務"},{"w": "take the blame for","n": "強調承擔責備，情感色彩更強"}],"note": "accept the consequences 比 face the consequences 更強調主動承擔，而非被動面對；是討論責任時的高分用語。"},{"word": "accuse someone of","ipa": "/əˈkjuːz ˈsʌmwʌn əv/","pos": "phrase","zh": "指控某人","part": "D","examples": ["The senator was publicly accused of accepting bribes from a major pharmaceutical corporation.","In a democratic society, the right to accuse those in power of wrongdoing is fundamental to accountability."],"col": ["accuse someone of misconduct","accuse someone of fraud","formally accuse","wrongly accuse","accuse someone of corruption","publicly accuse"],"syn": [{"w": "charge someone with","n": "法律術語，指正式提出指控，比 accuse 更具法律效力"},{"w": "allege that someone","n": "強調指控尚未被證實，具有法律謹慎性"},{"w": "indict someone for","n": "特指大陪審團的正式起訴，美國法律術語"}],"note": "accuse 指提出指控但尚未判決；charge 是正式法律程序；若要表示尚未確認，用 allege 或 allegedly 更為嚴謹。"},{"word": "arrest someone for","ipa": "/əˈrest ˈsʌmwʌn fɔː/","pos": "phrase","zh": "因...逮捕某人","part": "D","examples": ["The police arrested the suspect for armed robbery following a tip-off from a member of the public.","Authorities arrested several journalists for reporting on sensitive political matters, drawing widespread international condemnation."],"col": ["arrest someone for theft","arrest someone for assault","arrest without warrant","wrongfully arrest","arrest on suspicion of","be arrested for"],"syn": [{"w": "detain someone for","n": "強調拘留，不一定是正式逮捕"},{"w": "apprehend someone for","n": "正式用語，強調拘捕行為本身"},{"w": "take into custody for","n": "強調正式移交羈押的法律程序"}],"note": "arrest 是逮捕的正式法律行為，必須有法定依據；detain 可以是臨時的非正式拘留，兩者法律效力不同。"},{"word": "be (held) responsible for","ipa": "/biː (held) rɪˈspɒnsɪbl fɔː/","pos": "phrase","zh": "負責；承擔責任","part": "D","examples": ["Corporations must be held responsible for the environmental damage they cause, regardless of their economic contributions.","The government was held responsible for failing to provide adequate flood defences despite years of prior warning."],"col": ["be held responsible for","be directly responsible for","hold accountable","bear responsibility for","be ultimately responsible for","be legally responsible for"],"syn": [{"w": "be accountable for","n": "強調有義務說明和解釋行為，多用於公共治理"},{"w": "be liable for","n": "法律術語，強調法律上的賠償或連帶責任"},{"w": "be culpable for","n": "強調道德或法律上的過失責任，帶有譴責色彩"}],"note": "be responsible for 可指一般職責；be held responsible for 強調外部歸咎；be liable for 特指法律賠償責任，三者語境不同。"},{"word": "be a victim of","ipa": "/biː ə ˈvɪktɪm əv/","pos": "phrase","zh": "成為...的受害者","part": "D","examples": ["Children who are victims of abuse often carry lasting psychological scars into adulthood.","Elderly people in urban areas are disproportionately likely to be a victim of financial scams and fraud."],"col": ["be a victim of crime","be a victim of fraud","be a victim of discrimination","be a victim of abuse","be a victim of circumstance","unwitting victim"],"syn": [{"w": "fall victim to","n": "強調遭受傷害的過程，含有無力抵抗之意"},{"w": "suffer from","n": "強調承受傷害或痛苦，適用範圍更廣"},{"w": "be on the receiving end of","n": "口語化，強調被動承受不公待遇"}],"note": "be a victim of 後接 crime, fraud, abuse 等；fall victim to 後接 temptation, disease 等更抽象的事物，搭配有所不同。"},{"word": "convicted criminal","ipa": "/kənˈvɪktɪd ˈkrɪmɪnl/","pos": "phrase","zh": "定罪的罪犯","part": "D","examples": ["Whether convicted criminals should be allowed to vote after serving their sentences is a contentious political debate.","Employers are legally prohibited from discriminating against convicted criminals who have fully served their time."],"col": ["convicted criminal record","violent convicted criminal","former convicted criminal","rights of convicted criminals","convicted criminal background","treat as a convicted criminal"],"syn": [{"w": "offender","n": "廣義罪犯，不一定已被定罪，也可指輕罪"},{"w": "felon","n": "美式英語，特指已定罪的重罪犯"},{"w": "ex-convict","n": "強調已服刑完畢，出獄後的前罪犯"}],"note": "convicted criminal 強調「已定罪」，在法律討論中重要；mere suspect 或 accused 在定罪前不應稱為 criminal。"},{"word": "criminal activity","ipa": "/ˈkrɪmɪnl ækˈtɪvɪti/","pos": "phrase","zh": "犯罪活動","part": "D","examples": ["The neighbourhood watch scheme was established to deter criminal activity and increase community safety.","Online platforms have a responsibility to monitor and report criminal activity that occurs within their digital spaces."],"col": ["engage in criminal activity","suspected criminal activity","report criminal activity","deter criminal activity","link to criminal activity","criminal activity online"],"syn": [{"w": "illegal activity","n": "最廣義，強調任何違法行為，不限於刑事"},{"w": "criminal behaviour","n": "強調行為本身，比 activity 更聚焦於個人行動"},{"w": "illicit activity","n": "正式書面語，強調非法且違反道德的活動"}],"note": "criminal activity 是不可數名詞，不說 a criminal activity；engage in criminal activity 是最常見的動詞搭配。"},{"word": "criminal offence","ipa": "/ˈkrɪmɪnl əˈfens/","pos": "phrase","zh": "刑事犯罪","part": "D","examples": ["Driving while intoxicated is a criminal offence in virtually every jurisdiction in the world.","The proposed legislation seeks to make cyberbullying a criminal offence punishable by up to two years in prison."],"col": ["commit a criminal offence","serious criminal offence","constitute a criminal offence","criminal offence punishable by","criminal offence under the law","minor criminal offence"],"syn": [{"w": "crime","n": "最廣義，口語及正式均適用"},{"w": "felony","n": "美式法律術語，指重刑事罪行"},{"w": "misdemeanour","n": "美式法律術語，指輕刑事罪行，與 felony 相對"}],"note": "constitute a criminal offence（構成刑事罪行）是論述法律議題的高頻句型；英式拼法 offence 在全文中應保持一致。"},{"word": "criminal record","ipa": "/ˈkrɪmɪnl ˈrekɔːd/","pos": "phrase","zh": "犯罪紀錄","part": "D","examples": ["Individuals with a criminal record often face significant barriers to employment, housing, and social reintegration.","The court took into account the defendant's lack of a prior criminal record when determining the appropriate sentence."],"col": ["have a criminal record","clear a criminal record","prior criminal record","criminal record check","criminal record expunged","no criminal record"],"syn": [{"w": "prior convictions","n": "法律術語，強調之前的定罪記錄"},{"w": "rap sheet","n": "口語，非正式稱謂，指警方存檔的犯罪記錄"},{"w": "criminal history","n": "強調犯罪歷程，範圍比 record 更廣"}],"note": "have a criminal record 是固定搭配；criminal record check 在英語國家的就業程序中非常普遍，是實用搭配。"},{"word": "hardened criminal","ipa": "/ˈhɑːdnd ˈkrɪmɪnl/","pos": "phrase","zh": "慣犯","part": "D","examples": ["Placing first-time offenders alongside hardened criminals in prison can accelerate their criminal socialisation.","The rehabilitation programme was designed for hardened criminals who had failed to respond to conventional sentencing."],"col": ["notorious hardened criminal","reformed hardened criminal","deal with hardened criminals","hardened criminal behaviour","treat as a hardened criminal","hardened criminal offender"],"syn": [{"w": "career criminal","n": "強調以犯罪為職業，長期慣犯"},{"w": "habitual offender","n": "法律術語，指多次重複犯罪者"},{"w": "recidivist","n": "最正式的法律術語，指重複犯罪的累犯"}],"note": "hardened criminal 帶有「難以改過」的含義；recidivist 是學術和法律文件中最正式的用語，IELTS 高分寫作中應優先使用。"},{"word": "juvenile crime","ipa": "/ˈdʒuːvənaɪl kraɪm/","pos": "phrase","zh": "青少年犯罪","part": "D","examples": ["Juvenile crime is widely regarded as a symptom of broader social problems such as poverty and family dysfunction.","Preventive education programmes have proven more effective at reducing juvenile crime than punitive measures."],"col": ["juvenile crime rate","rise in juvenile crime","tackle juvenile crime","juvenile crime prevention","juvenile crime offender","juvenile crime and delinquency"],"syn": [{"w": "youth offending","n": "英式術語，廣泛用於政策討論中"},{"w": "youth crime","n": "口語化，最常見的說法"},{"w": "juvenile delinquency","n": "最正式的學術用語，涵蓋反社會行為和犯罪"}],"note": "juvenile crime 和 youth crime 在一般文章中可互換；但 juvenile delinquency 在學術寫作中更精確，是首選的正式表達。"},{"word": "underlying causes","ipa": "/ˌʌndəˈlaɪɪŋ ˈkɔːzɪz/","pos": "phrase","zh": "根本原因","part": "D","examples": ["Effective crime reduction strategies must address the underlying causes of offending, such as poverty and lack of opportunity.","Treatment programmes that target the underlying causes of addiction are more likely to achieve lasting recovery."],"col": ["address the underlying causes","identify the underlying causes","tackle the underlying causes","underlying causes of crime","underlying causes of conflict","deeper underlying causes"],"syn": [{"w": "root causes","n": "最常見，強調問題的最根本起源"},{"w": "fundamental causes","n": "強調本質性的、基礎性的原因"},{"w": "contributing factors","n": "強調多個促成因素，不一定是最根本的"}],"note": "underlying causes 強調問題背後隱藏的根本原因；root causes 含義相近但更口語，學術寫作中兩者均為高分詞組。"},{"word": "jail","ipa": "/dʒeɪl/","pos": "verb","zh": "監禁；監獄","part": "C","examples": ["The corrupt official was jailed for five years after being found guilty of embezzlement and fraud.","Human rights groups criticised the government for jailing political dissidents without a fair trial."],"col": ["jail someone for","be jailed","jailed indefinitely","jail a suspect","risk being jailed","jail without trial"],"syn": [{"w": "imprison","n": "較正式，泛指一切形式的監禁，使用範圍最廣"},{"w": "incarcerate","n": "高度正式的法律術語，常見於學術及司法文件"},{"w": "detain","n": "強調拘留或羈押，不一定指正式監禁"}],"note": "jail 作動詞是口語化用法，academic writing 中 imprison 或 incarcerate 更為正式；但 jail 在新聞文體中非常普遍。"},{"word": "punish","ipa": "/ˈpʌnɪʃ/","pos": "verb","zh": "懲罰","part": "C","examples": ["Society must strike a balance between the need to punish offenders and the imperative to rehabilitate them.","The new legislation will punish companies that fail to meet environmental standards with substantial financial penalties."],"col": ["punish offenders","punish severely","punish wrongdoers","be punished for","punish crime","fail to punish"],"syn": [{"w": "penalise","n": "強調施加罰款或處分，常用於規範與制度語境"},{"w": "discipline","n": "強調通過懲戒來改正行為，含有教育目的"},{"w": "sanction","n": "正式用語，可指制裁或批准，語境決定含義"}],"note": "punish 強調對過錯的懲罰本身；rehabilitate（使改過自新）是其常見的對立概念，兩者在 IELTS 討論文中常並用。"},{"word": "catastrophe","ipa": "/kəˈtæstrəfi/","pos": "noun","zh": "大災難","part": "A","examples": ["The collapse of the dam was an environmental catastrophe that displaced over 300,000 people from their homes.","Without immediate intervention, economists warned that the financial crisis could escalate into a global catastrophe."],"col": ["environmental catastrophe","natural catastrophe","economic catastrophe","verge of catastrophe","catastrophe strikes","avert a catastrophe"],"syn": [{"w": "disaster","n": "最常用，規模可大可小，使用範圍最廣"},{"w": "calamity","n": "文學性較強，強調帶來痛苦的重大不幸"},{"w": "cataclysm","n": "強調規模巨大且具有顛覆性的毀滅性事件"}],"note": "catastrophe 強調後果的嚴重性與破壞規模；disaster 更常用，但 catastrophe 程度更深，多指難以彌補的損失。"},{"word": "controversy","ipa": "/ˈkɒntrəvɜːsi/","pos": "noun","zh": "爭議 (名詞)","part": "A","examples": ["The proposed policy sparked considerable controversy among academics and policymakers alike.","Despite the ongoing controversy surrounding genetically modified crops, many countries have approved their commercial cultivation."],"col": ["spark controversy","generate controversy","surrounded by controversy","at the centre of controversy","ongoing controversy","stir up controversy"],"syn": [{"w": "debate","n": "中性，指正反雙方的正式討論，不一定有激烈對立"},{"w": "dispute","n": "強調雙方的明確分歧或爭執"},{"w": "contention","n": "較正式，強調爭論的核心焦點"}],"note": "controversy 含有衝突與爭議色彩；debate 較為中性；writing 中 spark/generate controversy 是最常見的搭配。"},{"word": "crisis","ipa": "/ˈkraɪsɪs/","pos": "noun","zh": "危機","part": "A","examples": ["The refugee crisis has placed enormous strain on the social infrastructure of many European nations.","Effective leadership is particularly crucial during a crisis, when rapid and decisive action can determine outcomes."],"col": ["economic crisis","humanitarian crisis","refugee crisis","in crisis","manage a crisis","trigger a crisis"],"syn": [{"w": "emergency","n": "強調需要立即行動的緊急狀況"},{"w": "predicament","n": "強調困境的複雜性，帶有無計可施的感覺"},{"w": "turning point","n": "強調情況可能好轉或惡化的關鍵時刻"}],"note": "crisis 複數為 crises（/ˈkraɪsiːz/），是常見拼寫錯誤點；in crisis 不加冠詞，但 a crisis 或 the crisis 均正確。"},{"word": "dilemma","ipa": "/dɪˈlemə/","pos": "noun","zh": "進退兩難","part": "A","examples": ["Policymakers face a fundamental dilemma between promoting economic growth and protecting the natural environment.","The ethical dilemma of whether to prioritise individual rights or collective welfare is central to political philosophy."],"col": ["face a dilemma","ethical dilemma","moral dilemma","pose a dilemma","classic dilemma","be in a dilemma"],"syn": [{"w": "predicament","n": "強調無法輕易脫身的困難處境"},{"w": "quandary","n": "偏口語，強調不知所措、難以決定的狀態"},{"w": "catch-22","n": "比喻用法，指兩難中每個選擇都會帶來問題"}],"note": "dilemma 嚴格來說指「兩個不好的選擇之間的抉擇」；口語上可泛指任何困境，但學術寫作仍以兩難含義為準。"},{"word": "disaster","ipa": "/dɪˈzɑːstə/","pos": "noun","zh": "災害；災難","part": "A","examples": ["The earthquake was the worst natural disaster to strike the region in living memory, claiming thousands of lives.","Governments must develop comprehensive disaster preparedness plans to minimise the impact of future calamities."],"col": ["natural disaster","disaster relief","disaster preparedness","man-made disaster","disaster strikes","disaster management"],"syn": [{"w": "catastrophe","n": "強調後果嚴重且難以彌補，程度重於 disaster"},{"w": "calamity","n": "文學性強，帶有深重不幸與悲痛的含義"},{"w": "tragedy","n": "強調令人悲傷的損失，常用於人員傷亡的事件"}],"note": "disaster 與 catastrophe 常可互換，但後者暗示更大規模的毀滅；natural disaster 是固定搭配，不說 natural catastrophe。"},{"word": "hurdle","ipa": "/ˈhɜːdl/","pos": "noun","zh": "障礙；困難","part": "A","examples": ["Securing funding remains the biggest hurdle for start-up companies seeking to expand their operations.","The new policy must overcome several bureaucratic hurdles before it can be fully implemented."],"col": ["overcome a hurdle","clear a hurdle","major hurdle","final hurdle","face a hurdle","bureaucratic hurdle"],"syn": [{"w": "obstacle","n": "強調阻礙前進的具體困難或障礙物"},{"w": "barrier","n": "強調妨礙進展的結構性或系統性障礙"},{"w": "challenge","n": "較中性，指需要努力克服的困難，不帶阻礙感"}],"note": "hurdle 源自賽跑中的跨欄，隱含「可以跨越」的積極意涵，比 obstacle 更強調可克服性；常用於描述過程中的具體關卡。"},{"word": "obstacle","ipa": "/ˈɒbstəkl/","pos": "noun","zh": "阻礙","part": "A","examples": ["Language barriers represent a significant obstacle for many immigrants attempting to integrate into their new communities.","The lack of adequate infrastructure remains a persistent obstacle to economic development in remote regions."],"col": ["overcome an obstacle","face an obstacle","major obstacle","remove an obstacle","obstacle to progress","insurmountable obstacle"],"syn": [{"w": "barrier","n": "強調妨礙進入或通過的阻礙，常指結構性問題"},{"w": "impediment","n": "正式用語，指妨礙正常運作或進展的因素"},{"w": "hindrance","n": "強調干擾和妨礙，程度不如 obstacle 嚴重"}],"note": "obstacle 強調阻擋前進的具體障礙；barrier 更強調分隔或排除的結構；兩者均可用於抽象概念。"},{"word": "predicament","ipa": "/prɪˈdɪkəmənt/","pos": "noun","zh": "困境","part": "A","examples": ["The government found itself in a predicament, unable to satisfy both economic and environmental lobbying groups simultaneously.","Many developing nations face a predicament in which rapid industrialisation comes at the cost of environmental degradation."],"col": ["find oneself in a predicament","awkward predicament","difficult predicament","get out of a predicament","face a predicament","unresolved predicament"],"syn": [{"w": "dilemma","n": "特指兩難抉擇，強調難以選擇的處境"},{"w": "plight","n": "強調不幸且難以改善的悲慘處境"},{"w": "quandary","n": "偏口語，強調困惑不知如何抉擇的狀態"}],"note": "predicament 強調複雜且難以脫身的困境，帶有輕微的尷尬感；plight 則更強調悲慘和痛苦，情感色彩更強。"},{"word": "setback","ipa": "/ˈsetbæk/","pos": "noun","zh": "挫折","part": "A","examples": ["Despite a series of early setbacks, the research team remained committed to finding a viable solution.","The failed referendum was a significant setback for the independence movement, delaying its aims by at least a decade."],"col": ["suffer a setback","experience a setback","major setback","temporary setback","overcome a setback","deal with setbacks"],"syn": [{"w": "reversal","n": "強調方向或進度的逆轉，較正式"},{"w": "drawback","n": "強調缺點或不利之處，較非強調挫折"},{"w": "impediment","n": "強調阻礙前進的因素，較 setback 更結構性"}],"note": "setback 暗示進度的暫時倒退，但不一定代表失敗，通常含「可以克服」的意涵；suffer a setback 是最常見的搭配。"},{"word": "catastrophic","ipa": "/ˌkætəˈstrɒfɪk/","pos": "adj","zh": "災難性的","part": "B","examples": ["The catastrophic flooding caused by the tropical storm destroyed entire villages and left tens of thousands homeless.","Scientists warn that unchecked climate change could have catastrophic consequences for global food security."],"col": ["catastrophic failure","catastrophic consequences","catastrophic effect","catastrophic damage","potentially catastrophic","catastrophic loss"],"syn": [{"w": "disastrous","n": "強調造成嚴重損失的後果，與 catastrophic 接近但程度稍輕"},{"w": "devastating","n": "強調造成極大破壞，情感色彩更強"},{"w": "cataclysmic","n": "強調天翻地覆的根本性毀滅，規模極大"}],"note": "catastrophic 多修飾後果、失敗、損失等抽象名詞，強調難以挽回的嚴重程度；與 disastrous 可互換，但前者程度更深。"},{"word": "daunting","ipa": "/ˈdɔːntɪŋ/","pos": "adj","zh": "令人畏縮的","part": "B","examples": ["The sheer scale of the reconstruction effort after the earthquake proved daunting even for experienced aid organisations.","Many young people find the prospect of entering a competitive job market daunting, particularly in times of economic uncertainty."],"col": ["daunting task","daunting challenge","daunting prospect","seem daunting","find something daunting","daunting scale"],"syn": [{"w": "intimidating","n": "強調令人感到威脅或膽怯，側重情緒反應"},{"w": "formidable","n": "強調規模或難度令人敬畏，帶有正面尊重之意"},{"w": "overwhelming","n": "強調壓倒性的、難以應付的感受"}],"note": "daunting 的核心含義是令人氣餒、畏縮，帶有主觀感受色彩；formidable 則更強調客觀上的強大或艱難，較中性。"},{"word": "disastrous","ipa": "/dɪˈzɑːstrəs/","pos": "adj","zh": "悲慘的；災難性的","part": "B","examples": ["The disastrous economic policies of the 1970s led to rampant inflation and widespread unemployment across the country.","A disastrous harvest caused by prolonged drought forced the government to appeal for international food aid."],"col": ["disastrous consequences","disastrous effect","disastrous decision","prove disastrous","disastrous outcome","disastrous policy"],"syn": [{"w": "catastrophic","n": "強調後果嚴重且難以挽回，規模大於 disastrous"},{"w": "devastating","n": "強調帶來極大破壞或打擊，情感色彩強"},{"w": "ruinous","n": "強調造成徹底毀滅或破產，多指財務或名譽"}],"note": "disastrous 側重強調後果的嚴重性；prove disastrous 是學術寫作中常見搭配，如 The decision proved disastrous。"},{"word": "insurmountable","ipa": "/ˌɪnsəˈmaʊntəbl/","pos": "adj","zh": "無法克服的","part": "B","examples": ["Although the logistical challenges appeared insurmountable initially, the team developed innovative solutions to overcome them.","Poverty need not be an insurmountable barrier to academic achievement if adequate support systems are in place."],"col": ["insurmountable obstacle","insurmountable barrier","insurmountable challenge","seemingly insurmountable","prove insurmountable","face insurmountable difficulties"],"syn": [{"w": "insuperable","n": "高度正式，幾乎為 insurmountable 的完全同義詞"},{"w": "unconquerable","n": "強調無法征服，多用於人或精神力量"},{"w": "impossible","n": "最常用，但較籠統，不如 insurmountable 具體"}],"note": "insurmountable 字面意思是「無法爬越的」；學術寫作中常用 seemingly insurmountable 以示可能最終克服的開放態度。"},{"word": "problematic","ipa": "/ˌprɒbləˈmætɪk/","pos": "adj","zh": "有問題的","part": "B","examples": ["The use of surveillance technology in public spaces is problematic from a civil liberties perspective.","Balancing economic development with environmental sustainability remains deeply problematic for many developing nations."],"col": ["prove problematic","deeply problematic","ethically problematic","highly problematic","problematic behaviour","problematic relationship"],"syn": [{"w": "troublesome","n": "較口語，強調造成麻煩或不便"},{"w": "contentious","n": "強調容易引起爭議和衝突，帶有論爭色彩"},{"w": "thorny","n": "比喻用法，指令人棘手、難以解決的問題"}],"note": "problematic 現在也常作名詞用（the problematics of...），但學術寫作中主要作形容詞；prove problematic 是高頻搭配。"},{"word": "pervasive","ipa": "/pəˈveɪsɪv/","pos": "adj","zh": "遍佈的；充斥的","part": "B","examples": ["The pervasive influence of social media on public opinion has become a central concern for democratic governance.","Corruption is so pervasive in certain public institutions that meaningful reform requires systemic rather than superficial changes."],"col": ["pervasive influence","pervasive problem","pervasive culture","become pervasive","increasingly pervasive","pervasive corruption"],"syn": [{"w": "widespread","n": "強調地理或群體上的廣泛分佈，最通用"},{"w": "ubiquitous","n": "強調無處不在、同時出現各處，程度強於 pervasive"},{"w": "prevalent","n": "強調在特定時間或地點普遍存在"}],"note": "pervasive 帶有「滲透到各處」的意涵，比 widespread 更強調深度而非廣度；常用於描述抽象的文化、態度或問題。"},{"word": "do more harm than good","ipa": "/duː mɔː hɑːm ðən ɡʊd/","pos": "phrase","zh": "弊大於利","part": "D","examples": ["Overly punitive sentencing policies may do more harm than good by increasing recidivism rather than reducing it.","Critics contend that strict drug prohibition laws do more harm than good by fuelling organised crime and overcrowding prisons."],"col": ["do more harm than good","ultimately do more harm than good","argue that it does more harm than good","policies that do more harm than good","risk doing more harm than good","do far more harm than good"],"syn": [{"w": "be counterproductive","n": "強調事與願違，反而帶來相反效果"},{"w": "outweigh the benefits","n": "強調負面影響超過正面效益"},{"w": "backfire","n": "口語，指計劃或行動產生與預期相反的不良後果"}],"note": "do more harm than good 是 IELTS Task 2 討論政策利弊的高頻句型，尤其出現在讓步段（concession paragraph）。"},{"word": "dwell on","ipa": "/dwel ɒn/","pos": "phrase","zh": "糾結於；詳述","part": "D","examples": ["Rather than dwelling on past failures, effective organisations focus their energy on learning and moving forward.","It is unproductive to dwell on a crisis once its immediate effects have been addressed; forward-looking planning is essential."],"col": ["dwell on the past","dwell on mistakes","dwell on negative thoughts","no need to dwell on","tend to dwell on","dwell on the issue"],"syn": [{"w": "ruminate on","n": "心理學術語，強調反覆沉思負面想法"},{"w": "linger on","n": "強調注意力或時間停留過長"},{"w": "fixate on","n": "強調病態的執著，心理色彩更強"}],"note": "dwell on 強調將注意力過度停留在過去或負面事物上，帶有輕微的負面評價；多用於勸告不要耽於過去。"},{"word": "energy crisis","ipa": "/ˈenədʒi ˈkraɪsɪs/","pos": "phrase","zh": "能源危機","part": "D","examples": ["The global energy crisis has accelerated the transition towards renewable sources of power in many industrialised nations.","Without significant investment in alternative energy infrastructure, many developing countries remain vulnerable to future energy crises."],"col": ["global energy crisis","energy crisis solution","energy crisis response","face an energy crisis","energy crisis and climate change","tackle the energy crisis"],"syn": [{"w": "fuel shortage","n": "強調具體燃料的短缺，較 crisis 範圍窄"},{"w": "power crisis","n": "強調電力供應危機，與 energy crisis 近義"},{"w": "resource scarcity","n": "廣義的資源短缺，包含能源在內"}],"note": "energy crisis 是 IELTS 環境和政策題的核心詞彙；複數形式為 energy crises，在討論歷史或預測未來時需注意。"},{"word": "take stock","ipa": "/teɪk stɒk/","pos": "phrase","zh": "盤點；評估現況","part": "D","examples": ["After a decade of rapid expansion, the company took stock of its achievements and strategic direction.","At the halfway point of the decade, it is time for policymakers to take stock of the progress made towards climate targets."],"col": ["take stock of the situation","take stock of progress","pause and take stock","time to take stock","take stock of one's life","regularly take stock"],"syn": [{"w": "assess the situation","n": "最通用，指評估當前狀況"},{"w": "evaluate progress","n": "強調對進展的正式評估"},{"w": "reflect on","n": "強調深入思考和回顧，比 take stock 更內省"}],"note": "take stock (of) 帶有暫停並全面評估的含義，常用於建議在行動前先評估現狀；是 IELTS 高分句型中表示反思的好選擇。"},{"word": "aggravate","ipa": "/ˈæɡrəveɪt/","pos": "verb","zh": "加重；惡化","part": "C","examples": ["Severe budget cuts have served only to aggravate existing inequalities within the education system.","The lack of dialogue between the two parties has done nothing but aggravate an already tense situation."],"col": ["aggravate the problem","aggravate a situation","further aggravate","aggravate tensions","aggravate an injury","aggravate inequality"],"syn": [{"w": "exacerbate","n": "最正式的同義詞，學術寫作首選，語氣最強"},{"w": "worsen","n": "最口語，最直接，廣泛使用"},{"w": "compound","n": "強調問題疊加，使壞情況更加複雜"}],"note": "aggravate 的口語意思是「激怒某人」，但學術寫作中僅取「使惡化」之意；exacerbate 是正式寫作中更佳的替換詞。"},{"word": "alleviate","ipa": "/əˈliːvieɪt/","pos": "verb","zh": "緩解","part": "C","examples": ["A range of measures have been proposed to alleviate poverty in the most disadvantaged regions of the country.","Investing in public transport infrastructure can help to alleviate traffic congestion in major urban centres."],"col": ["alleviate poverty","alleviate suffering","alleviate pressure","alleviate congestion","help alleviate","measures to alleviate"],"syn": [{"w": "mitigate","n": "強調降低嚴重程度，常見於風險和損失的語境"},{"w": "relieve","n": "較口語，強調解除痛苦或壓力，即時效果感強"},{"w": "ease","n": "強調使緊張或困難的狀況逐漸緩和"}],"note": "alleviate 強調減輕負擔或痛苦，但不一定消除根源；與 solve（解決）不同，它只是緩解症狀，常見於 IELTS Task 2。"},{"word": "arise","ipa": "/əˈraɪz/","pos": "verb","zh": "出現；產生","part": "C","examples": ["A number of ethical concerns have arisen as a result of rapid advances in artificial intelligence technology.","Conflicts between neighbours often arise from misunderstandings that could have been resolved through open communication."],"col": ["problems arise","issues arise","arise from","arise out of","arise as a result of","difficulties arise"],"syn": [{"w": "emerge","n": "強調逐漸浮現或顯現，多指新事物或想法"},{"w": "occur","n": "最通用，指任何事件的發生，不帶感情色彩"},{"w": "stem from","n": "強調起源和因果關係，arise from 的近義片語"}],"note": "arise 常用於學術寫作，搭配 problem、issue、concern 等；注意其三態：arise-arose-arisen。"},{"word": "exacerbate","ipa": "/ɪɡˈzæsəbeɪt/","pos": "verb","zh": "使惡化","part": "C","examples": ["Rising unemployment can exacerbate social tensions and contribute to an increase in crime rates.","Deforestation not only destroys habitats but also exacerbates the effects of climate change by releasing stored carbon."],"col": ["exacerbate the problem","exacerbate inequality","exacerbate tensions","further exacerbate","exacerbate poverty","exacerbate the situation"],"syn": [{"w": "aggravate","n": "意義相同，但 exacerbate 更常見於正式學術文體"},{"w": "worsen","n": "最口語化，意思直接，廣泛適用"},{"w": "compound","n": "強調問題疊加累積，使情況愈發複雜"}],"note": "exacerbate 是 IELTS 高分寫作必備動詞之一，專用於描述問題的加劇；注意拼寫，常見錯誤：exaserbate 或 exacerberate。"},{"word": "hinder","ipa": "/ˈhɪndə/","pos": "verb","zh": "阻礙","part": "C","examples": ["Excessive bureaucracy can hinder innovation by creating unnecessary delays in the approval process.","Persistent poverty and lack of access to education continue to hinder development in many parts of the world."],"col": ["hinder progress","hinder development","hinder growth","hinder efforts","significantly hinder","hinder the ability to"],"syn": [{"w": "impede","n": "正式用語，強調造成實質性阻礙，常見於學術文體"},{"w": "hamper","n": "強調阻礙或束縛，使活動受到限制"},{"w": "obstruct","n": "強調主動阻擋，帶有故意妨礙的含義"}],"note": "hinder 強調阻礙進展，但不一定完全停止；impede 程度相近，obstruct 含有更強的主動阻擋意涵，使用時需留意。"},{"word": "ignore","ipa": "/ɪɡˈnɔː/","pos": "verb","zh": "忽略","part": "C","examples": ["To ignore the warning signs of climate change would be an act of profound irresponsibility towards future generations.","Governments that ignore the needs of marginalised communities risk fuelling social unrest and political instability."],"col": ["ignore the problem","ignore warnings","simply ignore","ignore evidence","choose to ignore","ignore the consequences"],"syn": [{"w": "overlook","n": "可以是無意的疏忽，也可以是主動選擇忽略"},{"w": "disregard","n": "強調蓄意不理會，比 ignore 更正式"},{"w": "neglect","n": "強調因疏忽或不重視而未照料，帶有失職含義"}],"note": "ignore 通常指主動選擇不理會；overlook 可能是無意的疏忽；neglect 強調責任上的失職，三者有細微差別。"},{"word": "improve","ipa": "/ɪmˈpruːv/","pos": "verb","zh": "改善","part": "C","examples": ["Investment in early childhood education has been shown to significantly improve long-term academic outcomes.","The government has introduced several measures designed to improve air quality in the most heavily polluted cities."],"col": ["improve significantly","improve living standards","improve the situation","improve performance","seek to improve","measures to improve"],"syn": [{"w": "enhance","n": "強調提升品質或價值，不一定指從差到好"},{"w": "ameliorate","n": "高度正式，指使不好的情況有所改善"},{"w": "advance","n": "強調向更高水平推進，多用於技術或知識領域"}],"note": "improve 是最通用的動詞；IELTS 寫作中可用 enhance, ameliorate, refine 等替換，以展示詞彙多樣性。"},{"word": "mitigate","ipa": "/ˈmɪtɪɡeɪt/","pos": "verb","zh": "減輕；緩和","part": "C","examples": ["International cooperation is essential to mitigate the worst effects of climate change on vulnerable populations.","The introduction of stricter building codes was intended to mitigate the damage caused by future earthquakes."],"col": ["mitigate the effects","mitigate risk","mitigate damage","help mitigate","mitigate climate change","measures to mitigate"],"syn": [{"w": "alleviate","n": "強調減輕痛苦或負擔，側重人道層面"},{"w": "lessen","n": "最口語，指使程度或數量減少"},{"w": "reduce","n": "最通用，指降低程度或數量，廣泛適用"}],"note": "mitigate 多用於法律、環境、風險管理語境，強調降低負面後果的嚴重性；mitigate the effects of 是寫作中最常見的搭配。"},{"word": "rectify","ipa": "/ˈrektɪfaɪ/","pos": "verb","zh": "糾正；改正","part": "C","examples": ["The company was ordered by the court to rectify the defects in its products at its own expense.","Immediate steps must be taken to rectify the systemic inequalities that have persisted in the education system for decades."],"col": ["rectify the situation","rectify errors","rectify a problem","seek to rectify","rectify injustice","rectify a mistake"],"syn": [{"w": "correct","n": "最通用，指改正錯誤，使用範圍最廣"},{"w": "remedy","n": "強調提供補救或解決方案，帶有治療意涵"},{"w": "redress","n": "正式用語，強調彌補不公或損失，多用於法律語境"}],"note": "rectify 比 correct 更正式，帶有對嚴重錯誤或不公的糾正含義；IELTS 寫作中用 rectify 替換 fix 或 correct 可提升語域。"},{"word": "resolve","ipa": "/rɪˈzɒlv/","pos": "verb","zh": "解決","part": "C","examples": ["Diplomatic negotiation remains the most effective means of resolving international conflicts without recourse to violence.","The underlying tensions between these communities cannot be resolved without addressing the structural causes of inequality."],"col": ["resolve a conflict","resolve the issue","fully resolve","resolve differences","seek to resolve","resolve a dispute"],"syn": [{"w": "settle","n": "強調達成共識以平息爭議，常用於法律和談判語境"},{"w": "address","n": "較弱，指正視或處理問題，不一定完全解決"},{"w": "solve","n": "最通用，強調找到答案或方法，廣泛適用"}],"note": "resolve 強調徹底解決，尤其是衝突或複雜問題；address 僅指著手處理，不保證解決；writing 中兩者用法須分清。"}]
+};
+const PART_LABELS = {
+  A:'Part A · Nouns', B:'Part B · Adjectives',
+  C:'Part C · Verbs',  D:'Part D · Phrases'
+};
+const SK = 'ielts_u9';
+let cur=0, mode='browse', flipped=false, known=[], onIntro=true;
+function load(){ try{ known=JSON.parse(localStorage.getItem(SK)||'[]'); }catch(e){known=[];} }
+function save(){ try{ localStorage.setItem(SK,JSON.stringify(known)); }catch(e){} }
+function isKnown(i){ return known.includes(i); }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateDots(){
+  const n=UNIT.words.length, max=Math.min(n,30);
+  let h='';
+  for(let i=0;i<max;i++){
+    const c=(!onIntro&&i===cur)?'dot cur':isKnown(i)?'dot known':'dot';
+    h+='<div class="'+c+'"></div>';
+  }
+  if(n>max) h+='<span style="font-family:var(--fm);font-size:.5rem;color:var(--g400);margin-left:2px;">+'+(n-max)+'</span>';
+  document.getElementById('dots').innerHTML=h;
+}
+function renderIntro(){
+  document.getElementById('counter').textContent='Introduction';
+  document.getElementById('known-badge').textContent='';
+  document.getElementById('prog-fill').style.width='0%';
+  document.getElementById('action-count').textContent='';
+  document.getElementById('know-btn').style.display='none';
+  document.getElementById('review-btn').style.display='none';
+  const f=document.getElementById('front-face');
+  f.className='face front intro-face';
+  f.innerHTML=
+    '<div class="ic-eyebrow">IELTS Core Thematic Vocabulary · Chapter 9 of 10</div>'+
+    '<div class="ic-title">Crime, Law & Society</div>'+
+    '<div class="ic-zh">犯罪法律與社會危機</div>'+
+    '<div class="ic-rule"></div>'+
+    '<div class="ic-body">'+
+      '<div>'+
+        '<div class="ic-sec-label">關於本章</div>'+
+        '<div class="ic-about">本章收錄 56 個核心詞彙。每個詞條包含搭配詞與中文解釋。</div>'+
+      '</div>'+
+      '<div>'+
+        '<div class="ic-sec-label">使用方式</div>'+
+        '<div class="ic-steps">'+
+          '<div class="ic-step"><span class="ic-tag">Browse</span>正面顯示英文單字，翻面查看中文與搭配詞。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Quiz</span>正面顯示中文，翻面前先回想英文，訓練主動回憶。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Know it ✓</span>標記已掌握。<span class="ic-tag">Review ↺</span>重新複習。</div>'+
+          '<div class="ic-step"><span class="ic-tag">快捷鍵</span>← → 切換卡片 &nbsp;·&nbsp; F 翻轉 &nbsp;·&nbsp; K 標記</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="ic-hint">按 Next → 開始學習</div>';
+  document.getElementById('back-face').innerHTML='';
+  updateDots();
+}
+function render(){
+  if(onIntro){ renderIntro(); return; }
+  document.getElementById('front-face').className='face front';
+  document.getElementById('know-btn').style.display='';
+  document.getElementById('review-btn').style.display='';
+  const w=UNIT.words[cur], n=UNIT.words.length, k=isKnown(cur);
+  document.getElementById('counter').textContent=(cur+1)+' / '+n;
+  document.getElementById('known-badge').textContent=known.length+' / '+n+' known';
+  document.getElementById('prog-fill').style.width=((cur+1)/n*100)+'%';
+  document.getElementById('action-count').textContent=known.length+'/'+n;
+  const isQuiz=(mode==='quiz');
+  document.getElementById('front-face').innerHTML=
+    '<div class="f-top">'+
+      '<div class="f-meta">'+
+        '<div class="f-num">#'+String(cur+1).padStart(3,'0')+'</div>'+
+        '<div class="f-part">'+(PART_LABELS[w.part]||'')+'</div>'+
+      '</div>'+
+      '<span class="f-known-mark'+(k?' vis':'')+'">✓ known</span>'+
+    '</div>'+
+    '<div class="f-body">'+
+      '<div class="f-word">'+esc(isQuiz?w.zh:w.word)+'</div>'+
+      (!isQuiz&&w.ipa?'<div class="f-ipa">'+esc(w.ipa)+'</div>':'')+
+      (!isQuiz?'<div class="f-pos">'+esc(w.pos)+'</div>':'')+
+    '</div>'+
+    '<div class="f-hint">'+(isQuiz?'think → click to flip':'click to flip →')+'</div>';
+  const exH=(w.examples||[]).map(e=>'<div class="b-ex">"'+esc(e)+'"</div>').join('');
+  const colH=(w.col||[]).map(c=>'<div class="b-col">'+esc(c)+'</div>').join('');
+  const synH=(w.syn||[]).map(s=>
+    '<div class="b-syn-row"><div class="b-syn-w">'+esc(s.w)+'</div>'+
+    '<div class="b-syn-n">（'+esc(s.n)+'）</div></div>'
+  ).join('');
+  const noteH=w.note?'<div class="b-sec"><div class="b-label">注意</div><div class="b-note">'+esc(w.note)+'</div></div>':'';
+  let zhLine, metaLine='';
+  if(isQuiz){
+    zhLine='<div class="b-quiz-word">'+esc(w.word)+'</div>';
+    metaLine='<div class="b-quiz-meta">'+esc(w.pos)+(w.ipa?' &nbsp;'+esc(w.ipa):'')+'</div>';
+  } else {
+    zhLine='<div class="b-zh">'+esc(w.zh)+'</div>';
+  }
+  document.getElementById('back-face').innerHTML=
+    zhLine+metaLine+
+    '<div class="b-rule"></div>'+
+    '<div class="b-content">'+
+      (exH?'<div class="b-sec"><div class="b-label">Examples</div>'+exH+'</div>':'')+
+      (colH?'<div class="b-sec"><div class="b-label">搭配</div><div class="b-cols">'+colH+'</div></div>':'')+
+      (synH?'<div class="b-sec"><div class="b-label">近義</div><div class="b-syns">'+synH+'</div></div>':'')+
+      noteH+
+    '</div>';
+  updateDots();
+}
+function flip(){ if(onIntro) return; flipped=!flipped; document.getElementById('card').classList.toggle('flipped',flipped); }
+function go(dir){
+  if(onIntro&&dir>0){ onIntro=false;cur=0;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(!onIntro&&dir<0&&cur===0){ onIntro=true;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(onIntro) return;
+  cur=Math.max(0,Math.min(UNIT.words.length-1,cur+dir));
+  flipped=false;document.getElementById('card').classList.remove('flipped');render();
+}
+function markKnown(){ if(onIntro) return; if(!isKnown(cur)) known.push(cur); save();render(); setTimeout(function(){ if(cur<UNIT.words.length-1) go(1); },180); }
+function markReview(){ if(onIntro) return; known=known.filter(function(x){return x!==cur;}); save();render(); }
+function setMode(m){ mode=m;flipped=false;document.getElementById('card').classList.remove('flipped');document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.toggle('active',b.dataset.mode===m);});render(); }
+document.getElementById('scene').addEventListener('click',flip);
+document.getElementById('prev-btn').addEventListener('click',function(e){e.stopPropagation();go(-1);});
+document.getElementById('next-btn').addEventListener('click',function(e){e.stopPropagation();go(1);});
+document.getElementById('know-btn').addEventListener('click',function(e){e.stopPropagation();markKnown();});
+document.getElementById('review-btn').addEventListener('click',function(e){e.stopPropagation();markReview();});
+document.querySelectorAll('.mode-btn').forEach(function(b){ b.addEventListener('click',function(e){e.stopPropagation();setMode(b.dataset.mode);});});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowLeft') go(-1);
+  else if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  else if(e.key==='f'||e.key==='F') flip();
+  else if(e.key==='k'||e.key==='K') markKnown();
+});
+load();render();
+</script>
+</body>
+</html>

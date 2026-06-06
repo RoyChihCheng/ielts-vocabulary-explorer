@@ -1,0 +1,10 @@
+# Source / working files — not part of the published site
+*.docx
+*.pdf
+*.py
+*.txt
+*.md
+!README.md
+content_cache/
+.antigravitycli/
+audit_report.md

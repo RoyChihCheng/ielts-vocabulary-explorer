@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 10 · Media, Arts & Celebrity Culture | IELTS Vocabulary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="gate.js"></script>
+<style>
+:root{
+  --navy:#2E1A47;--gold:#8E5FB0;--gold2:#C9A8E0;
+  --paper:#FAF7FC;--g100:#F0E9F7;--g200:#E2D5EE;--g400:#9A8AA8;
+  --known:#2B6830;--r:2px;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Lora','Times New Roman',serif;
+  --fm:'JetBrains Mono','Courier New',monospace;
+  --shadow:0 1px 3px rgba(46,26,71,.06),0 4px 16px rgba(46,26,71,.08),0 16px 48px rgba(46,26,71,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);font-family:var(--fb);color:var(--navy);
+  height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+#hdr{height:52px;background:var(--navy);display:flex;align-items:center;
+  padding:0 18px;flex-shrink:0;position:relative;gap:12px;}
+.hdr-unit{font-family:var(--fd);font-size:.85rem;font-weight:700;color:var(--gold2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;}
+.hdr-center{position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:1px;pointer-events:none;}
+#counter{font-family:var(--fm);font-size:.82rem;color:#fff;letter-spacing:.02em;}
+#known-badge{font-family:var(--fm);font-size:.62rem;color:var(--gold2);opacity:.75;min-height:.85em;}
+.hdr-nav{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.mode-toggle{display:flex;border:1px solid rgba(142,95,176,.35);border-radius:var(--r);overflow:hidden;}
+.mode-btn{background:transparent;border:none;color:rgba(142,95,176,.6);font-family:var(--fm);
+  font-size:.66rem;padding:4px 10px;cursor:pointer;transition:background .15s,color .15s;
+  letter-spacing:.04em;text-transform:uppercase;}
+.mode-btn.active{background:var(--gold);color:#fff;}
+#home-link{color:rgba(201,168,224,.5);font-size:1.15rem;text-decoration:none;
+  line-height:1;transition:color .15s;padding:2px;}
+#home-link:hover{color:var(--gold2);}
+#prog-track{height:2px;background:rgba(142,95,176,.15);flex-shrink:0;}
+#prog-fill{height:100%;background:var(--gold);transition:width .3s ease;width:0%;}
+#stage{flex:1;display:flex;align-items:center;justify-content:center;
+  padding:14px 16px;overflow:hidden;}
+.scene{width:min(660px,100%);height:min(460px,calc(100vh - 130px));
+  perspective:1400px;cursor:pointer;user-select:none;}
+.card{width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;transition:transform .52s cubic-bezier(.4,0,.2,1);}
+.card.flipped{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--r);display:flex;flex-direction:column;padding:28px 36px;}
+.front{background:var(--paper);border:1px solid var(--g200);box-shadow:var(--shadow);}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;}
+.f-meta{display:flex;flex-direction:column;gap:2px;}
+.f-num{font-family:var(--fm);font-size:.66rem;color:var(--gold);letter-spacing:.1em;}
+.f-part{font-family:var(--fm);font-size:.58rem;color:var(--g400);letter-spacing:.05em;}
+.f-known-mark{font-family:var(--fm);font-size:.62rem;color:var(--known);
+  opacity:0;transition:opacity .2s;}
+.f-known-mark.vis{opacity:1;}
+.f-body{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;text-align:center;padding:4px 0;}
+.f-word{font-family:var(--fd);font-size:clamp(2rem,6vw,3.4rem);
+  color:var(--navy);font-weight:700;line-height:1.05;letter-spacing:-.01em;}
+.f-ipa{font-family:var(--fm);font-size:.76rem;color:var(--g400);letter-spacing:.02em;}
+.f-pos{font-family:var(--fb);font-size:.88rem;color:var(--g400);font-style:italic;}
+.f-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;}
+.back{background:var(--navy);transform:rotateY(180deg);overflow:hidden;}
+.b-zh{font-family:var(--fd);font-size:clamp(1.5rem,4.2vw,2.3rem);
+  color:var(--gold2);font-weight:700;line-height:1.2;flex-shrink:0;margin-bottom:10px;}
+.b-quiz-word{font-family:var(--fd);font-size:clamp(1.6rem,4.5vw,2.5rem);
+  color:var(--gold2);font-weight:700;line-height:1.1;flex-shrink:0;}
+.b-quiz-meta{font-family:var(--fb);font-size:.82rem;color:rgba(201,168,224,.65);
+  font-style:italic;flex-shrink:0;margin-bottom:10px;}
+.b-rule{height:1px;background:rgba(255,255,255,.1);flex-shrink:0;margin-bottom:10px;}
+.b-content{flex:1;overflow-y:auto;display:flex;flex-direction:column;
+  gap:11px;scrollbar-width:none;-ms-overflow-style:none;}
+.b-content::-webkit-scrollbar{display:none;}
+.b-sec{display:flex;flex-direction:column;gap:5px;}
+.b-label{font-family:var(--fm);font-size:.57rem;
+  color:rgba(142,95,176,.75);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;}
+.b-ex{font-family:var(--fb);font-size:.77rem;color:#ccc;font-style:italic;
+  line-height:1.6;padding-left:10px;border-left:2px solid rgba(142,95,176,.3);}
+.b-col{font-family:var(--fm);font-size:.67rem;color:#e8dff2;line-height:1.35;
+  padding-left:10px;border-left:2px solid var(--gold);padding-top:1px;padding-bottom:1px;}
+.b-cols{display:flex;flex-direction:column;gap:4px;}
+.b-syns{display:flex;flex-direction:column;gap:5px;}
+.b-syn-row{display:flex;flex-direction:column;gap:1px;}
+.b-syn-w{font-family:var(--fm);font-size:.7rem;color:var(--gold2);}
+.b-syn-n{font-family:var(--fb);font-size:.71rem;color:#999;line-height:1.45;padding-left:6px;}
+.b-note{font-family:var(--fb);font-size:.74rem;color:#cdb0e2;font-style:italic;
+  line-height:1.6;padding:8px 10px;
+  border:1px solid rgba(142,95,176,.2);border-radius:2px;background:rgba(142,95,176,.07);}
+.intro-face{cursor:default;}
+.ic-eyebrow{font-family:var(--fm);font-size:.62rem;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;flex-shrink:0;}
+.ic-title{font-family:var(--fd);font-size:clamp(1.3rem,3.2vw,1.9rem);
+  color:var(--navy);font-weight:700;line-height:1.1;margin-bottom:4px;flex-shrink:0;}
+.ic-zh{font-family:var(--fb);font-size:.85rem;color:var(--g400);font-style:italic;flex-shrink:0;}
+.ic-rule{height:1px;background:var(--g200);margin:14px 0;flex-shrink:0;}
+.ic-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
+.ic-sec-label{font-family:var(--fm);font-size:.57rem;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
+.ic-about{font-family:var(--fb);font-size:.81rem;color:var(--navy);line-height:1.65;}
+.ic-steps{display:flex;flex-direction:column;gap:6px;}
+.ic-step{font-family:var(--fb);font-size:.79rem;color:var(--navy);
+  line-height:1.5;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.ic-tag{font-family:var(--fm);font-size:.62rem;background:var(--g100);
+  border:1px solid var(--g200);color:var(--navy);padding:1px 7px;
+  border-radius:var(--r);white-space:nowrap;flex-shrink:0;}
+.ic-hint{font-family:var(--fm);font-size:.6rem;color:var(--g200);
+  letter-spacing:.06em;flex-shrink:0;text-align:right;margin-top:auto;}
+#nav-bar{height:52px;background:var(--g100);border-top:1px solid var(--g200);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 14px;flex-shrink:0;}
+.nav-btn{background:transparent;border:1px solid var(--g200);color:var(--navy);
+  font-family:var(--fb);font-size:.82rem;padding:6px 14px;cursor:pointer;
+  border-radius:var(--r);transition:all .15s;}
+.nav-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.action-center{display:flex;align-items:center;gap:6px;}
+#action-count{font-family:var(--fm);font-size:.65rem;color:#aaa;white-space:nowrap;}
+#know-btn{background:var(--known);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#know-btn:hover{opacity:.85;}
+#review-btn{background:var(--gold);border:none;color:#fff;font-family:var(--fb);
+  font-size:.78rem;padding:7px 13px;cursor:pointer;border-radius:var(--r);transition:opacity .15s;}
+#review-btn:hover{opacity:.8;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+#dots{display:flex;gap:3px;align-items:center;max-width:200px;overflow:hidden;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--g200);flex-shrink:0;transition:background .2s;}
+.dot.cur{background:var(--gold);}
+.dot.known{background:var(--known);}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <span class="hdr-unit">Ch. 10 &middot; Media, Arts & Celebrity Culture</span>
+  <div class="hdr-center">
+    <span id="counter">Introduction</span>
+    <span id="known-badge"></span>
+  </div>
+  <nav class="hdr-nav">
+    <div class="mode-toggle">
+      <button class="mode-btn active" data-mode="browse">Browse</button>
+      <button class="mode-btn" data-mode="quiz">Quiz</button>
+    </div>
+    <a id="home-link" href="index.html" title="Index">&#8962;</a>
+  </nav>
+</header>
+<div id="prog-track"><div id="prog-fill"></div></div>
+<main id="stage">
+  <div class="scene" id="scene">
+    <div class="card" id="card">
+      <div class="face front" id="front-face"></div>
+      <div class="face back"  id="back-face"></div>
+    </div>
+  </div>
+</main>
+<footer id="nav-bar">
+  <button class="nav-btn" id="prev-btn">&#8592; Prev</button>
+  <div class="action-center">
+    <span id="action-count"></span>
+    <button id="know-btn">Know it &#10003;</button>
+    <button id="review-btn">Review &#8635;</button>
+  </div>
+  <div class="nav-right">
+    <div id="dots"></div>
+    <button class="nav-btn" id="next-btn">Next &#8594;</button>
+  </div>
+</footer>
+<script>
+const UNIT = {
+  number: 10,
+  title_en: "Media, Arts & Celebrity Culture",
+  title_zh: "\u5927\u773e\u5a92\u9ad4\u3001\u85dd\u8853\u6587\u5316\u8207\u540d\u4eba",
+  src: "Units 19 & 20",
+  count: 57,
+  words: [{"word": "bias","ipa": "/ˈbaɪəs/","pos": "noun","zh": "偏見","part": "A","examples": ["Media bias towards certain political parties can significantly distort public perception of key policy issues.","Researchers must be vigilant about unconscious bias in their methodologies to ensure the validity of their findings."],"col": ["media bias","unconscious bias","political bias","show bias","bias towards","overcome bias"],"syn": [{"w": "prejudice","n": "強調先入為主的負面判斷，帶有情感色彩"},{"w": "partiality","n": "強調偏袒一方，不公平的傾向"},{"w": "slant","n": "較口語，指報導或觀點的偏向，多用於媒體語境"}],"note": "bias 可數時指具體偏見（a bias），不可數時泛指偏向（show bias）；媒體偏見是 IELTS 常考議題的核心詞彙。"},{"word": "broadcaster","ipa": "/ˈbrɔːdkɑːstə/","pos": "noun","zh": "廣播員；廣播機構","part": "A","examples": ["Public broadcasters are expected to maintain editorial independence and present news without political interference.","The role of a broadcaster has evolved dramatically with the rise of digital platforms and on-demand content."],"col": ["public broadcaster","national broadcaster","independent broadcaster","commercial broadcaster","broadcaster and journalist","broadcaster's responsibility"],"syn": [{"w": "media outlet","n": "廣義媒體機構，涵蓋印刷、廣播、網路"},{"w": "network","n": "強調聯播網或電視台，偏美式用法"},{"w": "media company","n": "強調商業實體，不特指播出形式"}],"note": "broadcaster 可指機構（broadcasting company）或個人（news broadcaster）；使用時需根據語境確認所指。"},{"word": "episode","ipa": "/ˈepɪsəʊd/","pos": "noun","zh": "一集","part": "A","examples": ["The final episode of the series attracted over fifteen million viewers, making it the most-watched broadcast of the year.","Binge-watching multiple episodes of a drama series in one sitting has become a widespread cultural phenomenon."],"col": ["final episode","pilot episode","watch an episode","episode of a series","binge-watch episodes","episode of violence"],"syn": [{"w": "instalment","n": "強調系列作品的一部分，可指電視或出版"},{"w": "chapter","n": "比喻用法，指人生或歷史的一個階段"},{"w": "segment","n": "強調節目中的一個片段，不一定是完整的集"}],"note": "episode 除指電視劇的一集外，也可指一段特定的事件或時期（an episode of depression）；writing 中需區分兩義。"},{"word": "headline","ipa": "/ˈhedlaɪn/","pos": "noun","zh": "標題；頭條","part": "A","examples": ["The scandal dominated the headlines for weeks, forcing the minister to resign from his cabinet position.","Sensational headlines designed to attract clicks often misrepresent the nuanced findings of scientific research."],"col": ["make headlines","dominate the headlines","newspaper headline","headline news","grab headlines","screaming headlines"],"syn": [{"w": "front page news","n": "強調重大到登上頭版的新聞"},{"w": "top story","n": "廣播或電視中的頭條，最受關注的報導"},{"w": "breaking news","n": "強調剛發生的即時新聞，不一定有標題"}],"note": "make headlines（成為頭條）和 grab headlines（搶佔頭條）是最常見的搭配；headlines 複數常用於指整體新聞報導。"},{"word": "paparazzi","ipa": "/ˌpæpəˈrætsi/","pos": "noun","zh": "狗仔隊","part": "A","examples": ["Celebrities often find it impossible to maintain any semblance of privacy when constantly pursued by paparazzi.","The intrusive behaviour of paparazzi has reignited debates about the boundaries between press freedom and personal privacy."],"col": ["swarm of paparazzi","hounded by paparazzi","paparazzi photographer","avoid paparazzi","paparazzi culture","paparazzi intrusion"],"syn": [{"w": "tabloid photographer","n": "強調為小報工作的攝影師"},{"w": "press photographer","n": "較中性，泛指新聞攝影師，不含負面意涵"},{"w": "celebrity photographer","n": "強調專門拍攝名人的攝影師"}],"note": "paparazzi 本身是複數，單數為 paparazzo（義大利語原形）；日常英語中常誤作單數使用，學術寫作中需注意。"},{"word": "press","ipa": "/pres/","pos": "noun","zh": "媒體；新聞界","part": "A","examples": ["Freedom of the press is considered a cornerstone of democracy, enabling citizens to hold those in power to account.","The celebrity couple sought an injunction to prevent the press from publishing photographs taken without their consent."],"col": ["freedom of the press","tabloid press","press coverage","press conference","press freedom","press release"],"syn": [{"w": "media","n": "最廣義，涵蓋所有傳播媒介，包含電視、網路"},{"w": "journalism","n": "強調新聞報導的專業實踐"},{"w": "news media","n": "特指從事新聞報導的媒體，範圍略比 press 廣"}],"note": "the press 特指新聞出版業，尤其是報業；現也泛指所有新聞媒體，但仍比 the media 範圍略窄。"},{"word": "viewer","ipa": "/ˈvjuːə/","pos": "noun","zh": "觀眾","part": "A","examples": ["The documentary attracted five million viewers on its opening night, exceeding the channel's expectations.","Online streaming has fundamentally altered the relationship between content creators and their viewers."],"col": ["television viewer","attract viewers","viewer rating","loyal viewer","viewer feedback","viewer numbers"],"syn": [{"w": "audience","n": "最廣義，可指電視、電影、劇場等各類觀眾"},{"w": "spectator","n": "強調現場觀看，常用於運動或現場表演"},{"w": "subscriber","n": "強調付費訂閱的觀眾，多用於串流平台語境"}],"note": "viewer 特指電視或影像內容的觀看者；audience 範圍更廣；online 時代 viewer 和 subscriber 的界限日益模糊。"},{"word": "biased","ipa": "/ˈbaɪəst/","pos": "adj","zh": "有偏見的","part": "B","examples": ["A biased news report can mislead the public and undermine trust in journalistic institutions.","The study was criticised for producing biased results due to the non-representative nature of the sample population."],"col": ["biased report","heavily biased","politically biased","biased towards","biased against","biased media coverage"],"syn": [{"w": "prejudiced","n": "強調因先入為主的想法而產生的不公平偏見"},{"w": "partial","n": "強調偏袒一方，不公平，帶有不客觀的含義"},{"w": "one-sided","n": "強調只呈現一方觀點，不平衡"}],"note": "biased 既可形容人，也可形容報導、研究；prejudiced 更強調對人或群體的偏見，不適用於報導語境。"},{"word": "eminent","ipa": "/ˈemɪnənt/","pos": "adj","zh": "卓越的；著名的","part": "B","examples": ["An eminent historian challenged the widely accepted narrative in a landmark study published last year.","The prize is awarded annually to an eminent scientist who has made outstanding contributions to medical research."],"col": ["eminent scholar","eminent scientist","eminent figure","highly eminent","eminent authority","eminent position"],"syn": [{"w": "distinguished","n": "強調因成就而受到尊重，常用於正式場合"},{"w": "renowned","n": "強調廣為人知的聲望，知名度更高"},{"w": "prominent","n": "強調引人注目的重要地位，不一定因成就"}],"note": "eminent 強調在特定領域因卓越成就而備受尊重；prominent 強調知名度和可見度，不一定是正面評價。"},{"word": "high-profile","ipa": "/ˌhaɪ ˈprəʊfaɪl/","pos": "adj","zh": "高調的；備受矚目的","part": "B","examples": ["A high-profile court case involving a major celebrity attracted intense media attention for several months.","The charity's high-profile campaign succeeded in raising both awareness and substantial funding within weeks."],"col": ["high-profile case","high-profile campaign","high-profile event","high-profile celebrity","high-profile figure","high-profile arrest"],"syn": [{"w": "prominent","n": "強調引人注目，廣為人知"},{"w": "well-publicised","n": "強調受到廣泛媒體報導，知名度來自宣傳"},{"w": "newsworthy","n": "強調值得報導的，具有新聞價值"}],"note": "high-profile 是複合形容詞，必須加連字符修飾名詞；它強調引人注目的程度，而非品質的高低。"},{"word": "prejudiced","ipa": "/ˈpredʒʊdɪst/","pos": "adj","zh": "有成見的","part": "B","examples": ["A prejudiced jury could compromise the integrity of a trial and result in a serious miscarriage of justice.","Children who grow up in diverse environments are less likely to develop prejudiced attitudes towards other cultures."],"col": ["prejudiced attitude","deeply prejudiced","racially prejudiced","prejudiced against","prejudiced view","culturally prejudiced"],"syn": [{"w": "biased","n": "較廣義，可用於人、報導或研究，不一定指社會偏見"},{"w": "bigoted","n": "程度更強，強調頑固的偏見，帶有強烈的道德譴責"},{"w": "intolerant","n": "強調對不同觀點或群體缺乏包容"}],"note": "prejudiced 強調對特定群體持有先入為主的負面看法；bigoted 程度更深，通常指頑固且無法說服的偏見。"},{"word": "prominent","ipa": "/ˈprɒmɪnənt/","pos": "adj","zh": "傑出的；顯著的","part": "B","examples": ["A prominent journalist was awarded the press freedom prize for her courageous reporting in conflict zones.","The issue of media ownership has become increasingly prominent in discussions about press diversity and public interest."],"col": ["prominent figure","prominent role","prominent journalist","become prominent","prominent position","prominent member"],"syn": [{"w": "notable","n": "強調值得關注、值得一提，較 prominent 低調"},{"w": "eminent","n": "強調因卓越成就而聲譽卓著"},{"w": "leading","n": "強調在特定領域中居於領先地位"}],"note": "prominent 可形容可見度高的事物（a prominent position）或著名的人物（a prominent figure），不一定含正面評價。"},{"word": "subjective","ipa": "/səbˈdʒektɪv/","pos": "adj","zh": "主觀的","part": "B","examples": ["Aesthetic judgements are inherently subjective, which is why critical consensus on art often remains elusive.","News analysis that purports to be objective but is actually subjective can be more misleading than openly biased reporting."],"col": ["subjective opinion","highly subjective","subjective judgement","entirely subjective","subjective experience","subjective view"],"syn": [{"w": "personal","n": "強調基於個人感受，較口語，不帶學術色彩"},{"w": "biased","n": "帶有偏頗的含義，比 subjective 更具批評色彩"},{"w": "opinionated","n": "強調固執己見，多含負面意涵"}],"note": "subjective 的對立面是 objective（客觀的）；學術寫作中常用 this is subjective 或 subjective judgement 進行立場說明。"},{"word": "world-famous","ipa": "/ˌwɜːld ˈfeɪməs/","pos": "adj","zh": "世界聞名的","part": "B","examples": ["The world-famous architect's latest project has become a symbol of cultural renewal in the city.","Despite being world-famous, the author continued to insist that her writing was primarily a personal endeavour."],"col": ["world-famous artist","world-famous landmark","world-famous brand","world-famous musician","become world-famous","world-famous institution"],"syn": [{"w": "internationally renowned","n": "較正式，強調在國際層面廣受肯定"},{"w": "globally recognised","n": "強調世界各地均有認知度"},{"w": "universally acclaimed","n": "強調獲得廣泛的一致好評"}],"note": "world-famous 作形容詞修飾名詞時需加連字符（world-famous artist）；單獨作表語時不需要（he is world famous）。"},{"word": "become famous overnight","ipa": "/bɪˈkʌm ˈfeɪməs ˈəʊvənaɪt/","pos": "phrase","zh": "一夜成名","part": "D","examples": ["In the age of social media, ordinary individuals can become famous overnight through a single viral video.","While it may seem appealing to become famous overnight, instant celebrity often brings unwanted scrutiny and pressure."],"col": ["become famous overnight","seemingly become famous overnight","desire to become famous overnight","risk of becoming famous overnight","virtually become famous overnight","trend of becoming famous overnight"],"syn": [{"w": "shoot to fame","n": "強調迅速崛起的名氣，帶有突然性"},{"w": "rise to prominence overnight","n": "較正式，強調地位的快速提升"},{"w": "instant stardom","n": "名詞片語，指突然獲得的明星地位"}],"note": "become famous overnight 是描述名人文化的核心片語；在討論社交媒體影響時，常與 viral content 和 fleeting fame 連用。"},{"word": "chief claim to fame","ipa": "/tʃiːf kleɪm tə feɪm/","pos": "phrase","zh": "主要名聲來源","part": "D","examples": ["The celebrity's chief claim to fame appears to be her carefully curated social media presence rather than any tangible artistic achievement.","The town's chief claim to fame is its association with a nineteenth-century novelist whose works are still widely read today."],"col": ["sole claim to fame","main claim to fame","only claim to fame","dubious claim to fame","legitimate claim to fame","greatest claim to fame"],"syn": [{"w": "main claim to fame","n": "最接近的同義替換，語氣相同"},{"w": "distinction","n": "強調使某人或某地特別值得注意的特點"},{"w": "hallmark","n": "強調代表性的特徵或標誌"}],"note": "chief claim to fame 常帶有輕微的諷刺語氣，暗示名氣可能是膚淺的；使用時需根據語境判斷是中性還是批評性。"},{"word": "in the public eye","ipa": "/ɪn ðə ˈpʌblɪk aɪ/","pos": "phrase","zh": "在公眾關注下","part": "D","examples": ["Politicians who choose to live in the public eye must accept a reduced expectation of personal privacy.","Charitable work conducted in the public eye can raise significant awareness, though it also attracts accusations of self-promotion."],"col": ["live in the public eye","constantly in the public eye","thrust into the public eye","remain in the public eye","life in the public eye","figure in the public eye"],"syn": [{"w": "under public scrutiny","n": "強調受到公眾仔細審視，帶有壓力感"},{"w": "in the spotlight","n": "強調受到聚光燈照射般的高度關注"},{"w": "in the limelight","n": "強調成為矚目焦點，帶有表演舞台的意涵"}],"note": "in the public eye 強調長期處於公眾視野中，不一定是積極的關注；be thrust into the public eye 強調突然被迫曝光。"},{"word": "instant celebrities","ipa": "/ˈɪnstənt sɪˈlebrɪtiz/","pos": "phrase","zh": "瞬間成名的人","part": "D","examples": ["Reality television has been criticised for creating instant celebrities who lack the skills or achievements to justify their fame.","The culture of instant celebrities reflects a broader societal tendency to value visibility over genuine talent or merit."],"col": ["create instant celebrities","culture of instant celebrities","rise of instant celebrities","social media instant celebrities","phenomenon of instant celebrities","instant celebrities and fame"],"syn": [{"w": "reality TV stars","n": "特指通過真人秀節目出名的人"},{"w": "overnight sensations","n": "強調突然爆紅的性質，帶有短暫感"},{"w": "social media influencers","n": "現代語境中的速成名人形式"}],"note": "instant celebrities 隱含對名氣缺乏實質基礎的批評；在 IELTS 討論名人文化時，與 fleeting fame（短暫的名氣）搭配使用效果好。"},{"word": "making headlines","ipa": "/ˈmeɪkɪŋ ˈhedlaɪnz/","pos": "phrase","zh": "登上頭條","part": "D","examples": ["The whistleblower's revelations have been making headlines around the world for the past two weeks.","A scientific breakthrough that might once have taken months to publicise is now capable of making headlines within hours."],"col": ["making international headlines","continue making headlines","start making headlines","making negative headlines","making major headlines","making headlines worldwide"],"syn": [{"w": "dominating the news","n": "強調佔據新聞報導的主要版面"},{"w": "grabbing attention","n": "較口語，強調吸引公眾目光"},{"w": "in the news","n": "最通用，指受到媒體報導"}],"note": "making headlines 強調主動引發媒體關注；dominating the headlines 則強調持續佔據頭版，程度更強。"},{"word": "media attention","ipa": "/ˈmiːdiə əˈtenʃn/","pos": "phrase","zh": "媒體關注","part": "D","examples": ["The trial attracted intense media attention, raising concerns about whether the defendant could receive a fair hearing.","Charities often struggle to maintain consistent media attention after the initial crisis coverage has subsided."],"col": ["attract media attention","intense media attention","unwanted media attention","media attention focused on","constant media attention","sustain media attention"],"syn": [{"w": "press coverage","n": "強調媒體報導的範圍和程度，偏書面語"},{"w": "media scrutiny","n": "強調媒體的仔細審視，帶有審查含義"},{"w": "public spotlight","n": "強調公眾目光的聚焦，比 media attention 範圍更廣"}],"note": "attract/receive media attention 是最常見的動詞搭配；unwanted media attention（不受歡迎的媒體關注）常見於名人隱私討論。"},{"word": "new-found fame","ipa": "/ˌnjuː faʊnd ˈfeɪm/","pos": "phrase","zh": "新獲得的名聲","part": "D","examples": ["The young singer struggled to cope with the pressures that accompanied her new-found fame following the talent show.","Some individuals exploit their new-found fame to promote social causes, while others are overwhelmed by the sudden attention."],"col": ["cope with new-found fame","enjoy new-found fame","new-found fame and fortune","handle new-found fame","bask in new-found fame","overwhelmed by new-found fame"],"syn": [{"w": "sudden celebrity","n": "強調名氣的突然性，不帶時間修飾"},{"w": "overnight success","n": "強調成功的快速，常含有努力多年終獲認可的意涵"},{"w": "instant recognition","n": "強調即時的認知度，廣泛被大眾認出"}],"note": "new-found fame 強調名氣是新近獲得的，帶有「初入名人世界」的含義；常搭配 cope with 或 handle，反映適應名氣的挑戰。"},{"word": "tabloid press","ipa": "/ˈtæblɔɪd pres/","pos": "phrase","zh": "小報媒體","part": "D","examples": ["The tabloid press has long been criticised for prioritising sensationalism over factual accuracy in its reporting.","Many celebrities feel their lives are constantly under siege from an intrusive tabloid press obsessed with their personal affairs."],"col": ["tabloid press intrusion","tabloid press coverage","tabloid press culture","criticise the tabloid press","tabloid press reporting","tabloid press obsession"],"syn": [{"w": "gutter press","n": "貶義，強調低品質、低道德的小報"},{"w": "yellow journalism","n": "美式用語，指以聳人聽聞為主的不負責任報導"},{"w": "sensationalist media","n": "強調以誇大、煽情手法吸引眼球的媒體"}],"note": "tabloid press 可指報紙的判型（小版面），但在討論媒體時特指以八卦和聳人聽聞為主的報紙文化，帶有批評意涵。"},{"word": "assert","ipa": "/əˈsɜːt/","pos": "verb","zh": "斷言；宣稱","part": "C","examples": ["Several experts assert that social media platforms bear significant responsibility for the spread of disinformation.","The government asserted that the new broadcasting regulations were necessary to protect vulnerable audiences."],"col": ["assert that","assert one's rights","boldly assert","assert authority","assert a claim","assert confidently"],"syn": [{"w": "claim","n": "最通用，指聲稱某事，不一定有證據"},{"w": "contend","n": "強調在爭論中提出主張，帶有論辯色彩"},{"w": "maintain","n": "強調在受質疑時仍堅持某立場"}],"note": "assert 比 claim 更正式，帶有更強的自信或確定性；學術寫作中常用 assert that + clause 表達作者或研究者的立場。"},{"word": "broadcast","ipa": "/ˈbrɔːdkɑːst/","pos": "verb","zh": "廣播；播放","part": "C","examples": ["The government's decision to broadcast the trial live on television sparked a debate about media access to justice.","Major news networks broadcast footage of the natural disaster around the clock, mobilising international aid efforts."],"col": ["broadcast live","broadcast news","broadcast a programme","broadcast worldwide","broadcast a message","broadcast publicly"],"syn": [{"w": "transmit","n": "較技術性，強調信號的發送，偏工程語境"},{"w": "air","n": "口語化，指在電視或廣播中播出"},{"w": "screen","n": "特指在電影院或電視上放映影片"}],"note": "broadcast 的過去式和過去分詞均為 broadcast（不規則動詞），不加 -ed；broadcasted 是非標準用法，應避免。"},{"word": "contend","ipa": "/kənˈtend/","pos": "verb","zh": "主張；競爭","part": "C","examples": ["Proponents of stricter media regulation contend that unrestricted content can cause measurable harm to young audiences.","Some critics contend that the award merely reflects the commercial success of a film rather than its artistic merit."],"col": ["contend that","contend with","strongly contend","contend for","critics contend","proponents contend"],"syn": [{"w": "argue","n": "最通用，指提出論據支持某立場"},{"w": "assert","n": "強調自信地聲明，帶有確定性"},{"w": "maintain","n": "強調在受到反對時仍堅持立場"}],"note": "contend that（主張）和 contend with（應對困難）含義完全不同；writing 中使用前者時，後接 that + clause。"},{"word": "gossip","ipa": "/ˈɡɒsɪp/","pos": "verb","zh": "閒聊；八卦","part": "C","examples": ["Tabloid journalists who gossip about celebrities' private lives often justify their coverage as being in the public interest.","Social media has dramatically expanded the speed and scale at which people can gossip and spread unverified information."],"col": ["gossip about","spread gossip","idle gossip","celebrity gossip","gossip column","malicious gossip"],"syn": [{"w": "rumour-monger","n": "指散播謠言的人，動詞用法不同"},{"w": "tittle-tattle","n": "英式口語，指無聊的流言蜚語"},{"w": "spread rumours","n": "強調散播未經證實的消息，不一定惡意"}],"note": "gossip 作名詞（閒話）和動詞（說閒話）均常見；tabloid journalism（小報新聞）與 celebrity gossip 有密切聯繫。"},{"word": "indicate","ipa": "/ˈɪndɪkeɪt/","pos": "verb","zh": "表明；指示","part": "C","examples": ["Research indicates that exposure to violent media content can desensitise viewers to real-world aggression.","Declining newspaper circulation figures indicate a fundamental shift in how audiences consume news and information."],"col": ["research indicates","data indicates","indicate that","clearly indicate","studies indicate","indicators indicate"],"syn": [{"w": "suggest","n": "比 indicate 委婉，不確定程度較高"},{"w": "demonstrate","n": "強調以明確證據證明，確定性高於 indicate"},{"w": "reveal","n": "強調揭示之前未知或隱藏的信息"}],"note": "indicate 常用於報告研究結果，比 show 更正式；比 demonstrate 不確定性稍高，是學術寫作中平衡陳述的理想選詞。"},{"word": "speculate","ipa": "/ˈspekjʊleɪt/","pos": "verb","zh": "推測；投機","part": "C","examples": ["Media commentators began to speculate about the government's motives long before any official announcement was made.","It would be premature to speculate about the outcome of the investigation before all the evidence has been examined."],"col": ["speculate about","speculate that","media speculate","widely speculate","speculate wildly","speculate on the cause"],"syn": [{"w": "conjecture","n": "正式用語，指在缺乏充分證據的情況下推測"},{"w": "surmise","n": "強調根據有限資訊得出的猜測，語氣謹慎"},{"w": "hypothesise","n": "學術用語，指提出可供驗證的假設"}],"note": "speculate 強調在缺乏確定證據時的推測，學術寫作中帶有謹慎不確定的意涵；it would be premature to speculate 是常見句型。"},{"word": "animation","ipa": "/ˌænɪˈmeɪʃn/","pos": "noun","zh": "動畫","part": "A","examples": ["Computer-generated animation has revolutionised the film industry, enabling the creation of visually stunning scenes.","Animation is no longer considered a medium exclusively for children; many animated films address complex adult themes."],"col": ["computer animation","animation film","animation studio","produce animation","3D animation","animation industry"],"syn": [{"w": "cartoon","n": "較口語，多指傳統手繪動畫，帶有輕鬆娛樂的意涵"},{"w": "animated film","n": "強調動畫電影作品，偏正式"},{"w": "CGI","n": "縮寫，特指電腦生成影像，現代動畫的主要形式"}],"note": "animation 可指整個動畫藝術形式，也可指具體的動感效果（帶來生氣）；在媒體議題中多指前者。"},{"word": "culture","ipa": "/ˈkʌltʃə/","pos": "noun","zh": "文化","part": "A","examples": ["The globalisation of popular culture has led to growing concerns about the erosion of local traditions and identities.","Arts funding is essential not only for individual creative expression but for the preservation of a nation's cultural heritage."],"col": ["popular culture","cultural heritage","celebrity culture","culture shock","promote culture","culture and society"],"syn": [{"w": "civilisation","n": "強調人類文明整體的發展成就"},{"w": "society","n": "強調社群的組織結構，比 culture 更具社會學意涵"},{"w": "heritage","n": "強調從過去繼承的文化遺產，偏歷史性"}],"note": "culture 在 IELTS 中是高頻詞，可指 high culture（精英文化）、popular culture（流行文化）或 celebrity culture，三種語境均常考。"},{"word": "drama","ipa": "/ˈdrɑːmə/","pos": "noun","zh": "戲劇","part": "A","examples": ["Television drama has increasingly tackled social and political issues that were once considered too controversial for mainstream broadcasting.","The study of drama in schools is valuable not only for artistic development but for building communication and empathy skills."],"col": ["television drama","period drama","drama series","study drama","drama production","drama and comedy"],"syn": [{"w": "play","n": "特指舞台劇本或演出，不包含電視劇"},{"w": "series","n": "強調電視連續劇的播出形式"},{"w": "production","n": "強調製作層面，可指電視、電影或舞台"}],"note": "drama 既可指舞台戲劇（stage drama），也可指電視劇（TV drama）；口語中也用於形容戲劇性的現實事件。"},{"word": "echo","ipa": "/ˈekəʊ/","pos": "noun","zh": "迴聲；呼應","part": "A","examples": ["Social media platforms often create echo chambers in which users are only exposed to views that reinforce their existing beliefs.","The prime minister's speech found an echo in the concerns expressed by thousands of citizens during the public consultation."],"col": ["echo chamber","find an echo","echo of the past","echo effect","echo someone's views","faint echo"],"syn": [{"w": "reverberation","n": "物理上的聲音回響，也可比喻影響的延伸"},{"w": "reflection","n": "比喻性地指思想或觀點的映照"},{"w": "resonance","n": "強調引發共鳴、產生強烈反應"}],"note": "echo chamber（同溫層）是媒體和社交網絡議題的重要概念詞；在 IELTS 寫作中是高頻且高分的搭配。"},{"word": "engraving","ipa": "/ɪnˈɡreɪvɪŋ/","pos": "noun","zh": "雕刻；版畫","part": "A","examples": ["The museum's collection of historical engravings provides valuable visual records of eighteenth-century urban life.","Wood engraving was a primary method of reproducing images in printed publications before the advent of photography."],"col": ["wood engraving","copper engraving","engraving technique","historical engraving","engraving print","fine engraving"],"syn": [{"w": "etching","n": "特指酸蝕法製作的版畫，技法不同但效果相似"},{"w": "print","n": "廣義的版畫印刷，包含各種技法"},{"w": "woodcut","n": "特指木版畫，是 engraving 的一種具體形式"}],"note": "engraving 特指以刻刀在硬質材料上刻製圖像的版畫技法；與 painting（繪畫）和 sculpture（雕塑）並列為藝術形式。"},{"word": "fiction","ipa": "/ˈfɪkʃn/","pos": "noun","zh": "小說；虛構故事","part": "A","examples": ["Literary fiction often provides a more nuanced exploration of the human condition than non-fiction accounts.","The boundary between fiction and reality has become increasingly blurred in the age of fake news and deepfake technology."],"col": ["literary fiction","science fiction","work of fiction","fiction writing","fiction and non-fiction","pure fiction"],"syn": [{"w": "novel","n": "特指長篇敘事小說，是 fiction 的主要形式"},{"w": "narrative","n": "廣義的敘事作品，可指虛構或真實"},{"w": "fantasy","n": "強調充滿幻想和超自然元素的虛構作品"}],"note": "fiction 是不可數名詞時泛指虛構文學（write fiction）；可數時指具體的虛構作品（a work of fiction）。"},{"word": "imagination","ipa": "/ɪˌmædʒɪˈneɪʃn/","pos": "noun","zh": "想像力","part": "A","examples": ["The arts play a vital role in nurturing children's imagination and capacity for creative thinking.","Scientific breakthroughs often require as much imagination as they do technical expertise and empirical rigour."],"col": ["creative imagination","fire the imagination","capture the imagination","lack imagination","rich imagination","beyond imagination"],"syn": [{"w": "creativity","n": "強調創造新事物的能力，比 imagination 更強調行動"},{"w": "ingenuity","n": "強調解決問題的巧思和獨創性"},{"w": "vision","n": "強調對未來的遠見或對新可能性的洞察"}],"note": "imagination 強調在腦中構建不存在之物的能力；capture the imagination（引發廣泛的想像與興趣）是高頻搭配。"},{"word": "inspiration","ipa": "/ˌɪnspəˈreɪʃn/","pos": "noun","zh": "靈感","part": "A","examples": ["Many artists cite their cultural heritage and personal experiences as their primary source of inspiration.","The biographer drew inspiration from thousands of letters written during the subject's most productive creative years."],"col": ["source of inspiration","draw inspiration from","artistic inspiration","creative inspiration","find inspiration","inspiration for"],"syn": [{"w": "stimulus","n": "強調觸發創作或行動的外部刺激"},{"w": "motivation","n": "強調驅動行為的內在動力，比 inspiration 更目標導向"},{"w": "muse","n": "詩意化用法，指啟發靈感的人或力量"}],"note": "inspiration 強調突然的靈感或啟發；draw inspiration from 是最常見的搭配，適用於描述藝術創作的來源。"},{"word": "abominable","ipa": "/əˈbɒmɪnəbl/","pos": "adj","zh": "惡劣的；可憎的","part": "B","examples": ["Critics described the film as abominable, arguing that it glorified violence without any redemptive artistic merit.","The working conditions in the factory were described as abominable by inspectors who visited the site."],"col": ["abominable behaviour","abominable conditions","absolutely abominable","abominable crime","abominable treatment","find something abominable"],"syn": [{"w": "appalling","n": "強調令人震驚的極差品質或行為"},{"w": "atrocious","n": "強調極度惡劣，常用於品質或行為的批評"},{"w": "dreadful","n": "較口語，表示非常糟糕，帶有強烈情感反應"}],"note": "abominable 語氣極強，含有強烈的道德厭惡感；在描述藝術品質時用此詞表達強烈的負面評價，比 bad 有力得多。"},{"word": "abysmal","ipa": "/əˈbɪzməl/","pos": "adj","zh": "極糟的","part": "B","examples": ["The film received abysmal reviews, with critics unanimously condemning its weak plot and poor production values.","Abysmal levels of media literacy among young people have contributed to the rapid spread of misinformation online."],"col": ["abysmal performance","abysmal failure","abysmal quality","absolutely abysmal","abysmal standards","abysmal reviews"],"syn": [{"w": "terrible","n": "最口語，最廣泛使用，程度不如 abysmal 強"},{"w": "dreadful","n": "強調令人擔憂或害怕的糟糕程度"},{"w": "appalling","n": "強調令人震驚的極差，帶有強烈情感反應"}],"note": "abysmal 的本義是「深淵般的」，形容詞用法強調程度之深；多修飾 performance, failure, standard 等名詞。"},{"word": "dismal","ipa": "/ˈdɪzməl/","pos": "adj","zh": "陰沉的；慘淡的","part": "B","examples": ["The charity's fundraising campaign produced dismal results, raising only a fraction of the target amount.","A series of dismal economic indicators suggested that the country was heading towards a prolonged recession."],"col": ["dismal failure","dismal performance","dismal results","dismal economic outlook","absolutely dismal","paint a dismal picture"],"syn": [{"w": "gloomy","n": "強調令人悲觀的暗淡前景，側重情緒感受"},{"w": "bleak","n": "強調缺乏希望的嚴峻情形，常用於未來展望"},{"w": "dire","n": "強調極其嚴重的處境，帶有緊迫感"}],"note": "dismal 強調令人沮喪的失敗或暗淡前景；paint a dismal picture（描繪一幅慘淡的景象）是學術論述的常用表達。"},{"word": "fictional","ipa": "/ˈfɪkʃənl/","pos": "adj","zh": "虛構的","part": "B","examples": ["The fictional portrayal of scientists in popular media often bears little resemblance to the actual practice of research.","Fictional narratives can be a powerful vehicle for exploring moral dilemmas that resist simple real-world solutions."],"col": ["fictional character","fictional narrative","fictional world","fictional account","entirely fictional","fictional representation"],"syn": [{"w": "imaginary","n": "強調純粹出於想像，不存在於現實"},{"w": "invented","n": "強調人為創造，有時含刻意捏造的意涵"},{"w": "fabricated","n": "強調捏造事實，帶有欺騙性的負面意涵"}],"note": "fictional 是中性詞，指虛構的文藝作品；fabricated 含欺騙含義，描述假新聞時用後者，不可混用。"},{"word": "figurative","ipa": "/ˈfɪɡərətɪv/","pos": "adj","zh": "比喻的；象徵的","part": "B","examples": ["The artist's figurative paintings draw on classical mythology to comment on contemporary social issues.","In a figurative sense, the film uses the journey as a metaphor for personal growth and transformation."],"col": ["figurative language","figurative art","figurative painting","in a figurative sense","figurative expression","figurative meaning"],"syn": [{"w": "metaphorical","n": "強調使用隱喻來表達抽象意義"},{"w": "symbolic","n": "強調以象徵手法傳遞深層含義"},{"w": "allegorical","n": "強調透過故事或人物象徵傳達道德或政治寓意"}],"note": "figurative 的對立面是 literal（字面的）；figurative language（比喻性語言）是文學分析的核心術語。"},{"word": "hilarious","ipa": "/hɪˈleəriəs/","pos": "adj","zh": "極其滑稽的","part": "B","examples": ["The comedian's hilarious commentary on social media culture resonated with audiences across different age groups.","What some viewers find hilarious, others may consider offensive, highlighting the subjective nature of humour."],"col": ["hilarious comedy","absolutely hilarious","find something hilarious","hilarious performance","hilarious moment","hilarious sketch"],"syn": [{"w": "side-splitting","n": "口語化，形容笑到肚子痛，誇張強調"},{"w": "uproarious","n": "強調引發哄堂大笑，場面喧鬧"},{"w": "comical","n": "較中性，強調有趣或帶有喜劇效果"}],"note": "hilarious 語氣強烈，強調極度好笑；funny 是最普通的說法；comical 有時帶有滑稽可笑的意涵，用法稍有不同。"},{"word": "inspirational","ipa": "/ˌɪnspəˈreɪʃənl/","pos": "adj","zh": "鼓舞人心的","part": "B","examples": ["The documentary about the athlete's recovery from injury proved to be an inspirational story of perseverance and resilience.","Teachers who are genuinely inspirational can transform students' attitudes towards learning and their own capabilities."],"col": ["inspirational figure","inspirational story","inspirational speaker","truly inspirational","inspirational message","inspirational leader"],"syn": [{"w": "motivating","n": "強調激勵行動，比 inspirational 更側重實際驅動力"},{"w": "uplifting","n": "強調令人振奮、提升精神狀態"},{"w": "empowering","n": "強調賦予能力和信心，鼓勵主動行動"}],"note": "inspirational 多用於人物或故事，強調令人感受到深刻的啟發與鼓勵；motivating 更偏向實際行動的驅動。"},{"word": "petrified","ipa": "/ˈpetrɪfaɪd/","pos": "adj","zh": "石化的；嚇呆的","part": "B","examples": ["The audience was left petrified by the horror film's unexpected and deeply unsettling final scene.","Many people are petrified of public speaking, even when they are confident and articulate in private settings."],"col": ["absolutely petrified","petrified with fear","leave someone petrified","petrified of","look petrified","feel petrified"],"syn": [{"w": "terrified","n": "最常用，指極度恐懼，程度比 scared 強"},{"w": "paralysed with fear","n": "強調恐懼到無法行動的程度"},{"w": "horror-stricken","n": "強調被驚嚇打擊，語氣更書面"}],"note": "petrified 字面義是「石化的」，比喻因極度恐懼而僵住；語氣強於 scared 和 frightened，適合描述強烈的恐懼反應。"},{"word": "spine-chilling","ipa": "/ˈspaɪn tʃɪlɪŋ/","pos": "adj","zh": "令人毛骨悚然的","part": "B","examples": ["The director's spine-chilling use of silence and shadow created a sense of dread more effective than any jump scare.","A spine-chilling account of the survivor's ordeal was broadcast as part of the documentary series."],"col": ["spine-chilling scene","spine-chilling performance","spine-chilling horror","absolutely spine-chilling","spine-chilling atmosphere","spine-chilling tale"],"syn": [{"w": "hair-raising","n": "強調令人毛骨悚然、汗毛直立"},{"w": "eerie","n": "強調詭異神秘的恐怖氛圍，不一定有直接威脅"},{"w": "terrifying","n": "最直接，強調引起強烈恐懼感"}],"note": "spine-chilling 是複合形容詞，修飾名詞時須加連字符；它強調令人背脊發涼的恐懼感，常用於評論恐怖影視作品。"},{"word": "talented","ipa": "/ˈtæləntɪd/","pos": "adj","zh": "有天賦的","part": "B","examples": ["The conservatoire attracts many talented young musicians from across the country who aspire to professional careers.","Being talented is not sufficient for success in the arts; discipline, perseverance, and opportunity are equally essential."],"col": ["highly talented","talented musician","talented artist","immensely talented","talented individual","talented performer"],"syn": [{"w": "gifted","n": "強調天賦，暗示才能是天生而非後天習得"},{"w": "accomplished","n": "強調通過努力所達到的高超技藝"},{"w": "skilled","n": "強調技術能力，不一定指天賦"}],"note": "talented 強調天賦與才能，比 skilled 更強調先天因素；gifted 則更強調罕見的天生才能，程度略強於 talented。"},{"word": "tedious","ipa": "/ˈtiːdiəs/","pos": "adj","zh": "冗長乏味的","part": "B","examples": ["The documentary's tedious pacing and excessive length tested even the patience of its most dedicated viewers.","Routine data entry is among the most tedious tasks in administrative work, and automation has significantly reduced its prevalence."],"col": ["tedious process","tedious task","tedious work","find something tedious","long and tedious","tedious repetition"],"syn": [{"w": "monotonous","n": "強調缺乏變化的單調乏味，強調重複性"},{"w": "dull","n": "最口語，強調無聊、不有趣"},{"w": "mind-numbing","n": "口語化，強調乏味到令人麻木"}],"note": "tedious 強調因過長或過於重複而令人感到厭倦；monotonous 強調的是單調的重複性；兩者有細微區別。"},{"word": "terrified","ipa": "/ˈterɪfaɪd/","pos": "adj","zh": "恐懼的","part": "B","examples": ["Many children are terrified of the dark, a fear that psychologists attribute to the absence of visual information.","Residents living near the volcano were terrified as lava flows inched closer to their homes."],"col": ["absolutely terrified","terrified of","terrified look","leave someone terrified","terrified audience","visibly terrified"],"syn": [{"w": "petrified","n": "強調驚嚇到僵化，程度與 terrified 相當"},{"w": "horrified","n": "強調因看到可怕或令人震驚的事物而產生的恐懼"},{"w": "panic-stricken","n": "強調因恐懼引發的慌亂和不理智反應"}],"note": "terrified 和 petrified 程度相近，均指極度恐懼；horrified 更側重道德上的震驚，不一定是對人身安全的威脅。"},{"word": "terrifying","ipa": "/ˈterɪfaɪɪŋ/","pos": "adj","zh": "令人恐怖的","part": "B","examples": ["The documentary presents a terrifying vision of what coastal cities could look like if sea levels continue to rise.","Watching the news had become terrifying for many citizens as reports of violent conflict dominated daily broadcasts."],"col": ["terrifying prospect","terrifying experience","absolutely terrifying","terrifying thought","terrifying statistic","terrifying scenario"],"syn": [{"w": "frightening","n": "最通用，強調引起恐懼感，語氣稍輕於 terrifying"},{"w": "alarming","n": "強調引起警覺和擔憂，帶有警告的意涵"},{"w": "harrowing","n": "強調令人痛苦煎熬的強烈情緒衝擊"}],"note": "terrifying 是最強烈的「令人恐懼」形容詞；frightening 程度稍輕；alarming 帶有「值得警惕」的含義，三者需按程度選用。"},{"word": "thrilling","ipa": "/ˈθrɪlɪŋ/","pos": "adj","zh": "令人興奮的","part": "B","examples": ["The live broadcast of the space launch was a thrilling moment that captured the imagination of viewers worldwide.","A thrilling plot twist in the final episode left audiences eagerly anticipating the next series."],"col": ["thrilling experience","thrilling performance","absolutely thrilling","thrilling adventure","thrilling finale","thrilling conclusion"],"syn": [{"w": "exhilarating","n": "強調令人精神振奮、充滿活力的感受"},{"w": "gripping","n": "強調緊緊抓住注意力，令人欲罷不能"},{"w": "electrifying","n": "強調極度興奮，如電流般的強烈刺激感"}],"note": "thrilling 強調令人心跳加速的興奮感；gripping 側重抓住注意力、令人無法停下；兩者均常用於影視和閱讀評論。"},{"word": "a matter of taste","ipa": "/ə ˈmætə əv teɪst/","pos": "phrase","zh": "品味問題","part": "D","examples": ["Whether abstract art has genuine aesthetic value is largely a matter of taste rather than an objective question.","Critics argue that what constitutes quality journalism is ultimately a matter of taste shaped by cultural background."],"col": ["largely a matter of taste","purely a matter of taste","entirely a matter of taste","matter of personal taste","when it comes to taste","a question of taste"],"syn": [{"w": "subjective judgement","n": "正式學術說法，強調評判的主觀性"},{"w": "personal preference","n": "強調基於個人喜好，不涉及客觀標準"},{"w": "in the eye of the beholder","n": "諺語，指美醜好壞因人而異"}],"note": "a matter of taste 強調沒有客觀標準，見仁見智；IELTS 藝術或媒體議題中常用此片語引出讓步或反駁論點。"},{"word": "acquire a taste for","ipa": "/əˈkwaɪə ə teɪst fɔː/","pos": "phrase","zh": "養成...的嗜好","part": "D","examples": ["Many young people who are initially indifferent to classical music eventually acquire a taste for it through sustained exposure.","Travellers who spend time in a foreign country often acquire a taste for local cuisine that persists long after they return home."],"col": ["acquire a taste for classical music","acquire a taste for art","acquire a taste for reading","gradually acquire a taste for","help someone acquire a taste for","acquire a taste for something new"],"syn": [{"w": "develop an appreciation for","n": "強調培養欣賞能力，過程更深入"},{"w": "come to enjoy","n": "最口語，強調從不喜歡到喜歡的轉變"},{"w": "grow fond of","n": "強調情感上的喜愛，帶有溫暖的意涵"}],"note": "acquire a taste for 強調興趣是後天培養的，暗示最初並不喜歡；常用於討論藝術教育或文化熏陶的重要性。"},{"word": "be in bad taste","ipa": "/biː ɪn bæd teɪst/","pos": "phrase","zh": "低俗；沒品味","part": "D","examples": ["The comedian's jokes about the recent tragedy were widely criticised for being in bad taste.","Advertisers must be careful to avoid campaigns that might be considered in bad taste by their target audience."],"col": ["considered in bad taste","be in questionable taste","be in extremely bad taste","deemed in bad taste","in very poor taste","border on bad taste"],"syn": [{"w": "offensive","n": "強調令人不快或冒犯他人，語氣更強"},{"w": "inappropriate","n": "強調不合時宜或不得體，範圍最廣"},{"w": "crude","n": "強調粗俗、缺乏品味，帶有道德批評"}],"note": "be in bad taste 強調言論或行為缺乏得體感，不一定是惡意；be in poor taste 是完全同義的替換；兩者均比 offensive 語氣輕。"},{"word": "compose a song","ipa": "/kəmˈpəʊz ə sɒŋ/","pos": "phrase","zh": "作曲","part": "D","examples": ["The musician composed a song inspired by her grandmother's stories of immigration and cultural displacement.","Composing a song that resonates with a wide audience requires both technical skill and emotional authenticity."],"col": ["compose an original song","compose a song for","compose and perform a song","help compose a song","compose a protest song","compose a theme song"],"syn": [{"w": "write a song","n": "最通用，強調歌詞創作，偏口語"},{"w": "create a musical piece","n": "較正式，範圍更廣，涵蓋各種音樂形式"},{"w": "produce a track","n": "現代音樂產業用語，強調製作過程"}],"note": "compose 通常強調創作音樂旋律和結構；write a song 側重歌詞；在學術寫作或正式語境中 compose 比 write 更恰當。"},{"word": "have diverse tastes","ipa": "/hæv daɪˈvɜːs teɪsts/","pos": "phrase","zh": "品味多樣","part": "D","examples": ["A well-rounded education exposes students to a range of art forms, helping them develop diverse tastes.","The success of streaming platforms is partly attributable to their ability to cater to audiences who have diverse tastes."],"col": ["have diverse tastes in music","have diverse tastes in art","develop diverse tastes","encourage diverse tastes","reflect diverse tastes","cater to diverse tastes"],"syn": [{"w": "eclectic preferences","n": "強調從多種來源選取的廣泛品味"},{"w": "wide-ranging interests","n": "強調興趣廣泛，涵蓋多個領域"},{"w": "varied aesthetic sensibilities","n": "正式學術用語，強調多元的審美感受"}],"note": "have diverse tastes 是討論文化消費和藝術教育時的實用片語；cater to diverse tastes（迎合多元品味）是媒體和娛樂產業的常見說法。"},{"word": "share the same taste","ipa": "/ʃeə ðə seɪm teɪst/","pos": "phrase","zh": "品味相同","part": "D","examples": ["Friendship groups often form around individuals who share the same taste in music, film, or other cultural interests.","It is unrealistic to expect that all members of a diverse society will share the same taste in art or entertainment."],"col": ["share the same taste in music","share the same taste in art","happen to share the same taste","share similar tastes","people who share the same taste","share the same taste as"],"syn": [{"w": "have similar preferences","n": "強調偏好上的相似性，比 share the same taste 更通用"},{"w": "be like-minded","n": "強調思想和喜好上的志同道合"},{"w": "enjoy the same things","n": "最口語，強調共同的愛好"}],"note": "share the same taste 強調兩人或群體在品味上的一致；在討論文化認同或社群形成時，這是一個有用的社會學概念詞組。"},{"word": "gain insight into","ipa": "/ɡeɪn ˈɪnsaɪt ˈɪntə/","pos": "phrase","zh": "洞察；深入了解","part": "D","examples": ["Analysing media representations of different cultures can help audiences gain insight into the biases inherent in news production.","Literary fiction allows readers to gain insight into the inner lives of characters whose experiences differ greatly from their own."],"col": ["gain valuable insight into","gain deeper insight into","gain insight into human behaviour","gain insight into the causes","help gain insight into","gain unique insight into"],"syn": [{"w": "develop an understanding of","n": "最廣義，強調建立理解"},{"w": "shed light on","n": "強調揭示或闡明之前不清楚的事物"},{"w": "illuminate","n": "正式用語，比喻性地指照亮、使清晰"}],"note": "gain insight into 是學術寫作的高分片語，比 understand 更深刻，含有透過觀察或分析獲得深層理解的意涵。"}]
+};
+const PART_LABELS = {
+  A:'Part A · Nouns', B:'Part B · Adjectives',
+  C:'Part C · Verbs',  D:'Part D · Phrases'
+};
+const SK = 'ielts_u10';
+let cur=0, mode='browse', flipped=false, known=[], onIntro=true;
+function load(){ try{ known=JSON.parse(localStorage.getItem(SK)||'[]'); }catch(e){known=[];} }
+function save(){ try{ localStorage.setItem(SK,JSON.stringify(known)); }catch(e){} }
+function isKnown(i){ return known.includes(i); }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateDots(){
+  const n=UNIT.words.length, max=Math.min(n,30);
+  let h='';
+  for(let i=0;i<max;i++){
+    const c=(!onIntro&&i===cur)?'dot cur':isKnown(i)?'dot known':'dot';
+    h+='<div class="'+c+'"></div>';
+  }
+  if(n>max) h+='<span style="font-family:var(--fm);font-size:.5rem;color:var(--g400);margin-left:2px;">+'+(n-max)+'</span>';
+  document.getElementById('dots').innerHTML=h;
+}
+function renderIntro(){
+  document.getElementById('counter').textContent='Introduction';
+  document.getElementById('known-badge').textContent='';
+  document.getElementById('prog-fill').style.width='0%';
+  document.getElementById('action-count').textContent='';
+  document.getElementById('know-btn').style.display='none';
+  document.getElementById('review-btn').style.display='none';
+  const f=document.getElementById('front-face');
+  f.className='face front intro-face';
+  f.innerHTML=
+    '<div class="ic-eyebrow">IELTS Core Thematic Vocabulary · Chapter 10 of 10</div>'+
+    '<div class="ic-title">Media, Arts & Celebrity Culture</div>'+
+    '<div class="ic-zh">大眾媒體、藝術文化與名人</div>'+
+    '<div class="ic-rule"></div>'+
+    '<div class="ic-body">'+
+      '<div>'+
+        '<div class="ic-sec-label">關於本章</div>'+
+        '<div class="ic-about">本章收錄 57 個核心詞彙。每個詞條包含搭配詞與中文解釋。</div>'+
+      '</div>'+
+      '<div>'+
+        '<div class="ic-sec-label">使用方式</div>'+
+        '<div class="ic-steps">'+
+          '<div class="ic-step"><span class="ic-tag">Browse</span>正面顯示英文單字，翻面查看中文與搭配詞。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Quiz</span>正面顯示中文，翻面前先回想英文，訓練主動回憶。</div>'+
+          '<div class="ic-step"><span class="ic-tag">Know it ✓</span>標記已掌握。<span class="ic-tag">Review ↺</span>重新複習。</div>'+
+          '<div class="ic-step"><span class="ic-tag">快捷鍵</span>← → 切換卡片 &nbsp;·&nbsp; F 翻轉 &nbsp;·&nbsp; K 標記</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="ic-hint">按 Next → 開始學習</div>';
+  document.getElementById('back-face').innerHTML='';
+  updateDots();
+}
+function render(){
+  if(onIntro){ renderIntro(); return; }
+  document.getElementById('front-face').className='face front';
+  document.getElementById('know-btn').style.display='';
+  document.getElementById('review-btn').style.display='';
+  const w=UNIT.words[cur], n=UNIT.words.length, k=isKnown(cur);
+  document.getElementById('counter').textContent=(cur+1)+' / '+n;
+  document.getElementById('known-badge').textContent=known.length+' / '+n+' known';
+  document.getElementById('prog-fill').style.width=((cur+1)/n*100)+'%';
+  document.getElementById('action-count').textContent=known.length+'/'+n;
+  const isQuiz=(mode==='quiz');
+  document.getElementById('front-face').innerHTML=
+    '<div class="f-top">'+
+      '<div class="f-meta">'+
+        '<div class="f-num">#'+String(cur+1).padStart(3,'0')+'</div>'+
+        '<div class="f-part">'+(PART_LABELS[w.part]||'')+'</div>'+
+      '</div>'+
+      '<span class="f-known-mark'+(k?' vis':'')+'">✓ known</span>'+
+    '</div>'+
+    '<div class="f-body">'+
+      '<div class="f-word">'+esc(isQuiz?w.zh:w.word)+'</div>'+
+      (!isQuiz&&w.ipa?'<div class="f-ipa">'+esc(w.ipa)+'</div>':'')+
+      (!isQuiz?'<div class="f-pos">'+esc(w.pos)+'</div>':'')+
+    '</div>'+
+    '<div class="f-hint">'+(isQuiz?'think → click to flip':'click to flip →')+'</div>';
+  const exH=(w.examples||[]).map(e=>'<div class="b-ex">"'+esc(e)+'"</div>').join('');
+  const colH=(w.col||[]).map(c=>'<div class="b-col">'+esc(c)+'</div>').join('');
+  const synH=(w.syn||[]).map(s=>
+    '<div class="b-syn-row"><div class="b-syn-w">'+esc(s.w)+'</div>'+
+    '<div class="b-syn-n">（'+esc(s.n)+'）</div></div>'
+  ).join('');
+  const noteH=w.note?'<div class="b-sec"><div class="b-label">注意</div><div class="b-note">'+esc(w.note)+'</div></div>':'';
+  let zhLine, metaLine='';
+  if(isQuiz){
+    zhLine='<div class="b-quiz-word">'+esc(w.word)+'</div>';
+    metaLine='<div class="b-quiz-meta">'+esc(w.pos)+(w.ipa?' &nbsp;'+esc(w.ipa):'')+'</div>';
+  } else {
+    zhLine='<div class="b-zh">'+esc(w.zh)+'</div>';
+  }
+  document.getElementById('back-face').innerHTML=
+    zhLine+metaLine+
+    '<div class="b-rule"></div>'+
+    '<div class="b-content">'+
+      (exH?'<div class="b-sec"><div class="b-label">Examples</div>'+exH+'</div>':'')+
+      (colH?'<div class="b-sec"><div class="b-label">搭配</div><div class="b-cols">'+colH+'</div></div>':'')+
+      (synH?'<div class="b-sec"><div class="b-label">近義</div><div class="b-syns">'+synH+'</div></div>':'')+
+      noteH+
+    '</div>';
+  updateDots();
+}
+function flip(){ if(onIntro) return; flipped=!flipped; document.getElementById('card').classList.toggle('flipped',flipped); }
+function go(dir){
+  if(onIntro&&dir>0){ onIntro=false;cur=0;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(!onIntro&&dir<0&&cur===0){ onIntro=true;flipped=false;document.getElementById('card').classList.remove('flipped');render();return; }
+  if(onIntro) return;
+  cur=Math.max(0,Math.min(UNIT.words.length-1,cur+dir));
+  flipped=false;document.getElementById('card').classList.remove('flipped');render();
+}
+function markKnown(){ if(onIntro) return; if(!isKnown(cur)) known.push(cur); save();render(); setTimeout(function(){ if(cur<UNIT.words.length-1) go(1); },180); }
+function markReview(){ if(onIntro) return; known=known.filter(function(x){return x!==cur;}); save();render(); }
+function setMode(m){ mode=m;flipped=false;document.getElementById('card').classList.remove('flipped');document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.toggle('active',b.dataset.mode===m);});render(); }
+document.getElementById('scene').addEventListener('click',flip);
+document.getElementById('prev-btn').addEventListener('click',function(e){e.stopPropagation();go(-1);});
+document.getElementById('next-btn').addEventListener('click',function(e){e.stopPropagation();go(1);});
+document.getElementById('know-btn').addEventListener('click',function(e){e.stopPropagation();markKnown();});
+document.getElementById('review-btn').addEventListener('click',function(e){e.stopPropagation();markReview();});
+document.querySelectorAll('.mode-btn').forEach(function(b){ b.addEventListener('click',function(e){e.stopPropagation();setMode(b.dataset.mode);});});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowLeft') go(-1);
+  else if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1);}
+  else if(e.key==='f'||e.key==='F') flip();
+  else if(e.key==='k'||e.key==='K') markKnown();
+});
+load();render();
+</script>
+</body>
+</html>
