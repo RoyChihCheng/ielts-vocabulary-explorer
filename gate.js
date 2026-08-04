@@ -5,14 +5,19 @@
    anyone with devtools can bypass it. The access code is never
    stored; only its SHA-256 digest is compared.
 
-   Access code: Roy_Elite   (SHA-256 below)
+   The access code is distributed out of band and is deliberately NOT recorded
+   in this file. Do not write it in a comment: this repository is public.
+   Use a code unique to this app — never one shared with another site.
    Include on every page with:  <script src="gate.js"></script>
    placed in <head> BEFORE the page's own styles/scripts.
    ──────────────────────────────────────────────────────────────── */
 (function () {
   "use strict";
 
-  var HASH = "c04325c6510c0727a112712354b61554dd084ed5defa11dc5655eb39baf68e4d"; // SHA-256("Roy_Elite")
+  // SHA-256 digest of this app's access code. The plaintext is not stored here.
+  // ROTATE ME: the previous code was published in this file's git history and
+  // reused across another app, so it must be considered public.
+  var HASH = "c04325c6510c0727a112712354b61554dd084ed5defa11dc5655eb39baf68e4d";
   var KEY = "ielts_vocab_auth";
   var REMEMBER_DAYS = 30;
 
